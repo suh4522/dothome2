@@ -1,0 +1,229 @@
+/* reset */
+body,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,textarea,p,
+select,button,figure{margin:0;padding:0;  font-family: 'cera-blackItalic',sans-serif;}
+em,address{font-style:normal;}
+ul,li,ol{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+a{ color: #fff; text-decoration:none;}
+img,fieldset{border:0;}
+/*video, img {width: 100%;}*/
+body{background:#fff;direction:ltr;-webkit-text-size-adjust:none; }
+table{width:100%;border-spacing: 0; border-collapse: collapse;}
+
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after{display:table;content:'';line-height:0;}
+.clearfix:after{clear:both;}
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+@font-face{font-family:'cera-blackitalic';
+    src:url('../fonts/cera-blackitalic-webfont.eot');
+    src:url('../fonts/cera-blackitalic-webfont.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/cera-blackitalic-webfont.woff2') format("woff2"),
+    url('../fonts/cera-blackitalic-webfont.woff') format("woff"),
+    url('../fonts/cera-blackitalic-webfont.ttf') format("truetype")
+}
+@font-face{font-family:'Cera-RegularItalic';
+    src:url('../fonts/Cera-RegularItalic.eot');
+    src:url('../fonts/Cera-RegularItalic.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/Cera-RegularItalic.woff') format("woff"),
+    url('../fonts/Cera-RegularItalic.ttf') format("truetype")
+}
+
+/* info */
+.info {position: fixed; right: 10px; top: 60px; display: none;}
+.info span {position: relative; background: rgba(0,0,0,0.6); padding: 10px; border-radius: 50%; color: #fff; width: 50px; height: 50px; display:inline-block; margin: 3px; text-align: center; line-height: 50px;}
+.info .scroll_top:before {content:''; position: absolute; left: 50%; top: -40px; transform: translateX(-50%);}
+
+/* mainNav */
+.mainNav {position: fixed;top: 66px;left: 0;padding-left: 14%;z-index:50;transition: all 0.4s ease;}
+.navContent {margin: 3% 0 0;font-size: 14px;}
+.navContent ul {text-transform: uppercase; overflow: hidden;}
+.navContent ul li {position: relative; float: left;font-weight: 400;letter-spacing: .08em;}
+.navContent ul li a {display: block; padding: 20px}
+.navContent ul li a::after {content: ''; display: block; background: #fff; width: 100%; height: 3px; position: relative; top: 5px; opacity: 0; transition: all 0.3s ease; transform: translateY(10px);}
+.navContent ul li a:hover::after{opacity: 1; transform: translateY(0px);}
+
+
+/* layer-menu */
+.layer-menu {width: 100%; height: 100%; position: fixed; top: -100%; left: 0; z-index: 30; transform: translate(0,0); overflow: hidden;}
+.layer-menu:before { content:''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; width: 100%; height: 0; background: rgba(0,120,219,1); border-radius: 100%; padding-bottom: 100%; transform: scale(0.04), translatey(9999px); overflow: hidden;}
+.open .layer-menu { top: 0;}
+.open .layer-menu:before { animation: menu-animation 0.8s ease-in-out forwards;}
+
+@keyframes menu-animation {
+    0%    {transform: scale(0.04) translatey(300%); opacity: 0; }
+    40%   {transform: scale(0.04) translatey(0);transition: ease-out;}
+    60%   {transform: scale(0.02) translatey(0); opacity: 1;}
+    61%   {transform: scale(0.04);}
+    99.9% {height:0; padding-bottom: 100%; border-radius: 100%;}
+    100%  {transform: scale(2); height: 100%; padding-bottom: 0; border-radius: 0;}
+}
+.menu { display: flex; flex-direction: column;  justify-content: center; align-items: center;  max-width: 600px; height: 100%; margin: 0 auto; z-index: 2;}
+.menu li { opacity: 0; text-align: center; font-size: 50px; line-height: 45px; text-transform: uppercase; font-family: 'cera-blackItalic',sans-serif;  transform: translatey(30px);  overflow: hidden; margin: 15px 0;}
+.menu li a { display: block; overflow: hidden; color:#fff;}
+
+.menu li a:before {  content: ""; position: absolute; top: 0px; left: -100%; width: 100%; height: 100%; background: #006CC5; z-index: 99; transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);}
+.menu li a:hover::before { left: 100%;}
+
+.menu li a:after { content: ""; position: absolute; top: 50%; margin-top: -2px; left: 100%; width: 100%; height: 4px; background: #006CC5; transition: all .3s; transition-delay: .4s;}
+.menu li a:hover:after { left: 0%;}
+
+.open .menu li { opacity: 1; transform: translatey(0px); transition: opacity 1.1s cubic-bezier(0.18, 0.45, 0.1, 0.98), transform 0.7s cubic-bezier(0.18, 0.45, 0.1, 0.98);}
+.open .menu li:nth-child(1){ transition-delay: 0.8s;}
+.open .menu li:nth-child(2){ transition-delay: 0.9s;}
+.open .menu li:nth-child(3){ transition-delay: 1.0s;}
+.open .menu li:nth-child(3){ transition-delay: 1.1s;}
+.open .menu li:nth-child(4){ transition-delay: 1.2s;}
+.open .menu li:nth-child(5){ transition-delay: 1.3s; }
+.open .menu li:nth-child(6){ transition-delay: 1.4s; }
+
+
+
+/* contents */
+.container {width: 54%; margin: 0 auto;overflow: visible;padding: 16.5% 0 4.5%; position: relative;z-index: 10;}
+.section {position: relative; margin-bottom: 10%}
+.section h2 {position: absolute;left: 50%;top:50%;transform: translate(-50%,-50%);font-size: 82px;width: 450px;text-align: center;z-index: 10;}
+
+.img {padding-top: 56.25%; background: center bottom no-repeat fixed; background-color: rgba(0, 0, 0,0.1); background-blend-mode: multiply;  position: relative;}
+.img1 {background-image: url(../img/web1.png); background-size: 55%;}
+.img2 {background-image: url(../img/web2.png); background-size: 55%;}
+.img3 {background-image: url(../img/web3.png); background-size: 55%;}
+.img4 {background-image: url(../img/web4.png); background-size: 55%;}
+.img5 {background-image: url(../img/web5.png); background-size: 55%;}
+.img6 {background-image: url(../img/web6.png); background-size: 55%;}
+.img7 {background-image: url(../img/web7.png); background-size: 55%;}
+
+.section.show a span {animation: ani1 1s cubic-bezier(0, 0, 0.09, 0.87) forwards; display: inline-block;}
+.section a span {opacity: 0; display: inline-block;}
+.section.show a span:nth-of-type(1) {animation-delay: 0s;}
+.section.show a span:nth-of-type(2) {animation-delay: .05s;}
+.section.show a span:nth-of-type(3) {animation-delay: .1s;}
+.section.show a span:nth-of-type(4) {animation-delay: .15s;}
+.section.show a span:nth-of-type(5) {animation-delay: .2s;}
+.section.show a span:nth-of-type(6) {animation-delay: .25s;}
+.section.show a span:nth-of-type(7) {animation-delay: .3s;}
+.section.show a span:nth-of-type(8) {animation-delay: .35s;}
+.section.show a span:nth-of-type(9) {animation-delay: .4s;}
+.section.show a span:nth-of-type(10) {animation-delay: .45s;}
+.section.show a span:nth-of-type(11) {animation-delay: .5s;}
+.section.show a span:nth-of-type(12) {animation-delay: .55s;}
+.section.show a span:nth-of-type(13) {animation-delay: .6s;}
+.section.show a span:nth-of-type(14) {animation-delay: .65s;}
+.section.show a span:nth-of-type(15) {animation-delay: .7s;}
+@keyframes ani1 {
+    0% {opacity: 0; transform: translate(-10px, -10px)}
+    100% {opacity: 1; transform: translate(0, 0)}
+}
+
+/* desc */
+.section .desc {font-family: 'Cera-RegularItalic',sans-serif; font-weight: 600; display: block; text-align: left; width: auto; white-space: nowrap; position: absolute;  top: 70%; left: 80%; z-index: 15; margin-bottom: 0; font-size: 15px;}
+.section .desc ul li {margin: 3% 10%; opacity: 0; transform: translate(10%,0); transition: all 0.5s ease-in-out; }
+.section a:hover .desc ul li {opacity: 1; transform: none;  }
+
+
+
+
+
+@media (max-width: 1490px){
+    .container {width: 70%;}
+    .img {background-size: 70%;}
+}
+
+@media (max-width: 1200px){
+    .container {width: 80%;}
+    .img {background-size: 90%; background-position: center center}
+}
+
+@media (max-width: 960px){
+    .mainNav {position: fixed; top: 5%;padding-left: 0%;z-index:50;transition: all 0.4s ease; position: fixed; left: 0;
+    width: 97%;}
+    .mainNav .ham-menu {position: absolute; right: 15px; top: 15px;}
+    .mainNav .navContent {  display: none;}
+
+    .menu li {font-size: 30px; }
+
+    /* .ham-menu */
+    .icon-wrap { cursor: pointer; width: 35px; height: 15px; padding-top: 15px;}
+    .icon { width: 35px; height: 3px;}
+    .icon span { position: relative; display: block; width: 40px; height: 3px;}
+    .icon span:before { content:'';  width: 35px; height: 3px; background: #fff; position: absolute; left: 0; bottom: 0px; transition: transform 0.3s;}
+    .icon span:after { content:''; width: 35px; height: 3px; background: #fff; position: absolute; left: 0; bottom: 0px; transition: transform 0.3s;}
+    .icon.animation span:before { transform: rotate(45deg); transition: 0.3s transform 0.8s;}
+    .icon.animation span:after { transform: rotate(-45deg); transition: 0.3s transform 0.8s;}
+    .icon:before { content:''; width: 35px; height: 3px; background: #fff;  position: absolute; right: 0; bottom: 3px; transition: 0.3s width 0.4s;}
+    .icon.animation:before { width:0; right: 0; bottom: 3px; }
+    .icon:after { content:''; width: 35px; height: 3px; background: #fff; position: absolute; left: 0; top: 6px;  transition: 0.3s width 0.4s;}
+    .icon.animation:after { width:0; left: 0; top: 6px;}
+
+
+    .container {width: 90%;}
+    .section a h2 { font-size: 70px;}
+    .section .desc { text-align: right;width: 400px;top:auto;bottom: 20px;right:15px;left: auto;}
+    .section .desc ul li {margin: 0; opacity: 1; transform: translate(0,0); transition: all 0.5s ease-in-out;  margin-top: 3%; }
+}
+
+@media (max-width: 600px){
+    .mainNav {top: 1%;  }
+    .container {padding: 0}
+    .section {height: 80vh;}
+    .section a {display: block; height: 100%;}
+    .section a h2 {font-size: 40px;}
+    .section .desc ul li {margin-top: 0;}
+    .img {height: 80vh; box-sizing: border-box; padding: 0;  background-position:center center; background-attachment: scroll;  background-size: 130%; margin: 20% 0;}
+}
+
+@media (max-width: 380px){
+    .section .desc ul li {font-size: 12px;}
+}
+
+
+
+/********************** about.html **************************************/
+#about { 
+    height: 100vh; width: 100vw;
+    background-image: url(../img/bg2.jpg); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#about:before {
+    content: '';
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(244,79,203,0.9);
+}
+
+#about.drag1:before {background: rgba(79,83,244,0.9);}
+#about.drag2:before {background: rgba(28,220,18,0.9);}
+
+#draggable {position: absolute; left: 50%; top: 50%; width: 200px; height: 200px; border-radius: 50%; z-index: 2000; background: rgba(255,255,255,0.234); text-align: center; line-height: 200px; color:#fff; font-size: 20px;}
+
+#draggable.ui-draggable-dragging {background: rgba(0,0,0,0.234)}
+
+#draggable2 {position: absolute; left: 40%; top: 40%; width: 200px; height: 200px; border-radius: 50%; z-index: 2000; background: rgba(255,255,255,0.234); text-align: center; line-height: 200px; color:#fff; font-size: 20px;}
+
+
+
+/* dropTarget */
+#droppable {display: block; border-radius: 50%; height: 200px; width: 200px; position: absolute; right: 15%; bottom: 45%; z-index: 1000; border: 1px dashed #fff; text-align: center;}
+#droppable .title3 {position: absolute; width: 90px; top: 50%; left: 50%; color: #fff; transform: translate(-50%,-50%); text-transform: uppercase; font-size: 14px; letter-spacing: .08em;}
+#droppable.ui-droppable-hover {background: rgba(79,83,244,0.4);}
+
+
+#droppable2 {display: block; border-radius: 50%; height: 200px; width: 200px; position: absolute; right: 45%; bottom: 25%; z-index: 1000; border: 1px dashed #fff; text-align: center;}
+#droppable2 .title3 {position: absolute; width: 90px; top: 50%; left: 50%; color: #fff; transform: translate(-50%,-50%); text-transform: uppercase; font-size: 14px; letter-spacing: .08em;}
+
+
+/* aboutBlock */
+.aboutBlock { position: absolute; top:50%; left:14%; transform: translate(0,-50%);}
+.textWrap {color: #fff;}
+.textWrap .title1 {width: 100px; margin: 5% 0 11%; font-size: 70px;}
+.textWrap p {width: 360px; font-family: Cera-RegularItalic,sans-serif; font-size: 16px;}
+
+/* slideText */
+.slideText {position: absolute; right: 14%; bottom: 15%; color: #fff; }
+.slideText .title2 {width: 200px; margin: 5% 0; font-size: 16px;}
+.slideText .sub_tit {margin: 5% 0;} 
+.slideText .post {width: 300px; font-size: 16px; font-family: Cera-RegularItalic,sans-serif;}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>jquery</h3>
+    <div>
+        <ul class="list">
+            <li class="slist1">내용1</li>
+            <li class="slist2">내용2</li>
+        </ul>
+        <p class="plist1">데스크1</p>
+        <p class="plist2">데스크2</p>
+        <p class="plist3">데스크3</p>
+        <p class="plist4">데스크4</p>
+    </div>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script>
+        //$(".list").append("<li>내용3</li>");
+        //$(".list").prepend("<li>내용0</li>");
+        
+        //$("<li>내용3</li>").appendTo(".list");
+        //$("<li>내용0</li>").prependTo(".list");
+        
+        //$(".slist1").before("<li>내용0</li>");
+        //$(".slist2").after("<li>내용3</li>");
+        
+        //$("<li>내용0</li>").insertBefore(".slist1");
+        //$("<li>내용3</li>").insertAfter(".slist2");
+        
+        $(".list").unwrap();
+        $(".plist1").wrap("<div />");
+        $("p").wrapAll("<div />");
+        $("li").wrapInner("<h4 />");
+        
+        //$("h3").replaceWith("<h2>javascript</h2>");
+        $("h3").text("데스트");
+        $("h3").text("<em>데스트</em>");
+        $("h3").remove();
+        $(".list").empty();
+    </script>
+</body>
+</html>

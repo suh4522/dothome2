@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체</title>
+</head>
+<body>
+    <h2>예약정보</h2>
+    <div id="hotelName"></div>
+    <div id="availability">
+        <p id="room"></p>
+        <p>개의 방이 남아있습니다.</p>
+    </div>
+    
+    <script>
+        var hotel = {
+            name : 'quay',
+            rooms : 40,
+            booked : 25,
+            gym : true,
+            roomTypes : ['트윈','더블','스위트'],
+            checkAvailability : function(){
+                var free = this.rooms - this.booked;
+                return free;
+            }
+        };
+        
+        var elName = document.getElementById('hotelName');
+        elName.textContent = hotel.name;
+        
+        var elrooms = document.getElementById('room');
+        elrooms.textContent = hotel.checkAvailability();
+    </script>
+</body>
+</html>

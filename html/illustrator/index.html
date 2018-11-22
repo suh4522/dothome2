@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="webstoryboy">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, html5, html4, css3, html, markup, design">
+	<title>illustrator</title>
+
+	<!-- web_font -->
+	<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+
+	<!-- css -->
+	<link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+	<link href="../assets/css/custom.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+	<link href="../assets/css/jquery.fancybox.css" rel="stylesheet">
+
+	<!-- Prettify -->
+	<link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+		.face {
+			display: block;
+			margin: 20px auto;
+			width: 400px;
+		}
+
+		.face img {
+			width: 400px;
+			border-radius: 50%;
+		}
+
+		.face1 img {
+			width: 22%;
+			border-radius: 10%;
+			margin: 1%;
+		}
+
+		.member {
+			margin: 50px 0;
+		}
+
+		.member li {
+			width: 150px;
+			list-style: none;
+			display: inline-block;
+			margin: 6px;
+		}
+
+		.member li img {
+			border-radius: 50%;
+		}
+
+.screenshots ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.screenshots ul li {
+    float: left;
+    min-height: 100%;
+    width: 25%;
+    background-color: #000;
+    list-style: none;
+    font-size: 0;
+}
+.screenshots figure {
+    position: relative;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+}
+.screenshots figure img {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.screenshots figure:hover img, .screenshots figure:focus img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.screenshots figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25% 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 97, 132, 0.85);
+    text-align: center;
+    font-size: 15px;
+    opacity: 0;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.screenshots figcaption a {
+    color: #fff
+}
+.screenshots figcaption a:hover, .screenshots figcaption a:focus {
+    color: #73d0da
+}
+.screenshots figure:hover figcaption, .screenshots figure:focus figcaption {
+    opacity: 1
+}
+.visible {
+    opacity: 1
+}
+.screenshots figure.cs-hover figcaption {
+    opacity: 1
+}
+.screenshots figcaption i {
+    font-size: 35px
+}
+.screenshots figcaption p {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.screenshots figcaption .caption-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    width: 200px;
+    -webkit-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.screenshots figure:hover figcaption .caption-content, .screenshots figure:focus figcaption .caption-content {
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+@media screen and (max-width:960px) {
+	.screenshots ul li {width: 50%;}
+}
+
+
+@media screen and (max-width:480px) {
+	.screenshots ul li {width: 100%;}
+}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+	<div id="top-nav" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li><a href="#">webstoryboy</a></li>
+						<li><a href="#">reference</a></li>
+						<li><a href="#">tutorial</a></li>
+						<li><a href="#">css</a></li>
+						<li><a href="#">html</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //nav -->
+
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="span12" style="text-align:center;">
+					<div class="header_tit">
+						<h1>Professional web publishers</h1>
+						<h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+					</div>
+					<div class="header_icon" id="wow">
+						<ul>
+							<li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>illustrator</h1>
+
+				<h2>단축키</h2>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>단축키</th>
+							<th>설명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Space bar</td>
+							<td>다른 툴 사용도중 손바닥툴(화면이동)을 사용하고자 할 때</td>
+						</tr>
+						<tr>
+							<td>Ctrl + (-)</td>
+							<td>화면을 축소합니다.</td>
+						</tr>
+						<tr>
+							<td>Ctrl + (+)</td>
+							<td>화면을 확대합니다.</td>
+						</tr>
+						<tr>
+							<td>Ctrl + 0</td>
+							<td>도큐멘트를 화면에 맞게 보여주기 = 손바닥툴 더블클릭</td>
+						</tr>
+						<tr>
+							<td>Ctrl + 1</td>
+							<td>100%크기로 보여주기 = 돋보기툴 더블클릭</td>
+						</tr>
+						<tr>
+							<td>Tab</td>
+							<td>도큐멘트 상에서 보여지는 도구나 팔레트들을 보기 / 가리기</td>
+						</tr>
+						<tr>
+							<td>Shift Tab</td>
+							<td>도구를 뺀 나머지 창들을 보기 / 가리기</td>
+						</tr>
+						<tr>
+							<td>Ctrl</td>
+							<td>다른 툴의 사용 도중 선택툴을 사용하고자 할 때</td>
+						</tr>
+						<tr>
+							<td>Alt</td>
+							<td>오브젝트를 복사</td>
+						</tr>
+						<tr>
+							<td>Shift</td>
+							<td>수평/수직선을 그리거나 수평/수직으로 이동할 때, 오브젝트의 크지조절시 가로 세로 비율이 같도록 고정시킬 때, 다중선택/다중해제 가능</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + 드래그</td>
+							<td>오브젝트의 선택과 동시에 복사</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + Shift + 드래그</td>
+							<td>오브젝트의 복제시 수평/수직으로 복사</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + (.)</td>
+							<td>텍스트 크기를 2 Point 만큼씩 키우기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + (,)</td>
+							<td>텍스트 크기를 2 Point 만큼씩 줄이기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + Alt + (.)</td>
+							<td>텍스트 크기를 10 Point 만큼씩 키우기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + Alt + (,)</td>
+							<td>텍스트 크기를 10 Point 만큼씩 줄이기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + A</td>
+							<td>오브젝트를 모두 선택</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + A</td>
+							<td>선택된 오브젝트를 해제</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Z</td>
+							<td>방금 전 작업을 취소(Undo)</td>
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + Z</td>
+							<td>Undo로 취소시킨 것을 복귀(Redo)</td>
+						</tr>
+						<tr>
+							<td>Ctrl + X</td>
+							<td>오려내기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + C</td>
+							<td>복사하기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + V</td>
+							<td>붙여넣기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + F</td>
+							<td>복사한 오브젝트 앞에 붙이기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + F</td>
+							<td>복사한 오브젝트 앞에 붙이기</td>
+						</tr>
+						<tr>
+							<td>Ctrl + B</td>
+							<td>복사한 오브젝트 뒤에 붙이기</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + K</td>
+							<td>환경설정 General창을 불러내기</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + D</td>
+							<td>방금 전 작업을 반복합니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + M</td>
+							<td>아래의 Move창을 띄워줍니다. 원하는 수치 만큼 가로, 세로, 각도로 이동시켜 줍니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + shift + [</td>
+							<td>선택된 오브젝트를 맨 뒤로 보냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + shift + ]</td>
+							<td>선택된 오브젝트를 맨 앞으로 보냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + [</td>
+							<td>선택된 오브젝트를 뒤로 보냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + ]</td>
+							<td>선택된 오브젝트를 앞으로 보냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + G </td>
+							<td>여러 오브젝트를 그룹 지어 줍니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + G </td>
+							<td>그룹 지어진 오브젝트를 그룹 해제시켜 줍니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + J </td>
+							<td>패스와 패스를 연결할 때 사용합니다. ( 연결할 두 점만 선택해야 합니다 )</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + 7</td>
+							<td>마스크 씌우기</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + 7</td>
+							<td>마스크 해제</td>	
+						</tr>
+						<tr>
+							<td> Ctrl + 8</td>
+							<td>컴파운드 패스 설정</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + ]</td>
+							<td>선택된 오브젝트를 앞으로 보냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + ]</td>
+							<td>선택된 오브젝트를 앞으로 보냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + Alt + 8</td>
+							<td>컴파운드 패스 해제</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + R</td>
+							<td>자를 불러냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + T</td>
+							<td>Character 팔레트 ( 문자관련 팔레트 ) 를 불러냅니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Shift + O</td>
+							<td>텍스트의 외곽을 만들어 오브젝트화 시킵니다.</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + ( ; )</td>
+							<td>가이드 보기 / 가리기</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + ( ; )</td>
+							<td>가이드 잠그기 / 풀기</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + 5</td>
+							<td>오브젝트를 가이드로 만들기</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + 5</td>
+							<td>가이드가 된 오브젝트를 원래대로 복귀</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + 2</td>
+							<td>선택된 것을 움직이지 않게 잠그기 ( Lock )</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + 2</td>
+							<td>잠겨진 모든 것 풀기 ( Unlock )</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + 3</td>
+							<td>선택된 것 가리기 ( Hide )</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + 3</td>
+							<td>가려진 모든 것을 보기 ( Show )</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + Alt + P</td>
+							<td>도큐멘트 설정</td>	
+						</tr>
+						<tr>
+							<td>Ctrl + P</td>
+							<td>프린트</td>	
+						</tr>
+					</tbody>
+				</table>
+
+					
+				<br><br>
+				<h2>Blend Tool(W)</h2>
+				<img src="img/blend.jpg" width="300" alt="blend option">
+
+				<ul>
+					<li>Smooth color : 부드러운 색상 : 블렌드에 대한 단계 수가 자동으로 설정</li>
+					<li>Speecified Steps : 지정된 단계 블렌드의 시작과 끝 사이의 단계 수를 설정</li>
+					<li>Spefied Distance : 지정된 거리 : 블렌드의 시작과 끝 단계 사이의 거리를 조절</li>
+					<li>Orientation : 블렌드의ㅡ 오브젝트 방향을 설정
+						<ul>
+							<li>페이지에 정렬 : 블렌드 방향을 페이지의 X축에 수직으로 설정</li>
+							<li>패스에 정렬 : 패스에 수직으로 블렌드의 방향을 설정</li>
+						</ul>
+					</li>
+					<li>[Object]-[Blend]
+						<ul>
+							<li>[Revers Spine] : 블렌드 흐름의 방향을 반전</li>
+							<li>[Revers Front to Back] : 블렌드 흐름의 방향은 반전 시키지 않고 앞뒤 순서만 바꿈</li>
+						</ul>
+					</li>
+				</ul>
+				<img src="img/blend2.jpg" width="300" alt="blend option">
+				
+				<br><br>
+				<img src="https://cdn.tutsplus.com/vector/uploads/legacy/tuts/73_Comprehensive_Blend/blendexercise.png">
+				<p><a href="https://design.tutsplus.com/tutorials/illustrators-blend-tool-a-comprehensive-guide--vector-551"></a>참고</p>
+
+				<br><br>
+				<h2>라이브 페인트 이용하여 색상채우기</h2>
+				<ol>
+					<li>그림을 그린 후 [Object] - [Live Paint] - [Make]를 선택합니다.</li>
+					<li>Live Paint Bucket(K) 툴을 선택하여 색을 채웁니다.</li>
+					<li>색상을 다 채우면 [Object] - [Live Paint] - [expand]를 선택하여 해제합니다.</li>
+				</ol>
+
+
+				<div class="screenshots" id="screenshots">
+					<div class="container-fluid">
+						<div class="row">
+							<ul class="grid">
+								<li>
+									<figure>
+										<img src="img/sample1-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample1-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/sample2-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample2-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/sample3-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample3-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/sample4-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample4-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<br><br>
+				<h2>swatches를 이용한 다양한 색상채우기</h2>
+				<ol>
+					<li>[window] - [swatches]  - swatches libraries menu 아이콘을 클릭합니다.</li>
+					<li>색상 스타일에 맞는 스와치를 골라 색을 표현합니다.</li>
+					<li>[window] - [swatches]  - Open Color Themes Panel  아이콘을 클릭합니다.</li>
+					<li>유사한 색상을 선택하여 색을 표현합니다.</li>
+					<li>대상을 선택한 후 recolor artwork를 선택한 후 색상을 변경합니다.</li>
+				</ol>
+
+				<div class="screenshots" id="screenshots">
+					<div class="container-fluid">
+						<div class="row">
+							<ul class="grid">
+								<li>
+									<figure>
+										<img src="img/sample5-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample5-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/sample6-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample6-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/sample7-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample7-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/sample8-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/sample8-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<br><br>
+				<h2>황금비율을 이용한 로고 만들기</h2>
+				<ol>
+					<li>1.168의 비율을 이용하여 사각형과 원을 그린다.</li>
+					<li>원만 모아서 원하는 로고 모양을 그린다.</li>
+					<li>pathfinder를 이용하여 필요없는 부분을 제거한다</li>
+					<li>unite를 이용하여 면을 만들고 색을 넣어준다.</li>
+					<li>gradient를 이용하여 색상을 넣어준다.</li>
+				</ol>
+
+				<div class="screenshots" id="screenshots">
+					<div class="container-fluid">
+						<div class="row">
+							<ul class="grid">
+								<li>
+									<figure>
+										<img src="img/logo1-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/logo1-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/logo2-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/logo2-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/logo3-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/logo3-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img src="img/logo2-500.jpg" alt="Screenshot 01">
+										<figcaption>
+										<div class="caption-content">
+											<a href="img/logo2-1500.jpg" class="fancybox">
+												<i class="fa fa-search">Paint</i><br>
+												<p>Illustrator</p>
+											</a>
+										</div>
+										</figcaption>
+									</figure>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			
+
+
+
+
+
+
+			</div>
+			<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>
+	<!-- //contents -->
+
+	<!-- //footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h5>Webstoryboy</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script>
+	<script src="../assets/js/bootstrap-collapse.js"></script>
+	<script src="../assets/js/bootstrap-transition.js"></script>
+	<script src="../assets/js/google-code-prettify/prettify.js"></script>
+	<script src="../assets/js/application.js"></script>
+	<script src="../assets/js/jquery.fancybox.pack.js"></script>
+    <script>
+	   $(".fancybox").fancybox();
+	</script>
+</body>
+
+</html>

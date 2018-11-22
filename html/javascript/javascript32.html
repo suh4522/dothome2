@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>string 객체</title>
+    <script>
+        var saying = "Home sweet home";
+        var msg = "<p>길이 : " + saying.length + "</p>"
+            msg += "<p>대문자 : " + saying.toUpperCase() + "</p>";
+            msg += "<p>소문자 : " + saying.toLowerCase() + "</p>";
+            msg += "<p>문자인덱스12 : " + saying.charAt(12) + "</p>";
+            msg += "<p>'ee' 첫 번째 위치  : " + saying.indexOf('ee') + "</p>";
+            msg += "<p>'e'마지막 번째 위치  : " + saying.lastIndexOf('e') + "</p>";
+            msg += "<p>인덱스 범위(8-14)  : " + saying.substring(8,14) + "</p>";
+            msg += "<p>replace  : " + saying.replace('me','w') + "</p>";
+        
+        document.write(msg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

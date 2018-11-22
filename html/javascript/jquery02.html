@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1 {color: red; font-size: 30px;}
+    </style>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //태그 선택자
+            //$("h1").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //클래스 선택자
+            //$(".list8").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //아이디 선택자
+            //$("#list2").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //그룹 선택자
+            //$("#list2,.list8").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //전체 선택자
+            //$("*").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            
+            //자손 선택자
+            //$(".list li").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //child 선택자
+            //$(".list > li").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //sibling 선택자
+            //$(".list3 + li").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //siblings 선택자
+            //$(".list3 ~ li").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            
+            //속성 선택자 [name="value"]
+            //$("li[class='list4']").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //속성 선택자 [name^="value"]
+            //$("li[class^='list']").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //속성 선택자 [name$="value"]
+            //$("li[class$='4']").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //속성 선택자 [name*="value"]
+            //$("li[class*='4']").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //속성 선택자 [name!="value"]
+            //$("li[class!='list4']").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //속성 선택자 [name="value"][name="value"]
+            //$("li a[href][title]").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            
+            //기본 필터 선택자 :eq(index)
+            //$("li:eq(3)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :lt(index)
+            //$("li:lt(3)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :gt(index)
+            //$("li:gt(3)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :first
+            //$("li:first").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :last
+            //$("li:last").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :odd
+            //$("li:odd").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :even
+            //$("li:even").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //기본 필터 선택자 :not
+            //$("li:not(:eq(4))").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            
+            //내용 필터 선택자 :contains()
+            //$("li:contains('list4')").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //내용 필터 선택자 :empty
+            //$("li:empty").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //내용 필터 선택자 :parent
+            //$("li:parent").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //내용 필터 선택자 :has()
+            //$("li:has('li')").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            
+            //보임 필터 선택자 :hidden()
+            //$("li:hidden").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //보임 필터 선택자 :visible
+            //$("li:visible").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            
+            //자식 필터 선택자
+            //$("li:first-child").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:first").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:last-child").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:last").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:nth-child(4)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:nth-child(even)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:nth-child(odd)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:nth-child(4n)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:nth-child(4n+2)").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+            //$("li:only-child").css({"backgroundColor":"#bbdefb","border":"2px dashed #303f9f"});
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery</h1>
+  <div id="sample">
+    <ul id="list1" class="list">
+      <li class="list1"><a href="#list2">list1</a></li>
+      <li class="list2"><a href="http://naver.com">list2</a></li>
+      <li class="list3"><a href="http://www.daum.net">list3</a></li>
+      <li class="list4"><a href="http://webstoryboy.co.kr" title="사이트">list4</a></li>
+      <li class="list5">list5</li>
+      <li class="list6">list6</li>
+      <li class="list7">list7</li>
+      <li class="list8">list8</li>
+      <li class="list9">list9</li>
+      <li class="list10">list10</li>
+    </ul>
+    <ul id="list2" class="list">
+      <li class="list1">list1</li>
+      <li class="list2">list2</li>
+      <li class="list3">list3</li>
+      <li class="list4">list4</li>
+      <li class="list5"></li>
+      <li class="list6">list6</li>
+      <li class="list7">list7</li>
+      <li class="list8">list8</li>
+      <li class="list9">list9</li>
+      <li class="list10">list10
+        <ul>
+          <li>list10-1</li>
+          <li style="width:0; height:0; overflow:hidden;">list10-2</li>
+          <li style="opacity:0;">list10-3</li>
+          <li style="visibility:hidden;">list10-4</li>
+          <li style="display:none;">list10-5</li>
+          <li>list10-6</li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+</body>
+</html>

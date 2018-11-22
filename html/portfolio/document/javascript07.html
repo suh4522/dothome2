@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>다중 if문</title>
+    <script>
+        var x = 100;
+        
+        if(x == 90){
+            document.write("x의 숫자는 90입니다.");
+        } else if(x == 91) {
+            document.write("x의 숫자는 91입니다.");
+        } else if(x == 92) {
+            document.write("x의 숫자는 92입니다.");
+        } else if(x == 93) {
+            document.write("x의 숫자는 93입니다.");
+        } else if(x == 94) {
+            document.write("x의 숫자는 94입니다.");
+        } else if(x == 95) {
+            document.write("x의 숫자는 95입니다.");
+        } else {
+            document.write("x의 숫자는 모르겠습니다.");
+        }
+        
+        var userID = window.prompt("아이디를 입력하세요")
+        var userPW = window.prompt("패스워드를 입력하세요")
+        
+        if(userID == "suh4522" && userPW == "1234"){
+            alert("환영합니다");
+        } else if (userID == "suh4522"){
+            alert("패스워드가 틀렸습니다");
+        } else if (userPW == "suh4522"){
+            alert("패스워드가 틀렸습니다");
+        } else if (userID == "1234"){
+            alert("아이디가 틀렸습니다");
+        } else {
+            alert("아이디와 비밀번호를 다시 한번 확인해주세요.");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

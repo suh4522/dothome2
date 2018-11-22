@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본적인 함수</title>
+</head>
+<body>
+    <div id="message">환영합니다.</div>
+    
+    <script>
+        var msg = "10% 할인을 받으시려면 지금 회원으로 가입하세요!";
+        
+        function updateMessage(){    //자바스크립트가 인터프린터 언어이기 때문에 script 내용 뒤에 위치하도록 한다.
+            var el = document.getElementById('message');
+            el.textContent = msg;
+        }
+        updateMessage();
+    </script>
+</body>
+</html>

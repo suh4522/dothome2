@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>매개변수가 있는 함수</title>
+    <script>
+        function func3(num){
+            document.write(num);
+        }
+        func3("매개변수가 있는 함수입니다.");
+    </script>
+</head>
+<body>
+    <div id="message">환영합니다.</div>
+    
+    <script>
+        var msg = "10% 할인을 받으시려면 지금 회원으로 가입하세요!";
+        
+        function updateMessage(msg){
+            var el = document.getElementById('message');
+            el.textContent = msg;
+        }
+        updateMessage(msg);
+    </script>
+</body>
+</html>

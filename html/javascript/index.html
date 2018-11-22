@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="webstoryboy">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, html5, html4, css3, html, markup, design">
+	<title>javascript sample</title>
+
+	<!-- web_font -->
+	<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+
+	<!-- css -->
+	<link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+	<link href="../assets/css/custom.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+
+	<!-- Prettify -->
+	<link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+		.face {
+			display: block;
+			margin: 20px auto;
+			width: 400px;
+		}
+
+		.face img {
+			width: 400px;
+			border-radius: 50%;
+		}
+
+		.face1 img {
+			width: 22%;
+			border-radius: 10%;
+			margin: 1%;
+		}
+
+		.member {
+			margin: 50px 0;
+		}
+
+		.member li {
+			width: 150px;
+			list-style: none;
+			display: inline-block;
+			margin: 6px;
+		}
+
+		.member li img {
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+	<div id="top-nav" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li><a href="#">webstoryboy</a></li>
+						<li><a href="#">reference</a></li>
+						<li><a href="#">tutorial</a></li>
+						<li><a href="#">css</a></li>
+						<li><a href="#">html</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //nav -->
+
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="span12" style="text-align:center;">
+					<div class="header_tit">
+						<h1>Professional web publishers</h1>
+						<h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+					</div>
+					<div class="header_icon" id="wow">
+						<ul>
+							<li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>Parallax</h1>
+				<ul>
+					<li><a href="#pa1">Parallax - basic</a></li>
+					<li><a href="#pa2">Parallax - menu</a></li>
+					<li><a href="#pa2-1">Parallax - Responsive Menu</a></li>
+					<li><a href="#pa2-2">Parallax - Side Menu</a></li>
+					<li><a href="#pa2-3">Parallax - Sticky Menu</a></li>
+					<li><a href="#pa2-4">Parallax - Hidden Menu</a></li>
+					<li><a href="#pa2-5">Parallax - Scroll Show/Hide Menu </a></li>
+
+					<li><a href="#pa3">Parallax - Dot</a></li>
+					<li><a href="#pa4">Parallax - Dot Style1</a></li>
+					<li><a href="#pa5">Parallax - Dot Style2</a></li>
+					<li><a href="#pa6">Parallax - Dot Style3</a></li>
+					<li><a href="#pa7">Parallax - Hamberger Menu style1</a></li>
+					<li><a href="#pa8">Parallax - Hamberger Menu style2</a></li>
+					<li><a href="#pa9">Parallax - Hamberger Menu style3</a></li>
+					<li><a href="#pa14">Parallax - Text Animation Basic</a></li>
+					<li><a href="#pa15">Parallax - Text Animation Animate.css</a></li>
+					<li><a href="#pa16">Parallax - Text Animation letter</a></li>
+					<li><a href="#pa17">Parallax - Text Animation letter2</a></li>
+					<li><a href="#pa18">Parallax - Horizontal</a></li>
+					<li><a href="#pa10">Modal - basic</a></li>
+					<li><a href="#pa11">Modal - Layer Style1</a></li>
+					<li><a href="#pa12">Modal - Layer Style2</a></li>
+					<li><a href="#pa13">Modal - Layer Style3</a></li>
+				</ul>
+
+				<h3>SAMPLE</h3>
+				<ul>
+					<li>slider site<a href="sample01.html">sample01</a></li>
+					<li>Parallax site<a href="sample02.html">sample02</a></li>
+				</ul>
+
+
+				<br><br>
+				<h3 id="pa1">Parallax - basic</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="bKmVjr" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - basic" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/bKmVjr/">Parallax - basic</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				
+				<br><br>
+				<h3 id="pa2">Parallax - menu</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="zaMYOP" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parllax-Menu" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/zaMYOP/">Parllax-Menu</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa2-1">Parallax - Responsive Menu</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="MXxQvz" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Responsive Nav" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/MXxQvz/">Responsive Nav</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa2-2">Parallax - Responsive Side Menu</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="XYGqyB" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Responsive Side Nav" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/XYGqyB/">Responsive Side Nav</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa2-3">Parallax - Sticky Menu</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="OwMZRe" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Sticky Menu" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/OwMZRe/">Parallax - Sticky Menu</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa2-4">Parallax - Hidden Menu</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="RBrJbw" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Hidden Menu" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/RBrJbw/">Parallax - Hidden Menu</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa2-5">Parallax - Scroll Show/Hide Menu </h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="VBedjZ" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Scroll Show/Hide Menu" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/VBedjZ/">Parallax - Scroll Show/Hide Menu</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa3">Parallax - Dot</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="zaMxmx" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax-Dot Menu" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/zaMxmx/">Parallax-Dot Menu</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa4">Parallax - Dot Style1</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="jKQPpP" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax-Dot Menu style" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/jKQPpP/">Parallax-Dot Menu style</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa5">Parallax - Dot Style2</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="EROVVQ" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax-Dot Menu style2" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/EROVVQ/">Parallax-Dot Menu style2</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa6">Parallax - Dot Style3</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="QxJNNR" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Dot Style3" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/QxJNNR/">Parallax - Dot Style3</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa7">Menu-Hambuger Style1</h3>
+				<p data-height="500" data-theme-id="0" data-slug-hash="GGPRvb" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Menu-Hambuger Style1" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/GGPRvb/">Menu-Hambuger Style1</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa8">Menu-Hambuger Style2</h3>
+				<p data-height="500" data-theme-id="0" data-slug-hash="YvdPMN" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Menu-Hambuger Style2" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/YvdPMN/">Menu-Hambuger Style2</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa9">Menu-Hambuger Style3</h3>
+				<p data-height="500" data-theme-id="0" data-slug-hash="mKaJKK" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Menu-Hambuger Style3" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/mKaJKK/">Menu-Hambuger Style3</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa14">Modal - Text Animation Basic</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="Lrvzyw" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Text Animation" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/Lrvzyw/">Parallax - Text Animation</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				
+				<br><br>
+				<h3 id="pa15">Parallax - Text Animation Animate.css</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="vrwZae" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Text Animation Animate.css" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/vrwZae/">Parallax - Text Animation Animate.css</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+				<br><br>
+				<h3 id="pa16">Parallax - Text Animation letter</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="OEYgoE" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Text Animation letter" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/OEYgoE/">Parallax - Text Animation letter</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa17">Parallax - Text Animation letter2</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="pKmwxX" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Text Animation letter2" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/pKmwxX/">Parallax - Text Animation letter2</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa18">Parallax - Horizontal</h3>
+				<p data-height="265" data-theme-id="0" data-slug-hash="rrxrma" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax Horizontal Site" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/rrxrma/">Parallax Horizontal Site</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa15">Modal - Text Animation Basic</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="Lrvzyw" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Parallax - Text Animation" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/Lrvzyw/">Parallax - Text Animation</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa10">Modal-Basic</h3>
+				<p data-height="600" data-theme-id="0" data-slug-hash="ZRwMqj" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Modal style1" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/ZRwMqj/">Modal style1</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa11">Modal - Layer Style1</h3>
+				<p data-height="600" data-theme-id="0" data-slug-hash="zaemZg" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Modal style2" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/zaemZg/">Modal style2</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa12">Modal - Layer Style2</h3>
+				<p data-height="600" data-theme-id="0" data-slug-hash="jKdeQJ" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Modal - Layer Style2" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/jKdeQJ/">Modal - Layer Style2</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br><br>
+				<h3 id="pa13">Modal - Layer Style3</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+			<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>
+	<!-- //contents -->
+
+	<!-- //footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h5>Webstoryboy</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script>
+	<script src="../assets/js/bootstrap-collapse.js"></script>
+	<script src="../assets/js/bootstrap-transition.js"></script>
+	<script src="../assets/js/google-code-prettify/prettify.js"></script>
+	<script src="../assets/js/application.js"></script>
+</body>
+
+</html>

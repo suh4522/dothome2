@@ -1,0 +1,120 @@
+/* reset */
+body,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,textarea,p,
+select,button,figure{margin:0;padding:0;  font-family: 'cera-blackItalic',sans-serif;}
+em,address{font-style:normal;}
+ul,li,ol{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+a{ color: #fff; text-decoration:none;}
+img,fieldset{border:0;}
+/*video, img {width: 100%;}*/
+body{background:#fff;direction:ltr;-webkit-text-size-adjust:none; }
+table{width:100%;border-spacing: 0; border-collapse: collapse;}
+
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after{display:table;content:'';line-height:0;}
+.clearfix:after{clear:both;}
+
+@font-face{font-family:'cera-blackitalic';
+	src:url('../fonts/cera-blackitalic-webfont.eot');
+	src:url('../fonts/cera-blackitalic-webfont.eot?#iefix') format("embedded-opentype"),
+	url('../fonts/cera-blackitalic-webfont.woff2') format("woff2"),
+	url('../fonts/cera-blackitalic-webfont.woff') format("woff"),
+	url('../fonts/cera-blackitalic-webfont.ttf') format("truetype")
+}
+@font-face{font-family:'Cera-RegularItalic';
+	src:url('../fonts/Cera-RegularItalic.eot');
+	src:url('../fonts/Cera-RegularItalic.eot?#iefix') format("embedded-opentype"),
+	url('../fonts/Cera-RegularItalic.woff') format("woff"),
+	url('../fonts/Cera-RegularItalic.ttf') format("truetype")
+}
+
+
+/* info */
+.info {position: fixed; right: 10px; top: 60px; display: none;}
+.info span {position: relative; background: rgba(0,0,0,0.6); padding: 10px; border-radius: 50%; color: #fff; width: 50px; height: 50px; display:inline-block; margin: 3px; text-align: center; line-height: 50px;}
+.info .scroll_top:before {content:''; position: absolute; left: 50%; top: -40px; transform: translatex(-50%);}
+
+/* mainNav */
+.mainNav {position: fixed;top: 66px;left: 0;padding-left: 14%;z-index:50;transition: all 0.4s ease;}
+.navContent {margin: 3% 0 0;font-size: 14px;}
+.navContent ul {text-transform: uppercase; overflow: hidden;}
+.navContent ul li {position: relative; float: left;font-weight: 400;letter-spacing: .08em;}
+.navContent ul li a {display: block; padding: 20px}
+.navContent ul li a::after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    position: relative;
+    top: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+}
+.navContent ul li a:hover::after{
+    opacity: 1; transform: translateY(0px);
+  }
+
+/* contents */
+.container {
+    width: 54%;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 14.5% 0 4.5%;
+    position: relative;
+    z-index: 10;
+}
+.section {position: relative; margin-bottom: 10%}
+.section h2 {position: absolute;left: 50%;top:50%;transform: translate(-50%,-50%);font-size: 82px;width: 450px;text-align: center;z-index: 10;}
+.img {
+    padding-top: 56.25%;
+    background: center bottom no-repeat fixed;
+    background-color: rgba(0, 0, 0,0.1);
+    background-blend-mode: multiply; 
+    position: relative;
+}
+.img1 {background-image: url(../img/web1.png); background-size: 55%;}
+.img2 {background-image: url(../img/web2.png); background-size: 55%;}
+.img3 {background-image: url(../img/web3.png); background-size: 55%;}
+.img4 {background-image: url(../img/web4.png); background-size: 55%;}
+.img5 {background-image: url(../img/web5.png); background-size: 55%;}
+.img6 {background-image: url(../img/web6.png); background-size: 55%;}
+.img7 {background-image: url(../img/web7.png); background-size: 55%;}
+
+
+
+
+
+
+
+@media (max-width: 1490px){
+    .container {width: 70%;}
+    .img {background-size: 70%;}
+}
+
+@media (max-width: 1200px){
+    .container {width: 80%;}
+    .img {background-size: 90%; background-position: center center}
+}
+
+@media (max-width: 960px){
+    .mainNav {display: none;}
+    .container {width: 90%;}
+    .section a h2 {font-size: 60px;}
+    .section .desc {text-align: right;width: 400px;top:auto;bottom: 20px;right:20px;left: auto;}
+    .section .desc ul li {margin: 0; opacity: 1; transform: translate(0,0); transition: all 0.5s ease-in-out; }
+}
+
+@media (max-width: 600px){
+    .container {padding: 0}
+    .section {height: 80vh;}
+    .section a {display: block; height: 100%;}
+    .section a h2 {font-size: 40px;}
+    .img {height: 80vh; box-sizing: border-box; padding: 0; background-size: ; background-position:center center; background-attachment: scroll;     background-size: 120%; }
+}
+
+    
+
+
+

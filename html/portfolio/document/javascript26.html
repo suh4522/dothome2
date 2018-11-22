@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>생성자 문법을 이용한 객체</title>
+</head>
+<body>
+    <h2>예약정보</h2>
+    <div id="hotelName"></div>
+    <div id="availability">
+        <p id="room"></p>
+        <p>개의 방이 남아있습니다.</p>
+    </div>
+    
+    <script>
+        //var hotel = new Array();
+        var hotel = new Object();
+        
+        hotel.name = 'park';
+        hotel.rooms = '120';
+        hotel.booked = '70';
+        hotel.checkAvailability = function(){
+            return this.rooms - this.booked;
+        };
+        
+        var elName = document.getElementById('hotelName');
+        elName.textContent = hotel.name;
+        
+        var elrooms = document.getElementById('room');
+        elrooms.textContent = hotel.checkAvailability();
+    </script>
+</body>
+</html>

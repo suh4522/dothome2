@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slideToggle</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        .accordion-tit {background: #ccc; width: 100%; display: block; padding: 5px; border-top: 1px solid #000;}
+        .accordion-desc {display: none;}
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="accordion">
+            <li><a href="#" class="accordion-tit">title1</a>
+                <div class="accordion-desc">
+                    <p>You know I can paint the world
+                        Sitting there in black and gold
+                        You’re the perfect chemical
+                        I gotta test I gotta know
+                        You know I’m no criminal
+                        But I could take your heart and go
+                        You’re the perfect chemical
+                        I gotta test I gotta gotta
+                    </p>
+                </div>
+            </li>
+            <li><a href="#" class="accordion-tit">title2</a>
+                <div class="accordion-desc">
+                    <p>You know I can paint the world
+                        Sitting there in black and gold
+                        You’re the perfect chemical
+                        I gotta test I gotta know
+                        You know I’m no criminal
+                        But I could take your heart and go
+                        You’re the perfect chemical
+                        I gotta test I gotta gotta
+                    </p>
+                </div>
+            </li>
+            <li><a href="#" class="accordion-tit">title3</a>
+                <div class="accordion-desc">
+                    <p>You know I can paint the world
+                        Sitting there in black and gold
+                        You’re the perfect chemical
+                        I gotta test I gotta know
+                        You know I’m no criminal
+                        But I could take your heart and go
+                        You’re the perfect chemical
+                        I gotta test I gotta gotta
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(".accordion-tit").click(function(){
+            $(this).next(".accordion-desc").slideToggle(100);
+        });
+    </script>
+</body>
+</html>

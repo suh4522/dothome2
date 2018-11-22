@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0; padding: 0;}
+		li {list-style: none;}
+		a  {text-decoration: none;}
+		body {background:#D0FCFF;}
+
+		.character {
+		    width: 400px; height: 300px;
+		    position: fixed; left: 50%; bottom: 0; z-index: 10;
+		    margin-left: -200px;
+		    background-size: 4000px;
+		    background-image: url(https://tistory3.daumcdn.net/tistory/2909031/skin/images/front.jpg);
+		}
+		.character.walking {
+		    animation: walk 0.8s steps(10,start) infinite;
+		}
+		@keyframes walk {
+		    0%   {background-position: 0px 0px; }
+		    100% {background-position: -4000px 0px; }
+		}
+		.character.left {
+		    background-image: url(https://tistory1.daumcdn.net/tistory/2909031/skin/images/back.jpg);
+		    background-position: 0px;
+		}
+
+		.road {overflow: hidden; position: fixed; height: 500px; width: 15000px;}
+		.road > div {width: 1500px;}
+		.container {
+		    float: left; height: 100vh; width: 1500px; line-height: 60vh; text-align: center; position: relative; font-size: 6vw; color: #FE3B95; font-family: 'Lobster', cursive;
+		}
+	</style>
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<div class="character"></div>
+
+	<div class="road">
+	    <div class="container road1">START</div>
+	    <div class="container road2">RUN!</div>
+	    <div class="container road3">RUN!!</div>
+	    <div class="container road4">RUN!!!</div>
+	    <div class="container road5">RUN!!!</div>
+	    <div class="container road6">RUN!!!!</div>
+	    <div class="container road7">RUN!!!!!</div>
+	    <div class="container road8">STOP</div>
+	    <div class="container road9">GO!!</div>
+	    <div class="container road10">END</div>
+	</div>
+
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/TweenMax.min.js"></script>
+	<script>
+		var lastScrollTop = 0;                                  //현재 스크롤 값(제일 마지막 스크롤 값)
+		var roadLength = $(".road").width();        //전체 가로 값(15000)
+		$("body").css("height", roadLength);        //전체 세로 값은 width 전체 값을 할당
+
+		$(window).scroll(function(){
+		    var wScroll = $(window).scrollTop();
+		    var wWidth = $(window).width();                             //현재 화면의 가로 값
+		    var wHeight = $(window).height();                           //현재 화면의 세로 값
+		    var dHeight = $("body").height() - wHeight;     //전체 세로 값 - 현재 화면의 새로 값
+		    var wRoad = roadLength - wWidth;                            //전체 가로 값 - 현재 화면의 가로 값
+		    var step = wRoad/dHeight;                                           //전체 가로 값 / 전체 세로 값
+		    
+		    var goLeft = wScroll * step;
+		    
+		    
+		    $(".road").css({ "transform":"translateX(-"+ goLeft +"px )" });
+		    
+		    clearTimeout($.data(this,"scrollCheck"));
+		    
+		    $.data(this,"scrollCheck",setTimeout(function(){
+		        $(".character").removeClass("walking");
+		    },100));
+		    
+		    if(wScroll > lastScrollTop){
+		        //앞으로
+		        $(".character").removeClass("left");
+		        $(".character").addClass("walking");
+		    } else {
+		        $(".character").addClass("left");
+		        $(".character").addClass("walking");
+		    }
+		    lastScrollTop = wScroll;
+		});
+
+		$(document).keydown(function(e){
+		    if(e.which == 39){
+		        var scrollTop = $(document).scrollTop();
+		        $(window).scrollTop(scrollTop + 50);
+		    }
+		    if(e.which == 37){
+		        var scrollTop = $(document).scrollTop();
+		        $(window).scrollTop(scrollTop - 50);
+		    }
+		});
+	</script>
+</body>
+</html>

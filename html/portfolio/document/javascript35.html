@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>date 객체</title>
+    <script>
+        var today = new Date();
+        var msg = "";
+        msg += "오늘은 몇 일이니? : "+today.getDate()+"일"+"<br>";
+        msg += "오늘은 무슨 요일이니? : "+today.getDay()+"요일"+ "<br>";
+        msg += "오늘은 몇년도니? : "+today.getFullYear()+"년"+ "<br>";
+        msg += "지금은 몇 시니? : "+today.getHours()+"시"+ "<br>";
+        msg += "지금은 몇 분이니? : "+today.getMinutes()+"분"+ "<br>";
+        msg += "지금은 몇 초니? : "+today.getMilliseconds()+"초"+ "<br>";
+        msg += "오늘은 몇 월이니? : "+today.getMonth()+"월"+ "<br>";
+        
+        document.write(msg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

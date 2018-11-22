@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="webstoryboy">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, html5, html4, css3, html, markup, design">
+	<title>Emmet</title>
+
+	<!-- web_font -->
+	<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+
+	<!-- css -->
+	<link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+	<link href="../assets/css/custom.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+
+	<!-- Prettify -->
+	<link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+		.face {
+			display: block;
+			margin: 20px auto;
+			width: 400px;
+		}
+
+		.face img {
+			width: 400px;
+			border-radius: 50%;
+		}
+
+		.face1 img {
+			width: 22%;
+			border-radius: 10%;
+			margin: 1%;
+		}
+
+		.member {
+			margin: 50px 0;
+		}
+
+		.member li {
+			width: 150px;
+			list-style: none;
+			display: inline-block;
+			margin: 6px;
+		}
+
+		.member li img {
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+	<div id="top-nav" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li><a href="#">webstoryboy</a></li>
+						<li><a href="#">reference</a></li>
+						<li><a href="#">tutorial</a></li>
+						<li><a href="#">css</a></li>
+						<li><a href="#">html</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //nav -->
+
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="span12" style="text-align:center;">
+					<div class="header_tit">
+						<h1>Professional web publishers</h1>
+						<h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+					</div>
+					<div class="header_icon" id="wow">
+						<ul>
+							<li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>Emmet</h1>
+                <div class="well">Emmet을 HTML,CSS의 자동완성 기능을 통해 작업 생산성을 향상시키는 기능입니다.
+                <a href="https://docs.emmet.io/cheat-sheet/">바로가기</a></div>
+                
+                <br>
+                <h2>Emmet의 문법</h2>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>문법</th>
+                            <th>예제</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td><code>&gt;</code></td>
+                            <td>div&gt;ul&gt;li</td>
+                            <td>여러개의 요소를 한번에 만들 때(child)</td>
+                        </tr>
+                        <tr>
+                            <td><code>+</code></td>
+                            <td>div+p</td>
+                            <td>형제 요소를 한번에 만들 때(sibling)</td>
+                        </tr>
+                        <tr>
+                            <td><code>^</code></td>
+                            <td>div>p^span</td>
+                            <td>부모 요소에 추가하여 만들 때(climb-up)</td>
+                        </tr>
+                        <tr>
+                            <td><code>()</code></td>
+                            <td>(ul>li>a+div)</td>
+                            <td>그룹화하여 순서를 정할 때(Grouping)</td>
+                        </tr>
+                        <tr>
+                            <td><code>*</code></td>
+                            <td>div>ul>li*5</td>
+                            <td>원하는 개수를 설정할 때(Multiplickation)</td>
+                        </tr>
+                        <tr>
+                            <td><code>$</code></td>
+                            <td>div>ul>li.img$*5</td>
+                            <td>넘버를 순차적으로 적용할 때(Numbering)</td>
+                        </tr>
+                        <tr>
+                            <td><code>#</code></td>
+                            <td>#wrap.div</td>
+                            <td>아이디와 클래스 속성 설정 할 때</td>
+                        </tr>
+                        <tr>
+                            <td><code>[]</code></td>
+                            <td>td[rowspan="2"]</td>
+                            <td>요소의 속성 값을 성정 할 때</td>
+                        </tr>
+                        <tr>
+                            <td><code>{}</code></td>
+                            <td>ul>li{header}</td>
+                            <td>텍스트 요소를 추가 할 때 설정</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>div>ul>li</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+                
+                <h3>! or html:5</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                
+                <h3>link</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;link rel="stylesheet" href=""&gt;
+</pre>
+                
+                <h3>di+p+div</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;di&gt;&lt;/di&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+</pre>
+                
+                <h3>div+p+div</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+</pre>
+                
+                <h3>div>ul>li*4^^+p+div</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+</pre>
+                
+                <h3>(div>ul>li*4)+p+span</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;span&gt;&lt;/span&gt;
+</pre>
+                
+                <h3>#wrap>#header+#content+#footer</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div id="wrap"&gt;
+    &lt;div id="header"&gt;&lt;/div&gt;
+    &lt;div id="content"&gt;&lt;/div&gt;
+    &lt;div id="footer"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                
+                <h3>#link>a[#]*10</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div id="link"&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+                
+                <h3>ul[id="ul" class="ul"]>li*8</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;ul id="ul" class="ul"&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                
+                <h3>div>ul>li>a[#]{글씨}</h3>
+<pre class="pre-show prettyprint linenums">
+&lt;div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;글씨&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+                
+                <h3>#list>ul>.link$$*10>a[#]{link$$}</h3>  
+<pre class="pre-show prettyprint linenums">
+&lt;div id="list"&gt;
+    &lt;ul&gt;
+        &lt;li class="link01"&gt;&lt;a href="#"&gt;link01&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link02"&gt;&lt;a href="#"&gt;link02&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link03"&gt;&lt;a href="#"&gt;link03&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link04"&gt;&lt;a href="#"&gt;link04&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link05"&gt;&lt;a href="#"&gt;link05&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link06"&gt;&lt;a href="#"&gt;link06&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link07"&gt;&lt;a href="#"&gt;link07&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link08"&gt;&lt;a href="#"&gt;link08&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link09"&gt;&lt;a href="#"&gt;link09&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="link10"&gt;&lt;a href="#"&gt;link10&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>                       
+
+
+
+
+            </div>
+			<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>
+	<!-- //contents -->
+
+	<!-- //footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h5>Webstoryboy</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script>
+	<script src="../assets/js/bootstrap-collapse.js"></script>
+	<script src="../assets/js/bootstrap-transition.js"></script>
+	<script src="../assets/js/google-code-prettify/prettify.js"></script>
+	<script src="../assets/js/application.js"></script>
+</body>
+
+</html>

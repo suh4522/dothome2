@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="webstoryboy">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, html5, html4, css3, html, markup, design">
+	<title>BACKGROUND</title>
+    
+    <!-- web_font -->
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+    
+    <!-- css -->
+    <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    
+    <!-- Prettify -->
+    <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+	
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+	.face {display:block; margin:20px auto; width:400px; }
+	.face img {width:400px; border-radius:50%; }
+	.face1 img {width:22%; border-radius:10%; margin:1%;}
+	.member {margin:50px 0;}
+	.member li {width:150px; list-style:none; display:inline-block; margin:6px; }
+	.member li img { border-radius:50%;}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+    <div id="top-nav" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse">
+                	<ul class="nav pull-right">
+                		<li><a href="#">webstoryboy</a></li>
+                		<li><a href="#">reference</a></li>
+                		<li><a href="#">tutorial</a></li>
+                		<li><a href="#">css</a></li>
+                		<li><a href="#">html</a></li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //nav -->
+    
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="span12" style="text-align:center;">
+                    <div class="header_tit">
+	                	<h1>Professional web publishers</h1>
+						<h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+		            </div>
+		            <div class="header_icon" id="wow">
+		                <ul>
+		                    <li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                </ul>
+		            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+    
+    <!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>BACKGROUND</h1>
+				
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>Porperty</th>
+							<th>sample</th>
+							<th>Descriptio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>background</td>
+							<td>background : #000 url(경로) no-repeat top / cover</td>
+							<td>배경 속기형 작성법</td>
+						</tr>
+						<tr>
+							<td>background-image</td>
+							<td>background-image : url("경로")</td>
+							<td>배경 이미지 설정</td>
+						</tr>
+						<tr>
+							<td>background-repeat</td>
+							<td>background-repeat : no-repeat</td>
+							<td>배경 이미지 반복 여부를 설정</td>
+						</tr>
+						<tr>
+							<td>background-attachment</td>
+							<td>background-attachment : fixed</td>
+							<td>배경 이미지 고정 여부 설정</td>
+						</tr>
+						<tr>
+							<td>background-color</td>
+							<td>background-color : #fff</td>
+							<td>백그라운드 색 설정</td>
+						</tr>
+						<tr>
+							<td>background-orgin</td>
+							<td>background-origin :  content-box</td>
+							<td>배경 이미지의 중심 위치를 설정</td>
+						</tr>
+						<tr>
+							<td>background-size</td>
+							<td>background-size :  cover</td>
+							<td>배경 사이즈 설정</td>
+						</tr>
+						<tr>
+							<td>background-clip</td>
+							<td>background-clip :  content-box</td>
+							<td>배경의 적용 범위 설정</td>
+						</tr>
+					</tbody>
+				</table>
+				<br><br>
+				<h2>Background Gradients</h2>
+				<div class="well">background : linear-gradient(direction, color1, color2, ......)</div>
+
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>Value</th>
+							<th>Sample</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>linear-gradient</td>
+							<td>background : linear-gradient( )</td>
+							<td>선형 그라데이션 백그라운드를 설정합니다.</td>
+						</tr>
+						<tr>
+							<td>radial-gradient</td>
+							<td>background : radial-gradient( )</td>
+							<td>원형 그라데이션 백그라운드를 설정합니다.</td>
+						</tr>
+						<tr>
+							<td>repeating-linear-gradient</td>
+							<td>background : linear-gradient( )</td>
+							<td>반복 선형 그라데이션 백그라운드를 설정합니다.</td>
+						</tr>
+						<tr>
+							<td>repeating-radial-gradient</td>
+							<td>background : radial-gradient( )</td>
+							<td>반복 원형 그라데이션 백그라운드를 설정합니다.</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!--.well.clearfix>.block.gra1*4>.gradient${gradient$}-->
+				<style>
+					.block { width: 180px; height: 180px; margin: 50px; font-size: 18px; line-height: 180px; color: #fff;	cursor: pointer; text-align: center; float: left; }
+					.block.gra1 > div {border-radius: 50%;}
+					.gradient1 {background: linear-gradient(to top, #fbc2eb, #a18cd1);}
+					.gradient2 {background: linear-gradient(to right, #fbc2eb, #a18cd1);}
+					.gradient3 {background: linear-gradient(to bottom, #fbc2eb, #a18cd1);}
+					.gradient4 {background: linear-gradient(to left, #fbc2eb, #a18cd1);}
+
+					.gradient5 {background: -webkit-linear-gradient(top, #fbc2eb, #a18cd1);}
+					.gradient6 {background: -webkit-linear-gradient(right, #fbc2eb, #a18cd1);}
+					.gradient7 {background: -webkit-linear-gradient(bottom, #fbc2eb, #a18cd1);}
+					.gradient8 {background: -webkit-linear-gradient(left, #fbc2eb, #a18cd1);}
+
+					.gradient9 {background: -webkit-linear-gradient(left top, #fbc2eb, #a18cd1);}
+					.gradient10 {background: -webkit-linear-gradient(right top, #fbc2eb, #a18cd1);}
+					.gradient11 {background: -webkit-linear-gradient(left bottom, #fbc2eb, #a18cd1);}
+					.gradient12 {background: -webkit-linear-gradient(right bottom, #fbc2eb, #a18cd1);}
+
+					.gradient13 {background: linear-gradient(0deg, #e0c3fc, #8ec5fc);}
+					.gradient14 {background: linear-gradient(40deg, #e0c3fc, #8ec5fc);}
+					.gradient15 {background: linear-gradient(80deg, #e0c3fc, #8ec5fc);}
+					.gradient16 {background: linear-gradient(120deg, #e0c3fc, #8ec5fc);}
+
+					.gradient17 {background: linear-gradient(140deg, #f093fb, #f5576c);}
+					.gradient18 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb);}
+					.gradient19 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb, #a6c1ee);}
+					.gradient20 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb, #a6c1ee, #f6d365, #fda085);}
+
+					.gradient21 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 20%, #a6c1ee, #f6d365, #fda085);}
+					.gradient22 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 40%, #a6c1ee, #f6d365, #fda085);}
+					.gradient23 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 60%, #a6c1ee, #f6d365, #fda085);}
+					.gradient24 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 80%, #a6c1ee, #f6d365, #fda085);}
+
+					.gradient25 {background: radial-gradient(#fc6076, #ff9a44);}
+					.gradient26 {background: radial-gradient(#fc6076, #ff9a44, #00ecbc);}
+					.gradient27 {background: radial-gradient(#fc6076, #ff9a44, #00ecbc, #b334ef);}
+					.gradient28 {background: radial-gradient(#fc6076, #ff9a44, #00ecbc, #b334ef, #ff4e50);}
+
+					.gradient29 {background: radial-gradient(#fc6076, #ff9a44 20%, #00ecbc, #b334ef, #ff4e50);}
+					.gradient30 {background: radial-gradient(#fc6076, #ff9a44 40%, #00ecbc, #b334ef, #ff4e50);}
+					.gradient31 {background: radial-gradient(#fc6076, #ff9a44 60%, #00ecbc, #b334ef, #ff4e50);}
+					.gradient32 {background: radial-gradient(#fc6076, #ff9a44 80%, #00ecbc, #b334ef, #ff4e50);}
+
+					.gradient33 {background: radial-gradient(ellipse farthest-corner at center top, #fddb92 0%, #48c6ef 100%);}
+					.gradient34 {background: radial-gradient(ellipse farthest-corner at left top, #fddb92 0%, #48c6ef 100%);}
+					.gradient35 {background: radial-gradient(ellipse farthest-corner at right top, #fddb92 0%, #48c6ef 100%);}
+					.gradient36 {background: radial-gradient(ellipse farthest-corner at bottom left, #fddb92 0%, #48c6ef 100%);}
+					.gradient37 {background: radial-gradient(ellipse farthest-corner at bottom center, #fddb92 0%, #48c6ef 100%);}
+					.gradient38 {background: radial-gradient(ellipse farthest-corner at bottom right, #fddb92 0%, #48c6ef 100%);}
+					.gradient39 {background: radial-gradient(ellipse farthest-corner at left center, #fddb92 0%, #48c6ef 100%);}
+					.gradient40 {background: radial-gradient(ellipse farthest-corner at right center, #fddb92 0%, #48c6ef 100%);}
+
+					.gradient41 {background: linear-gradient(0deg, #d61058 50%, #f49943 50%);}
+					.gradient42 {background: linear-gradient(30deg, #d61058 50%, #f49943 50%);}
+					.gradient43 {background: linear-gradient(90deg, #d61058 50%, #f49943 50%);}
+					.gradient44 {background: linear-gradient(180deg, #d61058 50%, #f49943 50%);}
+
+					.gradient45 {background: repeating-linear-gradient(-45deg, #66a6ff 5px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+					.gradient46 {background: repeating-linear-gradient(-45deg, #66a6ff 10px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+					.gradient47 {background: repeating-linear-gradient(-45deg, #66a6ff 15px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+					.gradient48 {background: repeating-linear-gradient(-45deg, #66a6ff 25px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+
+					.gradient49 {background: repeating-linear-gradient(-45deg, #66a6ff 5px, #66a6ff 30px, #89f7f3 35px, #89f7f3 45px);}
+					.gradient50 {background: repeating-linear-gradient(-45deg, #66a6ff 10px, #66a6ff 30px, #89f7f3 40px, #89f7f3 45px);}
+					.gradient51 {background: repeating-linear-gradient(-45deg, #66a6ff 15px, #66a6ff 30px, #89f7f3 45px, #89f7f3 45px);}
+					.gradient52 {background: repeating-linear-gradient(-45deg, #66a6ff 25px, #66a6ff 30px, #89f7f3 50px, #89f7f3 45px);}
+
+					.gradient53 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 10px);}
+					.gradient54 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 15px);}
+					.gradient55 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 20px);}
+					.gradient56 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 25px);}
+
+					.gradient57 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 10px, #fbc2eb 10px);}
+					.gradient58 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 15px, #fbc2eb 15px);}
+					.gradient59 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 20px, #fbc2eb 20px);}
+					.gradient60 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 25px, #fbc2eb 25px);}
+
+					.gradient61 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+					.gradient62 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+					.gradient63 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+					.gradient64 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+
+					.gradient65 {background: radial-gradient(#30cfd0, #330867) fixed;}
+					.gradient66 {background: radial-gradient(#30cfd0, #330867) fixed;}
+					.gradient67 {background: radial-gradient(#30cfd0, #330867) fixed;}
+					.gradient68 {background: radial-gradient(#30cfd0, #330867) fixed;}
+				</style>
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient1">gradient1</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient2">gradient2</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient3">gradient3</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient4">gradient4</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient1 {background: linear-gradient(to top, #fbc2eb, #a18cd1);}
+.gradient2 {background: linear-gradient(to right, #fbc2eb, #a18cd1);}
+.gradient3 {background: linear-gradient(to bottom, #fbc2eb, #a18cd1);}
+.gradient4 {background: linear-gradient(to left, #fbc2eb, #a18cd1);}
+</pre>				
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient5">gradient5</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient6">gradient6</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient7">gradient7</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient8">gradient8</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient5 {background: -webkit-linear-gradient(top, #fbc2eb, #a18cd1);}
+.gradient6 {background: -webkit-linear-gradient(right, #fbc2eb, #a18cd1);}
+.gradient7 {background: -webkit-linear-gradient(bottom, #fbc2eb, #a18cd1);}
+.gradient8 {background: -webkit-linear-gradient(left, #fbc2eb, #a18cd1);}
+</pre>			
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient9">gradient1</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient10">gradient2</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient11">gradient3</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient12">gradient4</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient9 {background: -webkit-linear-gradient(left top, #fbc2eb, #a18cd1);}
+.gradient10 {background: -webkit-linear-gradient(right top, #fbc2eb, #a18cd1);}
+.gradient11 {background: -webkit-linear-gradient(left bottom, #fbc2eb, #a18cd1);}
+.gradient12 {background: -webkit-linear-gradient(right bottom, #fbc2eb, #a18cd1);}
+</pre>
+				
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient13">gradient13</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient14">gradient14</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient15">gradient15</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient16">gradient16</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient13 {background: linear-gradient(0deg, #e0c3fc, #8ec5fc);}
+.gradient14 {background: linear-gradient(40deg, #e0c3fc, #8ec5fc);}
+.gradient15 {background: linear-gradient(80deg, #e0c3fc, #8ec5fc);}
+.gradient16 {background: linear-gradient(120deg, #e0c3fc, #8ec5fc);}
+</pre>			
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient17">gradient17</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient18">gradient18</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient19">gradient19</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient20">gradient20</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient17 {background: linear-gradient(140deg, #f093fb, #f5576c);}
+.gradient18 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb);}
+.gradient19 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb, #a6c1ee);}
+.gradient20 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb, #a6c1ee, #f6d365, #fda085);}
+</pre>			
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient21">gradient21</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient22">gradient22</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient23">gradient23</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient24">gradient24</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient21 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 20%, #a6c1ee, #f6d365, #fda085);}
+.gradient22 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 40%, #a6c1ee, #f6d365, #fda085);}
+.gradient23 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 60%, #a6c1ee, #f6d365, #fda085);}
+.gradient24 {background: linear-gradient(140deg, #f093fb, #f5576c, #fbc2eb 80%, #a6c1ee, #f6d365, #fda085);}
+</pre>		
+
+				<div class="well clearfix">
+					<div class="block gra2">
+						<div class="gradient25">gradient25</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient26">gradient26</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient27">gradient27</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient28">gradient28</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient25 {background: radial-gradient(#fc6076, #ff9a44);}
+.gradient26 {background: radial-gradient(#fc6076, #ff9a44, #00ecbc);}
+.gradient27 {background: radial-gradient(#fc6076, #ff9a44, #00ecbc, #b334ef);}
+.gradient28 {background: radial-gradient(#fc6076, #ff9a44, #00ecbc, #b334ef, #ff4e50);}
+</pre>
+
+				<div class="well clearfix">
+					<div class="block gra2">
+						<div class="gradient29">gradient29</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient30">gradient30</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient31">gradient31</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient32">gradient32</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient29 {background: radial-gradient(#fc6076, #ff9a44 20%, #00ecbc, #b334ef, #ff4e50);}
+.gradient30 {background: radial-gradient(#fc6076, #ff9a44 40%, #00ecbc, #b334ef, #ff4e50);}
+.gradient31 {background: radial-gradient(#fc6076, #ff9a44 60%, #00ecbc, #b334ef, #ff4e50);}
+.gradient32 {background: radial-gradient(#fc6076, #ff9a44 80%, #00ecbc, #b334ef, #ff4e50);}
+</pre>
+
+
+				<div class="well clearfix">
+					<div class="block gra2">
+						<div class="gradient33">gradient33</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient34">gradient34</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient35">gradient35</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient36">gradient36</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient37">gradient37</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient38">gradient38</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient39">gradient39</div>
+					</div>
+					<div class="block gra2">
+						<div class="gradient40">gradient40</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient33 {background: radial-gradient(ellipse farthest-corner at center top, #fddb92 0%, #48c6ef 100%);}
+.gradient34 {background: radial-gradient(ellipse farthest-corner at left top, #fddb92 0%, #48c6ef 100%);}
+.gradient35 {background: radial-gradient(ellipse farthest-corner at right top, #fddb92 0%, #48c6ef 100%);}
+.gradient36 {background: radial-gradient(ellipse farthest-corner at bottom left, #fddb92 0%, #48c6ef 100%);}
+.gradient37 {background: radial-gradient(ellipse farthest-corner at bottom center, #fddb92 0%, #48c6ef 100%);}
+.gradient38 {background: radial-gradient(ellipse farthest-corner at bottom right, #fddb92 0%, #48c6ef 100%);}
+.gradient39 {background: radial-gradient(ellipse farthest-corner at left center, #fddb92 0%, #48c6ef 100%);}
+.gradient40 {background: radial-gradient(ellipse farthest-corner at right center, #fddb92 0%, #48c6ef 100%);}
+</pre>
+
+				
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient41">gradient41</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient42">gradient42</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient43">gradient43</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient44">gradient44</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient41 {background: linear-gradient(0deg #d61058 50%, #f49943 50%);}
+.gradient42 {background: linear-gradient(30deg #d61058 50%, #f49943 50%);}
+.gradient43 {background: linear-gradient(90deg #d61058 50%, #f49943 50%);}
+.gradient44 {background: linear-gradient(180deg #d61058 50%, #f49943 50%);}
+</pre>
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient45">gradient45</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient46">gradient46</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient47">gradient47</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient48">gradient48</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient45 {background: repeating-linear-gradient(-45deg, #66a6ff 5px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+.gradient46 {background: repeating-linear-gradient(-45deg, #66a6ff 10px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+.gradient47 {background: repeating-linear-gradient(-45deg, #66a6ff 15px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+.gradient48 {background: repeating-linear-gradient(-45deg, #66a6ff 25px, #66a6ff 30px, #89f7f3 5px, #89f7f3 45px);}
+</pre>
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient49">gradient49</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient50">gradient50</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient51">gradient51</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient52">gradient52</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient49 {background: repeating-linear-gradient(-45deg, #66a6ff 5px, #66a6ff 30px, #89f7f3 35px, #89f7f3 45px);}
+.gradient50 {background: repeating-linear-gradient(-45deg, #66a6ff 10px, #66a6ff 30px, #89f7f3 40px, #89f7f3 45px);}
+.gradient51 {background: repeating-linear-gradient(-45deg, #66a6ff 15px, #66a6ff 30px, #89f7f3 45px, #89f7f3 45px);}
+.gradient52 {background: repeating-linear-gradient(-45deg, #66a6ff 25px, #66a6ff 30px, #89f7f3 50px, #89f7f3 45px);}
+</pre>
+
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient53">gradient53</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient54">gradient54</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient55">gradient55</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient56">gradient56</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient53 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 10px);}
+.gradient54 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 15px);}
+.gradient55 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 20px);}
+.gradient56 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 5px, #fbc2eb 25px);}
+</pre>
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient57">gradient57</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient58">gradient58</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient59">gradient59</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient60">gradient60</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient57 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 10px, #fbc2eb 10px);}
+.gradient58 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 15px, #fbc2eb 15px);}
+.gradient59 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 20px, #fbc2eb 20px);}
+.gradient60 {background: repeating-radial-gradient(#a18cd1, #a18cd1 5px, #fbc2eb 25px, #fbc2eb 25px);}
+</pre>				
+
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient61">gradient61</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient62">gradient62</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient63">gradient63</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient64">gradient64</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient61 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+.gradient62 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+.gradient63 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+.gradient64 {background: linear-gradient(180deg, #30cfd0, #330867) fixed;}
+</pre>
+
+				<div class="well clearfix">
+					<div class="block gra1">
+						<div class="gradient65">gradient65</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient66">gradient66</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient67">gradient67</div>
+					</div>
+					<div class="block gra1">
+						<div class="gradient68">gradient68</div>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+.gradient65 {background: radial-gradient(#30cfd0, #330867) fixed;}
+.gradient66 {background: radial-gradient(#30cfd0, #330867) fixed;}
+.gradient67 {background: radial-gradient(#30cfd0, #330867) fixed;}
+.gradient68 {background: radial-gradient(#30cfd0, #330867) fixed;}
+</pre>
+
+				<br><br>
+				<h2>Linear Gradinet Effect1</h2>
+				<p data-height="500" data-theme-id="0" data-slug-hash="gKOqQx" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="gKOqQx" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/gKOqQx/">gKOqQx</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<br><br>
+				<h2>Background Gradinet Effect2</h2>
+				<p data-height="500" data-theme-id="0" data-slug-hash="jKOJYj" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Random Backgroud" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/jKOJYj/">Random Backgroud</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<br><br>
+				<h2>Background Gradinet Effect3</h2>
+				<p data-height="500" data-theme-id="0" data-slug-hash="NzWJOV" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Random Gradient Backgroud" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/NzWJOV/">Random Gradient Backgroud</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<br><br>
+				<h2>Backgorund Effect4</h2>
+				<p data-height="1400" data-theme-id="0" data-slug-hash="pKoYBj" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Repeating-linear-gradient" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/pKoYBj/">Repeating-linear-gradient</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+				<a href="http://lea.verou.me/css3patterns/">출처</a>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			</div>
+		<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>  
+	<!-- //contents -->
+    
+    <!-- //footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h5>Webstoryboy</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script> 
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/google-code-prettify/prettify.js"></script>
+    <script src="../assets/js/application.js"></script>
+</body>
+</html>

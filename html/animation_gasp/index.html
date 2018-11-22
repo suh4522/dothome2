@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="webstoryboy">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, html5, html4, css3, html, markup, design">
+	<title>GASP Animation</title>
+    
+    <!-- web_font -->
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+    
+    <!-- css -->
+    <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    
+    <!-- Prettify -->
+    <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+	
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+	.face {display:block; margin:20px auto; width:400px; }
+	.face img {width:400px; border-radius:50%; }
+	.face1 img {width:22%; border-radius:10%; margin:1%;}
+	.member {margin:50px 0;}
+	.member li {width:150px; list-style:none; display:inline-block; margin:6px; }
+	.member li img { border-radius:50%;}
+	.box	{position: relative;}
+	.box > div {width: 60px; height: 60px; line-height: 60px; text-align: center; border-radius: 50%; overflow: hidden; position: relative; font-size: 12px; color: #fff; background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); perspective: 500px; margin: 10px;}
+		.btn_wrap > a {font-size: 12px; color: #fff;  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); padding: 5px 10px; border-radius: 3px;  }
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+    <div id="top-nav" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse">
+                	<ul class="nav pull-right">
+                		<li><a href="#">webstoryboy</a></li>
+                		<li><a href="#">reference</a></li>
+                		<li><a href="#">tutorial</a></li>
+                		<li><a href="#">css</a></li>
+                		<li><a href="#">html</a></li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //nav -->
+    
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="span12" style="text-align:center;">
+                    <div class="header_tit">
+	                	<h1>Professional web publishers</h1>
+						<h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+		            </div>
+		            <div class="header_icon" id="wow">
+		                <ul>
+		                    <li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                </ul>
+		            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+    
+    <!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>GASP Animation</h1>
+
+				<div class="well">
+					사이트 : <a href="https://greensock.com/">https://greensock.com/</a><br>
+					CDN : &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"&gt;&lt;/script&gt;
+				</div>
+
+				<div class="well">
+					TweenMax.to(target, duration, {vars});
+				</div>
+
+				<h3 class="btn_wrap">Position : 버튼 클릭하면 오른쪽으로 이동하기 <a href="#c" class="btn1">Start</a></h3>
+				<div class="well box">
+					<div class="box1_1">box</div>
+					<div class="box1_2">box</div>
+					<div class="box1_3">box</div>
+				</div>
+
+<pre class="pre-show prettyprint linenums">
+//jquery
+$(".btn1").on("click",function(){
+	$(".box1_1,.box1_2,.box1_3").animate({ left:"90%" },1000);
+});
+//TweenMax
+$(".btn1").on("click",function(){
+	TweenMax.to([".box1_1",".box1_2",,".box1_3"],1, { left:"90%" });
+});
+</pre>
+				<br>
+				<h3 class="btn_wrap">Position :버튼을 클릭하면 오른쪽으로 100px 움직이기 <a href="#c" class="btn2">Start</a></h3>
+				<div class="well box">
+					<div class="box2">box</div>
+				</div>
+
+<pre class="pre-show prettyprint linenums">
+//jquery
+$(".btn2").on("click",function(){
+	$(".box2").animate({ left : "+=100"},"slow","easeOutQuint")
+});
+//TweenMax
+$(".btn2").on("click",function(){
+	TweenMax.to(".box2",1,{ left : "+=100px"});
+});
+</pre>
+				<br>
+				<h3 class="btn_wrap">Background-image :버튼을 클릭하면 백그라운드 이미지 색을 변경하면서 오른쪽으로 이동하기 <a href="#c" class="btn3">Start</a></h3>
+				<div class="well box">
+					<div class="box3">box</div>
+				</div>
+
+<pre class="pre-show prettyprint linenums">
+//TweenMax
+$(".btn3").on("click",function(){
+    TweenMax.to(".box3",2,{left:"90%", backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"});
+ });
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">Opacity : 오른쪽으로 이동하면 투명도 조절하기 <a href="#c" class="btn4">Start</a></h3>
+				<div class="well box">
+					<div class="box4">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+//jquery
+$(".btn4").on("click",function(){
+	$(".box4").animate({ left : "90%",opacity : "0.1"},1000)
+});
+//TweenMax
+$(".btn4").on("click",function(){
+    TweenMax.to(".box4",2,{left:"90%", opacity : "0.1"});
+ });
+</pre>
+
+	
+
+				<br>
+				<h3 class="btn_wrap">delay : 1초 간격으로 움직이기 <a href="#c" class="btn6">Start</a></h3>
+				<div class="well box">
+					<div class="box6_1">box</div>
+					<div class="box6_2">box</div>
+					<div class="box6_3">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+//TweenMax
+$(".btn6").on("click",function(){
+	TweenMax.to(".box6_1",1,{ left : "90%", delay:1});
+	TweenMax.to(".box6_2",1,{ left : "90%", delay:2});
+	TweenMax.to(".box6_3",1,{ left : "90%", delay:3});
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">Callback : 콜백함수 활용하기 <a href="#c" class="btn7">Start</a></h3>
+				<div class="well box">
+					<div class="box7">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+//TweenMax
+$(".btn7").on("click",function(){
+	TweenMax.to(".box7",1,{ left : "90%", onComplete:myFunction });
+});
+
+function  myFunction(){
+	alert("도착했습니다.");
+}
+</pre>		
+
+				<br>
+				<h3 class="btn_wrap">easing : 다양한 움직임 <a href="	https://greensock.com/docs/Easing">ease view</a> <a href="#c" class="btn8">Start</a></h3>
+				<div class="well box">
+					<div class="box8_1">box</div>
+					<div class="box8_2">box</div>
+					<div class="box8_3">box</div>
+					<div class="box8_4">box</div>
+					<div class="box8_5">box</div>
+					<div class="box8_6">box</div>
+					<div class="box8_7">box</div>
+					<div class="box8_8">box</div>
+					<div class="box8_9">box</div>
+					<div class="box8_10">box</div>
+					<div class="box8_11">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+//TweenMax
+$(".btn8").on("click",function(){
+	TweenMax.to(".box8_1", 1, { left : "90%", ease:Power0.easeOut });
+	TweenMax.to(".box8_2", 1, { left : "90%", ease:Power1.easeOut });
+	TweenMax.to(".box8_3", 1, { left : "90%", ease:Power2.easeOut });
+	TweenMax.to(".box8_4", 1, { left : "90%", ease:Power3.easeOut });
+	TweenMax.to(".box8_5", 1, { left : "90%", ease:Power4.easeOut });
+	TweenMax.to(".box8_6", 1, { left : "90%", ease:Bounce.easeOut });
+	TweenMax.to(".box8_7", 1, { left : "90%", ease:RoughEase.easeOut });
+	TweenMax.to(".box8_8", 1, { left : "90%", ease:SlowMo.easeOut });
+	TweenMax.to(".box8_9", 1, { left : "90%", ease:Circ.easeOut });
+	TweenMax.to(".box8_10", 1, { left : "90%", ease:Expo.easeOut });
+	TweenMax.to(".box8_11", 1, { left : "90%", ease:Sine.easeOut });
+});
+</pre>
+
+
+				<br>
+				<h3 class="btn_wrap">border-radius <a href="#c" class="btn9">Start</a></h3>
+
+				<div class="well box">
+					<div class="box9">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn9").on("click",function(){
+	TweenMax.to(".box9", 1, { left : "90%", borderRadius: "0%", ease:Power2.easeOut });
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">skew, rotate  <a href="#c" class="btn10">Start</a></h3>
+				<div class="well box">
+					<div class="box10_1">box</div>
+					<div class="box10_2">box</div>
+					<div class="box10_3">box</div>
+					<div class="box10_4">box</div>
+					<div class="box10_5">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn10").on("click",function(){
+	TweenMax.to(".box10_1", 1, { left : "90%", rotation: "360deg"});
+	TweenMax.to(".box10_2", 1, { left : "90%", rotation: "7.54rad"});
+	TweenMax.to(".box10_3", 1, { left : "90%", rotation: 360 });
+	TweenMax.to(".box10_4", 1, { left : "90%", rotation: "360deg", skewX: "30deg" });
+	TweenMax.to(".box10_5", 1, { left : "90%", rotation: "360deg", skewX: "30deg", ease:Expo.easeOut });
+})
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">CSS <a href="#c" class="btn11">Start</a></h3>
+
+				<div class="well box">
+					<div class="box11_1">box</div>
+					<div class="box11_2">box</div>
+					<div class="box11_3">box</div>
+					<div class="box11_4">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn11").on("click",function(){
+	TweenMax.to(".box11_1", 1, { left : "90%", width: "100px", ease:SlowMo.easeOut});
+	TweenMax.to(".box11_2", 1, { left : "90%", height: "100px", ease:SlowMo.easeOut});
+	TweenMax.to(".box11_3", 1, { css: {left : "90%", width: "100px"}, ease:SlowMo.easeOut});
+	TweenMax.to(".box11_4", 1, { css: {left : "90%", height: "100px"}, ease:SlowMo.easeOut});
+});
+</pre>
+				<br>
+				<h3 class="btn_wrap">RotationX <a href="#c" class="btn12">Start</a></h3>
+
+				<div class="well box">
+					<div class="box12_1">box</div>
+					<div class="box12_2">box</div>
+					<div class="box12_3">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn12").on("click",function(){
+	TweenMax.to(".box12_1", 2, { left : "90%", rotationX: 400, ease:SteppedEase.easeOut});
+	TweenMax.to(".box12_2", 2, { left : "90%", rotationY: 400, ease:SteppedEase.easeOut});
+	TweenMax.to(".box12_3", 2, { left : "90%", rotationZ: 400, ease:SteppedEase.easeOut});
+});
+</pre>		
+
+				<br>
+				<h3 class="btn_wrap">TweenMax.set <a href="#c" class="btn13">Start</a></h3>
+
+				<div class="well box">
+					<div class="box13_1">box</div>
+					<div class="box13_2">box</div>
+					<div class="box13_3">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn13").on("click",function(){
+	TweenMax.set(".box13_1", { left : "90%" });
+	TweenMax.set(".box13_2", { left : "80%" });
+	TweenMax.set(".box13_3", { left : "70%" });
+});
+</pre>		
+
+				<br>
+				<h3 class="btn_wrap">Transform <a href="#c" class="btn14">Start</a></h3>
+
+				<div class="well box">
+					<div class="box14_1">box</div>
+					<div class="box14_2">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn14").on("click",function(){
+	TweenMax.to(".box14_1", 2, { left : "90%", scale: 1.5, rotationY:465, x:10, y:10, z:0 });
+	TweenMax.to(".box14_2", 2, { left : "90%", transformPerspective:500, rotation: 620, x:10, y:10, z:0 });
+});
+</pre>	
+
+				<br>
+				<h3 class="btn_wrap">TransformOrigin <a href="#c" class="btn15">Start</a></h3>
+
+				<div class="well box">
+					<div class="box15_1">box</div>
+					<div class="box15_2">box</div>
+					<div class="box15_3">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn15").on("click",function(){
+	TweenMax.to(".box15_1", 2, { left : "90%", rotation: 720 });
+	TweenMax.to(".box15_2", 2, { left : "90%", rotation: 720, transformOrigin: "left top" });
+	TweenMax.to(".box15_3", 2, { left : "90%", rotation: 720, transformOrigin: "50px 200px" });
+});
+</pre>	
+
+				<br>
+				<h3 class="btn_wrap">autoAlpha <a href="#c" class="btn16">Start</a></h3>
+
+				<div class="well box">
+					<div class="box16_1">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn16").on("click",function(){
+	TweenMax.to(".box16_1", 2, { left : "90%", rotation: 720, autoAlpha: 0, ease:Sine.easeOut });
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">Rotation <a href="#c" class="btn17">Start</a></h3>
+
+				<div class="well box">
+					<div class="box17_1">box</div>
+					<div class="box17_2">box</div>
+					<div class="box17_3">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn17").on("click",function(){
+	TweenMax.to(".box17_1", 2, { left : "+=100", rotation: "-=170" });
+	TweenMax.to(".box17_2", 2, { left : "+=100", rotationX: "-=30_cw"});
+	TweenMax.to(".box17_3", 2, { left : "+=100", rotationY: "-=150_cw"});
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">addClass <a href="#c" class="btn18">Start</a></h3>
+
+				<div class="well box">
+					<div class="box18_1">box</div>
+					<div class="box18_2">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn18").on("click",function(){
+	TweenMax.to(".box18_1", 2, { className:"class" });
+	TweenMax.to(".box18_2", 2, { className:"+=class" });
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">Event 
+					<a href="#c" class="btn19-1">Start</a>
+					<a href="#c" class="btn19-2">Pause</a>
+					<a href="#c" class="btn19-3">Resume</a>
+					<a href="#c" class="btn19-4">Reverse</a>
+					<a href="#c" class="btn19-5">Seek</a>
+					<a href="#c" class="btn19-6">Scale</a>
+					<a href="#c" class="btn19-7">Scale(2)</a>
+					<a href="#c" class="btn19-8">Kill</a>
+					<a href="#c" class="btn19-9">Restart</a>
+				</h3>
+
+				<div class="well box">
+					<div class="box19">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+var tween = TweenMax.to(".box19", 10, { left:"90%", ease:Expo.easeOut });
+$(".btn19-1").click(function(){ tween.play() });
+$(".btn19-2").click(function(){ tween.pause() });
+$(".btn19-3").click(function(){ tween.resume() });
+$(".btn19-4").click(function(){ tween.reverse() });
+$(".btn19-5").click(function(){ tween.seek(0.5) });
+$(".btn19-6").click(function(){ tween.timeScale(9.5) });
+$(".btn19-7").click(function(){ tween.timeScale(2)() });
+$(".btn19-8").click(function(){ tween.kill() });
+$(".btn19-9").click(function(){ tween.restart() });
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">Timeline <a href="#c" class="btn20">Start</a></h3>
+
+				<div class="well box">
+					<div class="box20">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn20").on("click",function(){
+	var tl = new TimelineLite();
+	tl.to(".box20",1,{ left: "90%" });
+	tl.to(".box20",1,{ height: 300, ease:Elastic.easeOut});
+	tl.to(".box20",1,{ opacity:0.5});
+	tl.to(".box20",1,{ height: 60, ease:Elastic.easeOut});
+	tl.to(".box20",1,{ opacity:1, left:"0"});
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">Repeat <a href="#c" class="btn21">Start</a></h3>
+
+				<div class="well box">
+					<div class="box21_1">box</div>
+					<div class="box21_2">box</div>
+					<div class="box21_3">box</div>
+					<div class="box21_4">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn21").on("click",function(){
+	TweenMax.to(".box21_1", 2, { left:"90%", repeat:1, ease:Power4.easeOut });
+	TweenMax.to(".box21_2", 2, { left:"90%", repeat:1, repeatDelay:1, ease:Power4.easeOut });
+	TweenMax.to(".box21_3", 2, { left:"90%", repeat:1, yoyo:true,  ease:Power4.easeOu});
+	TweenMax.to(".box21_4", 2, { left:"90%", repeat:-1, yoyo:true,  ease:Power4.easeOu});
+});
+</pre>
+
+				<br>
+				<h3 class="btn_wrap">stagger <a href="#c" class="btn22">Start</a></h3>
+
+				<div class="well box">
+					<div class="box22_1">box</div>
+					<div class="box22_2">box</div>
+					<div class="box22_3">box</div>
+					<div class="box22_4">box</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+$(".btn22").on("click",function(){
+	TweenMax.staggerTo([".box22_1",".box22_2",".box22_3",".box22_4"], 2, { left:"90%", ease:Power4.easeOut },0.25);
+});
+</pre>
+
+
+				<br>
+				<h3>Button Hover Effect</h3>
+				<p data-height="400" data-theme-id="0" data-slug-hash="rrMvWN" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Button Hover Effect : TweenMax" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/rrMvWN/">Button Hover Effect : TweenMax</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br>
+				<h3>Basic Animation</h3>
+				<p data-height="400" data-theme-id="0" data-slug-hash="MBbrRW" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="MBbrRW" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/MBbrRW/">MBbrRW</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br>
+				<h3>Rocket Animation</h3>
+				<p data-height="800" data-theme-id="0" data-slug-hash="NBbyvK" data-default-tab="result" data-user="suh4522" data-embed-version="2" data-pen-title="Rocket Animation TweenMax" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/NBbyvK/">Rocket Animation TweenMax</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<br>
+				<h3>mouse cursor</h3>
+				<p data-height="600" data-theme-id="0" data-slug-hash="BPgBpJ" data-default-tab="result" data-user="suh4522" data-pen-title="Mouse Cursor" class="codepen">See the Pen <a href="https://codepen.io/suh4522/pen/BPgBpJ/">Mouse Cursor</a> by parksuhyun (<a href="https://codepen.io/suh4522">@suh4522</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+			</div>
+			<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>  
+	<!-- //contents -->
+    
+    <!-- //footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h5>Webstoryboy</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+	<script src="TweenMax.min.js"></script> 
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/google-code-prettify/prettify.js"></script>
+    <script src="../assets/js/application.js"></script>
+    <script>
+    	//버튼을 클릭하면 box를 오른쪽을 이동시켜주세요!
+		//jquery
+		// $(".btn1").on("click",function(){
+		// 	$(".box1_1,.box1_2,.box1_3").animate({ left:"90%" },1000);
+		// });
+		//TweenMax
+		$(".btn1").on("click",function(){
+			TweenMax.to([".box1_1",".box1_2",,".box1_3"],1, { left:"90%" });
+		});
+
+		//jquery
+		//$(".btn2").on("click",function(){
+		//	$(".box2").animate({ left : "+=100"},"slow","easeOutQuint")
+		//});
+		//TweenMax
+		$(".btn2").on("click",function(){
+			TweenMax.to(".box2",1,{ left : "+=100px"});
+		});
+
+		
+		//TweenMax
+		$(".btn3").on("click",function(){
+            TweenMax.to(".box3",2,{left:"90%", backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"});
+         });
+
+		//jquery
+		//$(".btn4").on("click",function(){
+		//	$(".box4").animate({ left : "90%",opacity : "0.1"},1000)
+		//});
+		//TweenMax
+		$(".btn4").on("click",function(){
+            TweenMax.to(".box4",2,{left:"90%", opacity : "0.1"});
+         });
+
+		//jquery
+		//$(".btn5").on("click",function(){
+		//	$(".box5").animate({ left : "90%",width : "120px" , height: "120px" },1000)
+		//});
+		//TweenMax
+		$(".btn5").on("click",function(){
+            TweenMax.to(".box5",1,{left:"90%", scale:"2" });
+         });
+
+		//TweenMax
+		$(".btn6").on("click",function(){
+			TweenMax.to(".box6_1",1,{ left : "90%", delay:1});
+			TweenMax.to(".box6_2",1,{ left : "90%", delay:2});
+			TweenMax.to(".box6_3",1,{ left : "90%", delay:3});
+		});
+
+		//TweenMax
+		$(".btn7").on("click",function(){
+			TweenMax.to(".box7",1,{ left : "90%", onComplete:myFunction });
+		});
+		function  myFunction(){
+			alert("도착했습니다.");
+		}
+
+		//TweenMax
+		$(".btn8").on("click",function(){
+			TweenMax.to(".box8_1", 1, { left : "90%", ease:Power0.easeOut });
+			TweenMax.to(".box8_2", 1, { left : "90%", ease:Power1.easeOut });
+			TweenMax.to(".box8_3", 1, { left : "90%", ease:Power2.easeOut });
+			TweenMax.to(".box8_4", 1, { left : "90%", ease:Power3.easeOut });
+			TweenMax.to(".box8_5", 1, { left : "90%", ease:Power4.easeOut });
+			TweenMax.to(".box8_6", 1, { left : "90%", ease:Bounce.easeOut });
+			TweenMax.to(".box8_7", 1, { left : "90%", ease:RoughEase.easeOut });
+			TweenMax.to(".box8_8", 1, { left : "90%", ease:SlowMo.easeOut });
+			TweenMax.to(".box8_9", 1, { left : "90%", ease:Circ.easeOut });
+			TweenMax.to(".box8_10", 1, { left : "90%", ease:Expo.easeOut });
+			TweenMax.to(".box8_11", 1, { left : "90%", ease:Sine.easeOut });
+		});
+
+		$(".btn9").on("click",function(){
+			TweenMax.to(".box9", 1, { left : "90%", borderRadius: "0%", ease:Power2.easeOut });
+		});
+
+		$(".btn10").on("click",function(){
+			TweenMax.to(".box10_1", 1, { left : "90%", rotation: "360deg"});
+			TweenMax.to(".box10_2", 1, { left : "90%", rotation: "7.54rad"});
+			TweenMax.to(".box10_3", 1, { left : "90%", rotation: 360 });
+			TweenMax.to(".box10_4", 1, { left : "90%", rotation: "360deg", skewX: "30deg" });
+			TweenMax.to(".box10_5", 1, { left : "90%", rotation: "360deg", skewX: "30deg", ease:Expo.easeOut });
+		})
+
+		$(".btn11").on("click",function(){
+			TweenMax.to(".box11_1", 1, { left : "90%", width: "100px", ease:SlowMo.easeOut});
+			TweenMax.to(".box11_2", 1, { left : "90%", height: "100px", ease:SlowMo.easeOut});
+			TweenMax.to(".box11_3", 1, { css: {left : "90%", width: "100px"}, ease:SlowMo.easeOut});
+			TweenMax.to(".box11_4", 1, { css: {left : "90%", height: "100px"}, ease:SlowMo.easeOut});
+		});
+
+		$(".btn12").on("click",function(){
+			TweenMax.to(".box12_1", 2, { left : "90%", rotationX: 400, ease:SteppedEase.easeOut});
+			TweenMax.to(".box12_2", 2, { left : "90%", rotationY: 400, ease:SteppedEase.easeOut});
+			TweenMax.to(".box12_3", 2, { left : "90%", rotationZ: 400, ease:SteppedEase.easeOut});
+		});
+
+		$(".btn13").on("click",function(){
+			TweenMax.set(".box13_1", { left : "90%" });
+			TweenMax.set(".box13_2", { left : "80%" });
+			TweenMax.set(".box13_3", { left : "70%" });
+		});
+
+		$(".btn14").on("click",function(){
+			TweenMax.to(".box14_1", 2, { left : "90%", scale: 1.5, rotationY:465, x:10, y:10, z:0 });
+			TweenMax.to(".box14_2", 2, { left : "90%", transformPerspective:500, rotation: 620, x:10, y:10, z:0 });
+		});
+
+		$(".btn15").on("click",function(){
+			TweenMax.to(".box15_1", 2, { left : "90%", rotation: 720 });
+			TweenMax.to(".box15_2", 2, { left : "90%", rotation: 720, transformOrigin: "left top" });
+			TweenMax.to(".box15_3", 2, { left : "90%", rotation: 720, transformOrigin: "50px 200px" });
+		});
+
+		$(".btn16").on("click",function(){
+			TweenMax.to(".box16_1", 2, { left : "90%", rotation: 720, autoAlpha: 0, ease:Sine.easeOut });
+		});
+
+		$(".btn17").on("click",function(){
+			TweenMax.to(".box17_1", 2, { left : "+=100", rotation: "-=170" });
+			TweenMax.to(".box17_2", 2, { left : "+=100", rotationX: "-=30_cw"});
+			TweenMax.to(".box17_3", 2, { left : "+=100", rotationY: "-=150_cw"});
+		});
+
+		$(".btn18").on("click",function(){
+			TweenMax.to(".box18_1", 2, { className:"class" });
+			TweenMax.to(".box18_2", 2, { className:"+=class" });
+		});
+		
+		var tween = TweenMax.to(".box19", 10, { left:"90%", repeat:-1, yoyo:true, ease:Power0.easeOut });
+		$(".btn19-1").click(function(){ tween.play() });
+		$(".btn19-2").click(function(){ tween.pause() });
+		$(".btn19-3").click(function(){ tween.resume() });
+		$(".btn19-4").click(function(){ tween.reverse() });
+		$(".btn19-5").click(function(){ tween.seek(0.5) });
+		$(".btn19-6").click(function(){ tween.timeScale(9.5) });
+		$(".btn19-7").click(function(){ tween.timeScale(2)() });
+		$(".btn19-8").click(function(){ tween.kill() });
+		$(".btn19-9").click(function(){ tween.restart() });
+
+		$(".btn20").on("click",function(){
+			var tl = new TimelineLite();
+			tl.to(".box20",1,{ left: "90%" });
+			tl.to(".box20",1,{ height: 300, ease:Elastic.easeOut});
+			tl.to(".box20",1,{ opacity:0.5});
+			tl.to(".box20",1,{ height: 60, ease:Elastic.easeOut});
+			tl.to(".box20",1,{ opacity:1, left:"0"});
+		});
+
+		$(".btn21").on("click",function(){
+			TweenMax.to(".box21_1", 2, { left:"90%", repeat:1, ease:Power4.easeOut });
+			TweenMax.to(".box21_2", 2, { left:"90%", repeat:1, repeatDelay:1, ease:Power4.easeOut });
+			TweenMax.to(".box21_3", 2, { left:"90%", repeat:1, yoyo:true,  ease:Power4.easeOu});
+			TweenMax.to(".box21_4", 2, { left:"90%", repeat:-1, yoyo:true,  ease:Power4.easeOu});
+		});
+
+		$(".btn22").on("click",function(){
+			TweenMax.staggerTo([".box22_1",".box22_2",".box22_3",".box22_4"], 2, { left:"90%", ease:Power4.easeOut },0.25);
+		});
+
+
+    </script>
+</body>
+</html>

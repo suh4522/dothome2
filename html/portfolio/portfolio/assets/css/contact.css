@@ -1,0 +1,71 @@
+/* reset */
+body,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,textarea,p,
+select,button,figure{margin:0;padding:0;  font-family: 'cera-blackItalic',sans-serif;}
+em,address{font-style:normal;}
+ul,li,ol{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+a{ color: #fff; text-decoration:none;}
+img,fieldset{border:0;}
+/*video, img {width: 100%;}*/
+body{background:#fff;direction:ltr;-webkit-text-size-adjust:none; }
+table{width:100%;border-spacing: 0; border-collapse: collapse;}
+
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after{display:table;content:'';line-height:0;}
+.clearfix:after{clear:both;}
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+@font-face{font-family:'cera-blackitalic';
+    src:url('../fonts/cera-blackitalic-webfont.eot');
+    src:url('../fonts/cera-blackitalic-webfont.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/cera-blackitalic-webfont.woff2') format("woff2"),
+    url('../fonts/cera-blackitalic-webfont.woff') format("woff"),
+    url('../fonts/cera-blackitalic-webfont.ttf') format("truetype")
+}
+@font-face{font-family:'Cera-RegularItalic';
+    src:url('../fonts/Cera-RegularItalic.eot');
+    src:url('../fonts/Cera-RegularItalic.eot?#iefix') format("embedded-opentype"),
+    url('../fonts/Cera-RegularItalic.woff') format("woff"),
+    url('../fonts/Cera-RegularItalic.ttf') format("truetype")
+}
+
+
+
+/* contactWrap */
+.contactWrap { background: #000; height: 50vh; width: 100%; left: 0; overflow: hidden; padding: 12vh 14% 0; font-size: 14px; box-sizing: border-box; position: fixed; transition: all 0.4s ease; z-index: 2100 ;}
+.contactWrap .content1{ padding: 0; float: left; width: 20%; padding-right: 9% }
+.contactWrap .content1 .title1 { font-size: 30px; line-height: 1.2; color: #fff; margin-bottom: 2rem }
+.contactWrap .content1 p { line-height: 1.6; margin-top: 0; font-family: Cera-RegularItalic,sans-serif; color: #b3b3b3; font-size: 13px }
+.contactWrap .content2 { padding: 0; float: left; width: 70% }
+.contactWrap .content2  .contact { width: 18%; float: left; margin: 0; padding-right: 6.5%; line-height: 1.6; padding-top: 2% }
+.contactWrap .content2  .contact .title { text-transform: uppercase; font-size: 14px; margin-bottom: 2%; color: #fff }
+.contactWrap .content2  .contact  li a { font-family: Cera-RegularItalic,sans-serif; color: #b3b3b3; font-size: 13px }
+.contactWrap .content2  .contact  a:hover { color: #fff;  border-bottom: 1px solid #fff; transition: color .3s,background-color .3s }
+.contactWrap .content2  .contact  a { font-family: Cera-RegularItalic,sans-serif; color: #b3b3b3; font-size: 13px }
+.contactWrap .content2  .contact  li { font-family: Cera-RegularItalic,sans-serif; color: #b3b3b3; font-size: 13px }
+.contactWrap .content2  .contact  p { font-family: Cera-RegularItalic,sans-serif; color: #b3b3b3; font-size: 13px }
+.contact .mapLink { margin-top: 1rem; display: inline-block }
+.contactWrap .content2  .contact  .name {text-transform: uppercase; font-size: 19px; margin-bottom: 2%; color: #fff;}
+.contactWrap .content2  .contact  .old {text-align: right; margin-right: 36px;}
+.contactWrap .closeButton2 {height: 70px; width: 70px; float: right; background: #000; position: absolute; top: 10%; right: 3%; display: block; border-radius: 50%; font-size:22px; text-align: center;}
+.contactWrap .closeButton2:hover {cursor: pointer;}
+.contact .mapLink span {color: #fff;display: inline-block;padding-right: 7px;vertical-align: middle;}
+
+.cotactwrap.active {display: none;}
+
+
+@media (max-width:1200px){
+    .contactWrap {padding: 0; height: 100%;}
+    .contactWrap .content1 {width: 50%; padding-left: 9%;margin-top: 18%;}
+    .contactWrap .content2 {width: 100%; margin-left: 9%; margin-top: 60px;}
+    .contactWrap .content2 .contact {width: 30%; }
+    .contactWrap .content2 .contact .name {font-size: 14px;}
+    .contactWrap .content2 .contact .old {text-align: left;margin-right: 0px;}
+}
+
+@media (max-width:435px){
+    .contactWrap .content1 {width: 70%; margin-top: 20%;}
+    .contactWrap .content2 { margin-top: 20px;}
+    .contactWrap .content2 .contact {width: 40%; }
+}

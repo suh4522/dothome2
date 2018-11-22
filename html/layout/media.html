@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MediaQuery</title>
+</head>
+<body>
+	<h1>미디어쿼리 (MediaQuery)</h1>
+	<p>미디어 쿼리는 화면 크기에 따른 각각의 속성 값을 지정하여, 여러가지 화면을 구성하는 기술입니다. CSS2에서는 'print', 'screen'에서 사용하던 것을 CSS3에서는 확대되어 스크린 폭/높이 등 여러가지 관련 정보를 이용하여 스타일 속성을 바꿀수 있습니다.</p>
+	<style>
+		/* 화면 너비 1280px 이상*/
+		body {background-color: #b71c1c; color: #fff;}
+		h1::before {content: '1. ';}
+		h1::after {content: ' - 기본';}
+
+		/* 화면 너비 0 ~ 1280px : 데스크탑,TV, 레티나 */
+		@media (max-width:1280px){
+			body {background-color: #880e4f; color: #fff;}
+			h1::before {content: '2. ';}
+			h1::after {content: ' - 1280px';}
+		}
+		/* 화면 너비 0 ~ 1024px : 데스크 탑 */
+		@media (max-width:1024px){
+			body {background-color: #4a148c; color: #fff;}
+			h1::before {content: '3. ';}
+			h1::after {content: ' - 1024px';}
+		}
+		/* 화면 너비 0 ~ 960px : 노트북 */
+		@media (max-width:960px){
+			body {background-color: #311b92; color: #fff;}
+			h1::before {content: '4. ';}
+			h1::after {content: ' - 960px';}
+		}
+		/* 화면 너비 0 ~ 768px :  타블렛 */
+		@media (max-width:768px){
+			body {background-color: #006064; color: #fff;}
+			h1::before {content: '5. ';}
+			h1::after {content: ' - 768px';}
+		}
+		/* 화면 너비 0 ~ 576px :  모바일 */
+		@media (max-width:576px){
+			body {background-color: #004d40; color: #fff;}
+			h1::before {content: '6. ';}
+			h1::after {content: ' - 576px';}
+		}
+	</style>
+</body>
+</html>

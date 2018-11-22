@@ -1,0 +1,2090 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A Documentation by JavaScript.">
+	<meta name="author" content="JavaScript documentation">
+
+	<title>JavaScript Reference</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Documentation extras -->
+	<link href="assets/css/docs.min.css" rel="stylesheet">
+	<link href="assets/css/prism.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.assets/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="shortcut icon" href="ico/favicon.ico">
+
+	<!-- web font -->
+	<link href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+
+	<style>
+		ul,ol {margin-left: -25px;}
+        .nav {margin-left: auto;}
+	</style>
+
+</head>
+
+<body>
+	<a class="sr-only" href="#content">Skip to main content</a>
+
+	<header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">webstoryboy &lt;/doc&gt;</a>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav">
+					<li><a href="jquery.html">jQuery</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="bs-header javascript" style="background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);" id="content">
+		<div class="container">
+			<h1>JavaScript Reference v1.0 &lt;/doc&gt;</h1>
+			<p>suh45222.co.kr</p>
+		</div>
+	</div>
+
+	<div class="container bs-docs-container">
+		<div class="row">
+			
+			<div class="col-md-9" role="main">
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction1" class="page-header">자바스크립트</h2>
+					<p class=lead>자바스크립트는 웹 브라우저에서 동작되는 스크립트 언어를 말합니다. HTML은 정적인 레이아웃을 표현한다면, 자바스크립트는 동적인 기능을 표현합니다.</p>
+					<p>자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였으며 Netscape Navigstor2.0에 구현되었습니다. 1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재 모든 브라우저에서 지원됩니다. (jQuery-Node.js, vue.js, angule.js)</p>
+
+					<h3>자바스크립트 언어의 특징</h3>
+					<ol>
+						<li>자바스크립트는 인터프린터 언어입니다.
+							<ul>
+								<li>자바스크립트는 작성된 순서대로 구문을 분석합니다. 만약 코드에 문제가 생기면 에러가 발생한 다음 줄 부턴즌 구물을 해석하지 않습니다.</li>
+							</ul>
+						</li>
+						<li>자바스크립트는 클라이언트 언어입니다.
+							<ul>
+								<li>자바스크립트느 서버에서 실행되지 않고, 사용자 컴퓨터에서 실행되는 클라이언트 언어입니다. 클라이언트 자바스크립트는 ESMAScript가 규정한 코어 언어와 웹 브라우저 API로 구성되어 있습니다.</li>
+							</ul>
+						</li>
+						<li>자바스크립트는 객체 기반의 언어입니다.
+							<ul>
+								<li>c++와 JAVA는 클래스를 이용하여 객체를 생성하는 클래스 기반의 객체 지향 언어인 반면 잡1ㅏ스크립트느 프로토타입을 상속하는 프로토타입 기반 객체 지향 언어입니다.</li>
+							</ul>
+						</li>
+						<li>자바스크립트는 동적 타입 언어입니다.
+							<ul>
+								<li>c++와 JAVA는 변수 타입이 결정되는 정적 타입 언어인 반면 자바스크립트 변수 타입이 없습니다.</li>
+							</ul>
+						</li>
+						<li>자바스크립트는 다양한 라이브러리가 지원되는 언어입니다.
+							<ul>
+								<li>자바스크립트를 이용한 언어에는 제이쿼리리가 있습니다. 이를 통해 다양한 기능을 쉽게 구현할 수 있으며, 뛰어난 효과를 만들어 낼 수 있습니다.</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction2" class="page-header">자바스크립트 기본</h2>
+					<h3>대문자와 소문자</h3>
+					<p calss="lead">자바스크립트는 대문자와 소문자를 구별하여 처리해야 합니다.</p>
+
+					<h3>주석</h3>
+					<p>일반적으로 특정 코드에 대한 설명을 입력하거나 특정한 부분의 코드가 실행되지 않도록 사용합니다.</p>
+					<div class="alert alert-success" role="alert">
+						/*.....*/ : 여러 줄에 주석을 적용하는 경우<br>
+						// : 한 줄에 주석을 적용하는 경우
+					</div>
+
+						<h4>키워드와 식별자</h4>
+						<div class="alert alert-info" role="alert">
+							키워드(예약어) : 자바스크립트에 정해진 단어<br>	
+							식별자 : 사용자가 임의로 사용하는 단어
+						</div>
+
+						<h4>변수명 규칙</h4>
+						<ul>
+							<li>사용자가 사용할 수 있는 문자 알파벳(a~z, A~Z), 숫자(0~9), 밑줄(_), 달러기호($)</li>
+							<li>첫 글자는 숫자를 사용할 수 없음</li>
+							<li>공백을 주면 안됨 : 밑줄(_) 사용가능, 하이픈(-) 사용안됨</li>
+							<li>특수기호 사용 안됨</li>
+							<li>키워드(예약어)를 사용할 수 없음</li>
+						</ul>
+
+						<h4>변수명 조합 규칙</h4>
+						<ul>
+							<li>언더스코어 표기법 : text_top</li>
+							<li>카멜 표기법 : textTop</li>
+							<li>파스칼 표기법 : TextTop</li>
+						</ul>
+
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction3" class="page-header">변수</h2>
+					<div calss="lead">변수는 <strong>하나의 데이터</strong>를 저장하는 저장소입니다.</div>
+					<div class="bs-callout bs-callout-warning">
+						var 변수명 = 값;
+					</div>
+					<h4>변수<a href="javascript01.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;변수&lt;/title&gt;
+	&lt;script&gt;
+		var x = 10;                   // 변수 x에 숫자 10을 저장
+		var y = 20;                   // 변수 y에 숫자 20을 저장
+		var y2 = "20";                //변수 y2에 문자 20을 저장
+		var y2 = '20';                //변수 y2에 문자 20을 저장
+		var z = "javascript"          //변수 z에 문자 javascript를 저장
+		y = 200;                      //변수 y값이 20 --&gt; 200변경
+
+		document.write(x);
+		document.write("&lt;br&gt;");
+		document.write(y);
+		document.write("&lt;br&gt;");
+		document.write(y);
+		document.write("&lt;br&gt;");
+		document.write(y2);
+
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;	
+</code></pre>
+            
+            					<h3 id="introduction3-1">변수의 종류</h3>
+            					<div class="lead">
+            					    변수의 사용 가능 범위에 따라 4가지로 구분됩니다.
+            					</div>
+                                <div class="bs-callout bs-callout-warning">
+                                    지역변수 : 특정 범위 안에서만 사용하는 변수<br>
+                                    전역변수 : 모든 영역에서 사용하는 변수<br>
+                                    매개변수(파라미터) : 함수 외부에서 함수 내부로 데이터를 전달하기 위한 변수<br>
+                                    멤버변수(프로퍼티) : 클래스 내부에서 만들어지며, 주로 객체에서 사용하는 경우
+                                </div>
+                                <h4>지역변수/전역변수 <a href="javascript02.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;지역변수/전역변수&lt;/title&gt;
+    &lt;script&gt;
+        var x = 100;    //변수(전역) x에 숫자 100을 저장
+        var y = 200;    //변수(전역) y에 숫자 200을 저장
+        
+        function area(){
+            var x = 300;    //변수(지역) x에 숫자 300을 저장
+            var z = 400;    //변수(지역) z에 숫자 400을 저장
+            y = 600;        //변수(전역) y에 값을 200에서 600으로 변경
+            
+            document.write("area 함수 안");
+            document.write("&lt;br&gt;");
+            document.write(x);
+            document.write("&lt;br&gt;");
+            document.write(z);
+            document.write("&lt;br&gt;");
+            document.write(y);
+            document.write("&lt;br&gt;");
+        }
+        area();
+        
+        document.write("area 함수 밖");
+        document.write("&lt;br&gt;");
+        document.write(x);
+        document.write("&lt;br&gt;");
+        document.write(z);
+        document.write("&lt;br&gt;");
+        document.write(y);
+        document.write("&lt;br&gt;");
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                                                   
+                                <h4>매개변수 <a href="javascript03.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;매개 변수&lt;/title&gt;
+	&lt;script&gt;
+        //브라우저 화면에 "javascript" 문자를 출력해주세요!
+        document.write("javascript");
+        document.write("&lt;br&gt;");
+        
+        //변수를 이용해서 화면에 "jquery" 문자를 출력해주세요!
+        var x = "jquery";
+        document.write(x);
+        document.write("&lt;br&gt;");
+        
+        //함수를 이용해서 화면에 "HTML" 문자를 출력해주세요!
+        function str1(){
+            document.write("HTML");
+            document.write("&lt;br&gt;");
+        }
+            str1();
+        
+        //매개변수를 이용해서 화면에 "CSS" 문자를 출력해주세요!
+        function str2(num){
+            document.write(num);
+            document.write("&lt;br&gt;");
+        }
+            str2("CSS");
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                                                   
+                                <h3 id="introduction3-2">변수의 유형</h3>
+                                <div class="lead">변수는 식별자로만 구분하기 때문에 어떠한 값인지 구분해야 하며, 숫자, 문자열, 함수, 객체, undefined으로 나눌 수 있습니다.</div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>자료형</th>
+                                                <th>설명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>숫자(Number)</td>
+                                                <td>정수와 실수가 있지만 자바스크립트 에서는 정수와 실수를 구분하지 않고 사용할 수 있습니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>문자열(String)</td>
+                                                <td>"문자","string"처럼 따옴표를 사용한 문자의 집합을 문자열이라고 합니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>논리(Boolean)</td>
+                                                <td>참과 거짓을 나타내는 자료형이며 오직 <code>true</code>,<code>false</code>로만 표현합니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>특수값(null)</td>
+                                                <td>null은 아무런 값이 없는 경우를 의미하며, 주로 변수를 초기화할 때 사용합니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>특수값(undefined)</td>
+                                                <td>변수 선언 시 자료형의 지정이 이루어지지 않거나, 어떤 자료형인지 알수가 없을 경우에 undefined라고 표시가 됩니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>배열(array)</td>
+                                                <td>배열 형태의 자료형도 자바스크립트 변수에 사용할 수 있습니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>객체(object)</td>
+                                                <td>객체 형태의 자료형도 자바스크립트 변수에 사용할 수 있습니다.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>함수(Function)</td>
+                                                <td>함수 형태의 자료형도 자바스크립트 변수에 사용할 수 있습니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>                                                                                                   
+            										
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction4" class="page-header">배열</h2>
+					<div calss="lead">배열은 <strong>여러개의 데이터</strong>를 저장하는 저장소입니다.</div>
+					<div class="bs-callout bs-callout-warning">
+                       var 변수명 = [값1,값2,값3......]
+                    </div>
+                    <h4>배열 <a href="javascript04.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;배열&lt;/title&gt;
+	&lt;script&gt;
+        //변수 x=100, y=200 출력해주세요!
+        var x = 100;
+        var y = 200;
+        
+        document.write(x);
+        document.write("&lt;br&gt;");
+        document.write(y);
+        document.write("&lt;br&gt;&lt;br&gt;");
+        
+        //배열 선언
+        var arr1 = new Array();
+        arr1[0] = 100;
+        arr1[1] = 200;
+        
+        document.write(arr1[0]);
+        document.write("&lt;br&gt;");
+        document.write(arr1[1]);
+        document.write("&lt;br&gt;&lt;br&gt;");
+        
+        //배열 선언과 동시에 초기화하기
+        var arr2 = new Array(100,200,300);
+        
+        document.write(arr2[0],"&lt;br&gt;");
+        document.write(arr2[1],"&lt;br&gt;");
+        document.write(arr2[2],"&lt;br&gt;&lt;br&gt;");
+        
+        //배열의 크기 구하기
+        var arr3 = new Array(100,200,300,400,500);
+        
+        document.write(arr3.length);
+        document.write("&lt;br&gt;&lt;br&gt;");
+        
+        //for문을 이용한 배열의 합 구하기
+        var arr4 = new Array(100,200,300,400,500,600,700,800,900,1000);
+        var sum = 0;
+        
+        //arr4[0] = 100
+        //arr4[i] = 200
+        //arr4[i] = 300
+        //arr4[i] = 400
+        //arr4[i] = 500
+        //arr4[i] = 600
+        //arr4[i] = 700
+        //arr4[i] = 800
+        //arr4[i] = 900
+        //arr4[i] = 1000
+        
+        // 0 = 0 + 100;
+        // 100 = 100 + 200;
+        // 300 = 300 + 300;
+        // 600 = 600 + 400;
+        // 1000 = 1000 + 500;
+        // 1500 = 1500 + 600;
+        // 2100 = 2100 + 700;
+        // 2800 = 2800 + 800;
+        // 3600 = 3600 + 900;
+        // 4500 = 4500 + 1000;
+        // 5500
+            
+        //i=0; 0&lt;10; 1;
+        //i=1; 1&lt;10; 2;
+        //i=2; 2&lt;10; 3;
+        //i=3; 3&lt;10; 4;
+        //i=4; 4&lt;10; 5;
+        //i=5; 5&lt;10; 6;
+        //i=6; 6&lt;10; 7;
+        //i=7; 7&lt;10; 8;
+        //i=8; 8&lt;10; 9;
+        //i=9; 9&lt;10; 10;
+        
+        
+        for(var i=0; i&lt;arr4.length; i++){
+            sum = sum + arr4[i];
+       }
+        document.write(sum);
+    
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>                    
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction5" class="page-header">연산자</h2>
+					
+					<h3 id="introduction5-1">산술연산자</h3>
+					<div class="lead">산술 연산자는 사칙 연산을 수행합니다.</div>
+					<div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>연산자</th>
+                                    <th>예시</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>+</code></td>
+                                    <td>x + y</td>
+                                    <td>더하기</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-</code></td>
+                                    <td>x - y</td>
+                                    <td>빼기</td>
+                                </tr>
+                                <tr>
+                                    <td><code>*</code></td>
+                                    <td>x * y</td>
+                                    <td>곱하기</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/</code></td>
+                                    <td>x / y</td>
+                                    <td>나누기</td>
+                                </tr>
+                                <tr>
+                                    <td><code>%</code></td>
+                                    <td>x % y</td>
+                                    <td>나머지</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+					<h3 id="introduction5-2">복합연산자</h3>
+					<div class="lead">복합 연산자는 사칙연산을 간결하게 표현할 때 사용합니다.</div>
+					<div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>연산자</th>
+                                    <th>예시</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>+=</code></td>
+                                    <td>x = x + 10</td>
+                                    <td>x+=10</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-=</code></td>
+                                    <td>x = x - 10</td>
+                                    <td>x-=10</td>
+                                </tr>
+                                <tr>
+                                    <td><code>*=</code></td>
+                                    <td>x = x * 10</td>
+                                    <td>x*=10</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/=</code></td>
+                                    <td>x = x / 10</td>
+                                    <td>x/=10</td>
+                                </tr>
+                                <tr>
+                                    <td><code>%=</code></td>
+                                    <td>x = x % 10</td>
+                                    <td>x%=10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+					<h3 id="introduction5-3">증감연산자</h3>
+					<div class="lead">증가 연산자는 1만큼 증가시키고, 감소연산자는 1만큼 감소시킵니다.</div>
+					<div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>연산자</th>
+                                    <th>예시</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>++</code></td>
+                                    <td>x = x ++ 1</td>
+                                    <td>x++ 또는 ++x</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--</code></td>
+                                    <td>x = x -- 1</td>
+                                    <td>x-- 또는 --x</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+					<h3 id="introduction5-4">비교연산자</h3>
+					<div class="lead">비교 연산자는 두개의 값을 비교하여 결과를 참 또는 거짓으로 나타냅니다.</div>
+					<div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>연산자</th>
+                                    <th>예시</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>==</code></td>
+                                    <td>x == y</td>
+                                    <td>좌변과 우변이 값이 같을 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>===</code></td>
+                                    <td>x === y</td>
+                                    <td>좌변과 우변이 값이 같거나 데이터형도 같을 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>!=</code></td>
+                                    <td>x != y</td>
+                                    <td>좌변과 우변이 값이 같지 않을 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>!==</code></td>
+                                    <td>x !== y</td>
+                                    <td>좌변과 우변이 값이 같지 않을 경우, 또는 데이터형이 다른 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&gt;</code></td>
+                                    <td>x &gt; y</td>
+                                    <td>좌변이 우변보다 클 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;</code></td>
+                                    <td>x &lt; y</td>
+                                    <td>우변이과 좌변보다 클 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&gt;=</code></td>
+                                    <td>x &gt;= y</td>
+                                    <td>좌변이 우변보다 크거나 같은 경우에 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;=</code></td>
+                                    <td>x &lt;= y</td>
+                                    <td>우변이과 좌변보다 작거나 같은 경우에 true</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+					<h3 id="introduction5-5">논리연산자</h3>
+					<div class="lead">논리 연산자는 참/거짓으로 나타내는 boolean 값을 조합해서 논리 연산을 수행합니다.</div>
+					<div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>연산자</th>
+                                    <th>예시</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>&amp;&amp;</code></td>
+                                    <td>x &amp;&amp; y</td>
+                                    <td> (and) 둘다 true인 경우 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>||</code></td>
+                                    <td>x || y</td>
+                                    <td> (or) 둘 중의 하나 이상이 true 이면 true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>!</code></td>
+                                    <td>x ! y</td>
+                                    <td> (not) 식이 fales인 경우 true</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction6" class="page-header">조건문</h2>
+					<div class="lead">조건문은 말 그대로 조건에 맞으면 실행하고, 맞지 않으면 다른 코드를 실행하도록 조건을 거는 제어문입니다.</div>
+					
+					<h3 id="introduction6-1">if</h3>
+					<div class="lead">if문 단독으로 사용하는 형태입니다.</div>
+					<div class="bs-callout bs-callout-warning">
+                       if(조건){<br>
+                           //실행코드<br>
+                       }
+                    </div>
+                    <h4>if <a href="javascript05.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;if&lt;/title&gt;
+    &lt;script&gt;
+        var x = 100;
+        
+        if(x % 2 == 0){
+            document.write("짝수입니다.");
+           }
+        
+        var num = window.prompt("숫자를 입력해주세요!");
+        if(num % 2 == 0){
+            document.write("당신이 입력한 숫자는 짝수입니다.");
+           }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                    <h3 id="introduction6-2">if~else</h3>
+                    <div class="lead">두개의 값을 비교하여 코드를 별개로 실행합니다.</div>
+                    <div class="bs-callout bs-callout-warning">
+                       if(조건){<br>
+                           //참일 때 실행코드<br>
+                       } else {<br>
+                           //거짓일 때 실행코드<br>
+                       }
+                    </div>
+                    <h4>if~else <a href="javascript06.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;if~else&lt;/title&gt;
+    &lt;script&gt;
+        var x = 100;
+        if(x % 2 === 0){
+            document.write("짝수입니다.");
+           } else {
+            document.write("홀수입니다.");
+           }
+        
+        var num = window.prompt("숫자를 입력해주세요!");
+        if(num % 2 == 0){
+            alert("짝수입니다.");
+           } else {
+            alert("홀수입니다.");
+           }
+        
+        var userID = window.prompt("아이디를 입력하세요")
+        var userPW = window.prompt("패스워드를 입력하세요")
+        if(userID == "suh4522" &amp;&amp; userPW == "1234"){
+            alert("환영합니다");
+           } else {
+            alert("아이디 또는 비밀번호를 확인해주세요");
+           }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<h3 id="introduction6-3">다중 if</h3>
+					<div class="lead">여러가지 조건에 따라 조건문을 설정합니다.</div>
+					<div class="bs-callout bs-callout-warning">
+                       if(조건){<br>
+                           //참일 때 실행코드<br>
+                       } else if {<br>
+                           //앞 조건이 거짓일 때 실행코드<br>
+                       } else if {<br>
+                           //앞 조건이 거짓일 때 실행코드<br>
+                       } else {<br>
+                           //앞 모든 조건이 거짓일 때 실행코드<br>
+                       }
+                    </div>
+                    <h4>if <a href="javascript07.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;다중 if문&lt;/title&gt;
+    &lt;script&gt;
+        var x = 100;
+        
+        if(x == 90){
+            document.write("x의 숫자는 90입니다.");
+        } else if(x == 91) {
+            document.write("x의 숫자는 91입니다.");
+        } else if(x == 92) {
+            document.write("x의 숫자는 92입니다.");
+        } else if(x == 93) {
+            document.write("x의 숫자는 93입니다.");
+        } else if(x == 94) {
+            document.write("x의 숫자는 94입니다.");
+        } else if(x == 95) {
+            document.write("x의 숫자는 95입니다.");
+        } else {
+            document.write("x의 숫자는 모르겠습니다.");
+        }
+        
+        var userID = window.prompt("아이디를 입력하세요")
+        var userPW = window.prompt("패스워드를 입력하세요")
+        
+        if(userID == "suh4522" &amp;&amp; userPW == "1234"){
+            alert("환영합니다");
+        } else if (userID == "suh4522"){
+            alert("패스워드가 틀렸습니다");
+        } else if (userPW == "suh4522"){
+            alert("패스워드가 틀렸습니다");
+        } else if (userID == "1234"){
+            alert("아이디가 틀렸습니다");
+        } else {
+            alert("아이디와 비밀번호를 다시 한번 확인해주세요.");
+        }
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<h3 id="introduction6-4">switch</h3>
+					<div class="lead">해당 조건에 맞는 값을 case로 구분해서 수행하는 제어문입니다.</div>
+					<div class="bs-callout bs-callout-warning">
+                       switch(조건){<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;case 값1:<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값1을 가지고 있으면 실행<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                           
+                           &nbsp;&nbsp;&nbsp;&nbsp;case 값2:<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값2을 가지고 있으면 실행<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                           
+                           &nbsp;&nbsp;&nbsp;&nbsp;case 값3:<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값3을 가지고 있으면 실행<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                           
+                           &nbsp;&nbsp;&nbsp;&nbsp;default;<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//해당되는 값을 가지고 있지 않을 경우 실행<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                       }
+                    </div>
+                    <h4>switch1 <a href="javascript08.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;switch&lt;/title&gt;
+    &lt;script&gt;
+        var color = window.prompt("빨강, 파랑, 노랑, 검정, 흰색 중 가장 좋아하는 색을 적어주세요");
+        
+        switch (color){
+            case"빨강":
+                document.write("당신은 빨강처럼 열정적인 사람입니다.")
+            break;
+                
+            case"파랑":
+                document.write("당신은 파랑처럼 열정적인 사람입니다.")
+            break;
+                
+            case"노랑":
+                document.write("당신은 노랑처럼 열정적인 사람입니다.")
+            break;
+                
+            case"검정":
+                document.write("당신은 검정처럼 열정적인 사람입니다.")
+            break;
+                
+            case"흰색":
+                document.write("당신은 흰색처럼 열정적인 사람입니다.")
+            break;
+                
+            default :
+                document.write("당신은 색을 볼 줄 모르는군요~ 실망입니다.")
+            break;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <h4>switch2 <a href="javascript09.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;switch&lt;/title&gt;
+    &lt;script&gt;
+        var site = window.prompt("네이버, 다음, 구글, 네이트 중 가장 자주가는 사이트는?");
+        var url;
+        
+        switch (site){
+            case"네이버": url="www.naver.com";
+            break;
+                
+            case"다음": url="www.daum.net";
+            break;
+                
+            case"구글": url="www.google.com";
+            break;
+                
+            case"네이트": url="www.nate.com";
+            break;
+                
+            default : document.write("그런 사이트 없습니다.");
+            break;
+        }
+        //alert(url);
+        
+        if(url) location.href="http://"+url
+            
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<h3 id="introduction6-5">조건부 연산자</h3>
+					<div class="bs-callout bs-callout-warning">
+                       (조건) ? (참일때 실행코드) : (거짓일때 실행코드)
+                    </div>
+                    <h4>if <a href="javascript10.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;조건문 연산자&lt;/title&gt;
+    &lt;script&gt;
+    //숫자가 5보다 크면 "숫자가 5보다 큽니다" 출력
+    //숫자가 5보다 작으면 "숫자가 5보다 작습니다" 출력
+    //숫자가 5면 "빙고" 출력
+    
+    /* var num = window.prompt("숫자를 쓰세요~");
+        
+    if(num &gt; 10){
+        document.write("숫자가 10보다 큽니다");
+        document.write("&lt;br&gt;");
+    }else {
+        document.write("숫자가 10보다 작습니다");
+        document.write("&lt;br&gt;");
+    }*/
+    
+    var num = window.prompt("숫자를 쓰세요~");
+        
+    if(num == 5){
+        document.write("빙고");
+        document.write("&lt;br&gt;");
+    }else if(num &gt; 5) {
+        document.write("숫자가 5보다 큽니다");
+        document.write("&lt;br&gt;");
+    }else if(num &lt; 5) {
+        document.write("숫자가 5보다 작습니다");
+        document.write("&lt;br&gt;");
+    }
+        
+    //x:100, y:200 x*y의 값을 출력해주세요!
+    var x = 100;
+    var y = 200;
+        
+    document.write(x*y);
+    document.write("&lt;br&gt;");
+    
+    //x:100, y:200 함수(num2)를 이용해서 x*y의 값을 출력해주세요!
+    function num2(){
+        var x = 100;
+        var y = 200;
+        document.write(x*y);
+        document.write("&lt;br&gt;");
+    }
+    num2();
+    
+    //매개변수를 100,200을 이용해 함수(num3)를 만들어서 x*y의 값을 출력해주세요!
+    function num3(n1,n2){
+        document.write(n1*n2);
+    }
+    num3(100,200);
+    
+    //사용자가 숫자를 입력했을 때 홀수, 짝수를 구별해서 출력해주세요
+    var num5 = window.prompt("숫자를 입력해주세요!");
+    num5 = parseInt(num5);
+    
+    if(num5 % 2 == 0){
+        document.write("짝수");
+        document.write("&lt;br&gt;");
+    }else {
+        document.write("홀수");
+        document.write("&lt;br&gt;");
+    }
+    
+    (num5 % 2 == 0) ? document.write("짝수"); document.write("홀수");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+                    <h2 id="introduction7" class="page-header">반복문</h2>
+                    
+                    <h3 id="introduction7-1">while문</h3>
+					<div class="bs-callout bs-callout-warning">
+                        var 변수 = 초기값<br>
+                        while(조건식){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;증감식;<br>
+                       }
+                    </div>
+                    <h4>while <a href="javascript11.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;while&lt;/title&gt;
+    &lt;script&gt;
+    //1~1000출력
+    //초기값, 실행문, 증감식
+        var count = 1;
+        while(count &lt;= 1000){
+            document.write(count,"&lt;br&gt;");
+            count++;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <h4>100보다 작은 숫자에서 4의배수와 6의배수 출력하기 <a href="javascript12.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;while&lt;/title&gt;
+    &lt;script&gt;
+        //1~1000출력(4의배수, 6의배수)
+        //초기값, 조건식, 실행문, 증감식
+        var num = 1;
+        while(num &lt;= 100){
+            
+            if(num%4==0 &amp;&amp; num%6==0){
+                document.write(num,"&lt;br&gt;")
+            }
+            num++;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <h4>1~100까지 숫자를 짝수는 파란색, 홀수는 빨간색으로 출력하기 <a href="javascript13.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //1~100출력(짝수:파란색, 홀수:빨간색)
+        var num = 1;
+        while(num &lt;= 100){
+            
+            if(num % 2 == 0) {
+                document.write("&lt;span style='color:blue'&gt;"+num+"&lt;/span&gt;","&lt;br&gt;");
+            } else {
+                document.write("&lt;span style='color:red'&gt;"+num+"&lt;/span&gt;","&lt;br&gt;");
+            }
+            num++;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<h3 id="introduction7-2">do while문</h3>
+					<div class="lead">while 문의 경우에는 조건식의 만족 여부를 먼저 검사한 후, 중괄호에 있는 실행문의 실행 여부를 결정합니다. 하지만 do while문은 반드시 한 번은 실행문을 실행하고 조건식을 검사합니다.</div>
+					<div class="bs-callout bs-callout-warning">
+                        var 변수 = 초기값;<br>
+                        do {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;증감식;<br>
+                       } while(조건식)
+                    </div>
+                    <h4>do while <a href="javascript14.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;while&lt;/title&gt;
+    &lt;script&gt;
+        var count = 0;
+        do {
+            count++;
+            document.write(count,"&lt;br&gt;")
+        } while(count&lt;100);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<h3 id="introduction7-3">for문</h3>
+					<div class="lead">for문은 특정 구문을 여러번 반복하고 싶을 때 사용하는 반복문입니다.</div>
+					<div class="bs-callout bs-callout-warning">
+                        for (초기값; 조건식; 증감값){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
+                       }
+                    </div>
+                    <h4>for문 <a href="javascript15.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;for문&lt;/title&gt;
+    &lt;script&gt;
+        for (var i=0; i&lt;=100; i++){
+            document.write("숫자"+i,"&lt;br&gt;");
+        }
+        //0~100중에서 짝수만 출력
+        for (var i=0; i&lt;=100; i+=2){
+            document.write("짝수"+i,"&lt;br&gt;");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <h4>5의 배수는 파란색, 7의 배수는 빨간색, 5와7의 배수는 검은색 출력 <a href="javascript16.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;for문&lt;/title&gt;
+    &lt;script&gt;
+        //for문을 이용해서 1~100까지 출력
+        //5의 배수는 파란색 출력
+        //7의 배수는 빨간색 출력
+        //5와7의 배수는 검은색 출력
+        for(var i=1; i&lt;=100; i++){
+            if(i % 5 == 0 &amp;&amp; i % 7 !== 0){ //5의 배수이고 7의 배수가 아닌경우
+                document.write("&lt;span style='color:blue'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+            } else if(i % 7 == 0 &amp;&amp; i % 5 !== 0){ //7의 배수이고 5의 배수가 아닌 경우
+                document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+            } else if(i % 5 == 0 &amp;&amp; i % 7 == 0){ //7의 배수이고 5의 배수인 경우
+                document.write("&lt;span style='color:black'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                
+                <h4>for문을 이용해서 배열의 합 구하기 <a href="javascript17.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //변수 : 하나의 데이터를 저장하는 저장소
+        //배열 : 두개 이상의 데이터를 저장하는 저장소
+        var arr4 = new Array(100,200,300,400,500,100,200,300,400,500);
+        var sum = 0;
+        
+        for(var i=0; i&lt;arr4.length; i++){
+            //document.write(arr4[i],"&lt;br&gt;");
+            sum = sum + arr4[i];
+        }
+        document.write(sum);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+					<h3 id="introduction7-4">다중 for문</h3>
+					<div class="bs-callout bs-callout-warning">
+                       for(var i=0; i&lt;100; i++){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for(var j=0; j&lt;100; j++){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//실행 코드<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                       }
+                    </div>
+                    <h4>구구단<a href="javascript18.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;구구단&lt;/title&gt;
+    &lt;script&gt;
+        //num1 * num2 = sum
+        //(2~9) * (1~9)
+        // 2 * 1 = 2
+        // 2 * 2 = 4
+        // 2 * 3 = 6
+        // 2 * 4 = 8
+        // 2 * 5 = 10
+        // 2 * 6 = 12
+        
+        // 3 * 1 = 3
+        // 3 * 2 = 6
+        // 3 * 3 = 9
+        // 3 * 4 = 12
+        // 3 * 5 = 15
+        // 3 * 6 = 18
+        
+        for(var i=0; i&lt;8; i++){
+            for(var j=0; j&lt;9; j++){
+                var num1 = i + 2;
+                var num2 = j + 1;
+                var sum = num1 * num2;
+                document.write(num1 + " x " + num2 + " = " + sum);
+                document.write("&lt;br&gt;")
+                
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                
+                <h4>table<a href="javascript19.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;table&lt;/title&gt;
+    &lt;script&gt;
+        var num = 1;
+        var table = "&lt;table border='1'&gt;";
+        for(var i=1; i&lt;=10; i++){
+            table += "&lt;tr&gt;";
+            
+            for(var j=1; j&lt;=10; j++){
+                table += "&lt;td&gt;" + num + "&lt;/td&gt;";
+                num++;
+            }
+            
+            table += "&lt;/tr&gt;";
+        }
+        table += "&lt;/table&gt;";
+        document.write(table);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!--
+    &lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>                
+            
+                    <h3 id="introduction7-5">break문과 conrinue문</h3>
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction8" class="page-header">함수</h2>
+					<div class="lead"><strong>함수는 하나의 실행문</strong>을 저장하여 사용할 수 있습니다.</div>
+					<p>함수는 하나의 실행문을 저장하고 변수는 하나의 데이터를 저장하여 사용합니다. 함수는 스크립트 실행문을 보관하는 역활을 하기 때문에 반복 사용되는 코드를 구조화하거나 재활용을 목적으로 사용합니다.
+					</p>
+					
+					<h4>함수를 사용하는 이유 <a href="javascript20.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;script&gt;
+    //for문을 이용해서 화면에 다음과 같이 출력해주세요!
+    //1.white
+    //2.white
+    //3.white
+    //4.white
+    //5.white
+    //6.white
+    //7.white
+    //8.white
+    //9.white
+    //10.white
+        
+    //1.black
+    //2.black
+    //3.black
+    //4.black
+    //5.black
+    //6.black
+    //7.black
+    //8.black
+    //9.black
+    //10.black
+        
+    //1.blue
+    //2.blue
+    //3.blue
+    //4.blue
+    //5.blue
+    //6.blue
+    //7.blue
+    //8.blue
+    //9.blue
+    //10.blue
+
+    for (var i=1; i&lt;=10; i++){
+            document.write(i+". white","&lt;br&gt;");
+    }
+    for (var j=1; j&lt;=10; j++){
+            document.write(j+". black","&lt;br&gt;");
+    }
+    for (var a=1; a&lt;=10; a++){
+            document.write(a+". blue","&lt;br&gt;");
+    }
+        
+    function color(name){
+        for (var a=1; a&lt;=10; a++){
+            document.write(a+ "."+name,"&lt;br&gt;");
+        }
+    }
+    color("black");
+    color("blue");
+    color("white");
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            
+            <h3>함수는 사용 형태</h3>
+            <p>함수는 사용형태에 따라서 일반적인 함수, 익명함수, 매개변수 있는 함수, 리턴값이 있는 함수로 구분됩니다.</p>
+            
+            <h4>일반적인 함수 <a href="javascript21.html"> view</a></h4>
+            <div class="bs-callout bs-callout-warning">
+                function 함수이름(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
+                }<br>
+                함수이름();&nbsp;&nbsp;&nbsp;&nbsp;//함수 호출
+            </div>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;기본적인 함수&lt;/title&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="message"&gt;환영합니다.&lt;/div&gt;
+    
+    &lt;script&gt;
+        var msg = "10% 할인을 받으시려면 지금 회원으로 가입하세요!"
+        
+        function updateMeessage(){
+            var el = document.getElementById('message');
+            el.textContent = msg; 
+        }
+        updateMeessage(); 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            
+            <h4>익명 함수 <a href="javascript22.html"> view</a></h4>
+            <div class="bs-callout bs-callout-warning">
+                var 변수이름 = function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
+                }<br>
+                변수이름();&nbsp;&nbsp;&nbsp;&nbsp;//함수 호출
+            </div>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;익명 함수&lt;/title&gt;
+    &lt;script&gt;
+        var fun = function(){
+            document.write("익명함수가 실행되었습니다.");
+        }
+        fun();
+        
+        var msg = "10% 할인을 받으시려면 지금 회원으로 가입하세요!"
+        
+        var updateMeessage = function (){
+            var el = document.getElementById('message');
+            el.textContent = msg; 
+        }
+        updateMeessage();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="message"&gt;환영합니다.&lt;/div&gt;
+    
+    &lt;script&gt;
+        var msg = "10% 할인을 받으시려면 지금 회원으로 가입하세요!"
+        
+        function updateMeessage(){
+            var el = document.getElementById('message');
+            el.textContent = msg; 
+        }
+        updateMeessage(); 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                      
+            <h4>매개변수가 있는 함수 <a href="javascript23.html"> view</a></h4>
+            <div class="bs-callout bs-callout-warning">
+                function 함수이름(매개변수1, 매개변수2,....){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
+                }<br>
+                함수이름(매개변수1, 매개변수2,....);&nbsp;&nbsp;&nbsp;&nbsp;//함수 호출
+            </div>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;매개변수가 있는 함수&lt;/title&gt;
+    &lt;script&gt;
+        function func3(num){
+            document.write(num)
+        }
+        func3("매개변수가 있는 함수 입니다.")
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="message"&gt;환영합니다.&lt;/div&gt;
+    
+    &lt;script&gt;
+        var msg = "10% 할인을 받으시려면 지금 회원으로 가입하세요!"
+        
+        function updateMeessage(msg){
+            var el = document.getElementById('message');
+            el.textContent = msg; 
+        }
+        updateMeessage(msg); 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                      
+            <h4>리턴값이 있는 함수 <a href="javascript24.html"> view</a></h4>
+            <div class="bs-callout bs-callout-warning">
+                function 함수이름(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;//return 리턴값;<br>
+                }<br>
+                함수이름();&nbsp;&nbsp;&nbsp;&nbsp;//함수 호출
+            </div>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;리턴값이 있는 함수&lt;/title&gt;
+    &lt;script&gt;
+        function func4(){
+            var str = "리턴값이 있는 함수입니다."
+            return str;
+        }
+        document.write(func4());
+        
+        function calculateArea(width, height){
+            var area = width * height;
+            return area;
+        }
+        var ca =calculateArea(300,400);
+        document.write(ca);
+        
+        function getSize(width, height, edpth){
+            var area = width * height;
+            var volume = width * height * depth;
+            var size = [area, volume];
+            return size;
+        }
+        var areaOne = getSize(3,2,3)[0];
+        var volumeOne = getSize(3,2,3)[1];
+        
+        document.write(areaOne);
+        document.write(volumeOne);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction9" class="page-header">객체</h2>
+					<lead>객체는 데이터와 연산 작업을 담고 있는 기본적인 기능입니다.</lead>
+					<p>객체(object)란 여러분이 현실 세계에서 인지하는 물체에 대한 모델을 만들기 위해 변수와 함수를 그룹화한 것을 말합니다.</p>
+					<div class="bs-callout bs-callout-warning">
+                       속성 : 객체 안에 있는 변수<br>
+                       메서드 : 객체 안에 있는 함수
+                    </div>
+                    
+                    <h3>객체를 생성하는 방법</h3>
+                    <h4>축약형 표기법, 객체 생성자 표기법<a href="javascript28.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;객체를 생성하는 방법&lt;/title&gt;
+    &lt;script&gt;
+        //객체를 생성한 후 속성(변수)과 메서드(함수)를 추가하는 방법
+        //축약형 표기법
+        var hotel = {};
+        
+        hotel.name = "Park";
+        hotel.rooms = 40;
+        hotel.booked = 25;
+        hotel.check = function(){
+            return this.rooms - this.booked;
+        }
+        
+        //객체 생성자 표기법
+        var hotel2 = new Object{};
+        
+        hotel2.name = "Park";
+        hotel2.rooms = 40;
+        hotel2.booked = 25;
+        hotel2.check = function(){
+            return this.rooms - this.booked;
+        }
+        
+        //속성과 메서드를 사전에 정의하여 객체 생성하기
+        //축약형 표기법
+        var hotel3 = {
+            name : "Web",
+            rooms : 40,
+            booked : 25,
+            check : function(){
+                return this.rooms - this.booked;
+            }
+        }
+        
+        //객체 생성자 표기법
+        //함수를 이용하면 여러개의 객체를 생성할 수 있습니다. 이때는 객체의 이름 대신 this 키워드를 사용합니다.
+        function Hotel(name, rooms, booked){
+            this.name = name;
+            this.rooms = rooms;
+            this.booked = booked;
+            this.check = function(){
+                return this.rooms - this.booked;
+            }
+        }
+        var quayHotel = new Hotel('quay', 40, 25);
+        var parkHotel = new Hotel('park', 40, 25);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>					
+					<h4>객체 <a href="javascript25.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;예약정보&lt;/h2&gt;
+    &lt;div id="hotelName"&gt;&lt;/div&gt;
+    &lt;div id="availability"&gt;
+        &lt;p id="room"&gt;&lt;/p&gt;
+        &lt;p&gt;개의 방이 남아있습니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        var hotel = {
+            name : 'quay',
+            rooms : 40,
+            booked : 25,
+            gym : true,
+            roomtypes : ['트윈','더블','스위트'],
+            checkAvailability : function(){
+                var free = this.rooms - this.booked;
+                return free;
+            }
+        };
+        
+        var elName =document.getElementById('hotelName');
+        elName.textContent = hotel.name;
+        
+        var elRooms = document.getElementById('room');
+        elRooms.textContent = hotel.checkAvailability();
+        
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          
+                    <h4>데이터 저장 <a href="javascript29.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;데이터 저장하기&lt;/title&gt;
+    &lt;script&gt;
+        //변수 : 하나의 데이터를 저장하는 저장소
+        var hotel = "park";
+        document.write(hotel,"&lt;br&gt;");
+        
+        //배열 : 여러개의 데이터를 저장하는 저장소
+        var hotel1 = ["web","S","Y","Nan"];
+        document.write(hotel1[0],"&lt;br&gt;");
+        
+        //객체 : 속성과 메서드를 저장하는 저장소
+        var hotel2 = {
+            name: "java",
+            rooom: 40
+        };
+        document.write(hotel2.name,"&lt;br&gt;");
+        
+        //여러개의 객체 : 여러개의 객체를 저장하는 저장소
+        function Hotel6(name, rooms){
+            this.name = name;
+            this.rooms = rooms;
+        }
+        var hou1 = new Hotel6 ('Css',40);
+        var hou2 = new Hotel6 ('Cass',120);
+        
+        document.write(hou1.name,"&lt;br&gt;");
+        document.write(hou2.name,"&lt;br&gt;");
+        document.write(hou1.rooms,"&lt;br&gt;");
+        document.write(hou2.rooms,"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>           
+                    <h4>생성자 문법을 이용한 객체 <a href="javascript26.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;생성자 문법을 이용한 객체&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;예약정보&lt;/h2&gt;
+    &lt;div id="hotelName"&gt;&lt;/div&gt;
+    &lt;div id="availability"&gt;
+        &lt;p id="room"&gt;&lt;/p&gt;
+        &lt;p&gt;개의 방이 남아있습니다.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;script&gt;
+        //var hotel = new Array();
+        var hotel = new Object();
+        
+        hotel.name = 'park';
+        hotel.rooms = '120';
+        hotel.booked = '70';
+        hotel.checkAvailability = function(){
+            return this.rooms - this.booked;
+        };
+        
+        var elName = document.getElementById('hotelName');
+        elName.textContent = hotel.name;
+        
+        var elrooms = document.getElementById('room');
+        elrooms.textContent = hotel.checkAvailability();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+           
+                <h2>내장 객체</h2>
+                <div class="lead">브라우저는 브라우저 창과 이창이 현재 보여주고 있는 페이지 들을 표현하기 위한 내장 객체들을  가지고 있습니다.</div>
+                <h3>브라우저 객체 모델</h3>
+                <p>브라우저 객체 모델은 브라우저 탭 혹은 창의 모델을 생성합니다.</p>
+                <p>document, history, location, navigarior, screen</p>
+                
+                <h4>브라우저 객체 모델 : window 객체</h4>
+                <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>속성</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>window.innerHeight</td>
+                                    <td>창의 높이(브라우저 창 테두리 및 사용자 인터페이스 부분은 제외)(단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.innerWidth</td>
+                                    <td>창의 너비(브라우저 창 테두리 및 사용자 인터페이스 부분은 제외) (단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.pageXOffset</td>
+                                    <td>문서의 가로 스크롤 크기 (단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.pageYOffset</td>
+                                    <td>문서의 세로 스크롤 크기 (단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.screenX</td>
+                                    <td>화면의 좌측 상단으로부터 현재 마우스 포인터의 X좌표 (단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.screenY</td>
+                                    <td>화면의 좌측 상단으로부터 현재 마우스 포인터의 Y좌표 (단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.location</td>
+                                    <td>window 객체의 URL (혹은 파일의 경로)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.document</td>
+                                    <td>현재 창에 로드된 페이지를 표현하는 document 객체에 대한 참조</td>
+                                </tr>
+                                <tr>
+                                    <td>window.history</td>
+                                    <td>현재 창이나 탭을 통해 로드되었던 페이지들의 상세 정보를 제공하는 history 객체에 대한 참조</td>
+                                </tr>
+                                <tr>
+                                    <td>window.history.</td>
+                                    <td>length 브라우저 창 또는 탭의 history 객체에 보관된 페이지의 개수</td>
+                                </tr>
+                                <tr>
+                                    <td>window.screen</td>
+                                    <td>screen 객체에 대한 참조</td>
+                                </tr>
+                                <tr>
+                                    <td>window.screen.width</td>
+                                    <td>screen 객체의 접근하여 width 속성 값을 조회 (단위는 픽셀)</td>
+                                </tr>
+                                <tr>
+                                    <td>window.screen.height</td>
+                                    <td>screen 객체의 접근하여 height 속성 값을 조회 (단위는 픽셀)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>window 객체 <a href="javascript30.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        var msg = "&lt;h2&gt;브라우저 창&lt;/h2&gt;&lt;p&gt;너비 : " + window.innerWidth + "&lt;/p&gt;";
+        msg += "&lt;p&gt;높이 : " + window.innerHeight + "&lt;/p&gt;";
+        msg += "&lt;p&gt;히스토리 : " + window.history.length + "&lt;/p&gt;";
+        msg += "&lt;h2&gt;화면&lt;/h2&gt;&lt;p&gt;너비 : " + window.screen.width + "&lt;/p&gt;";
+        msg += "&lt;p&gt;높이 : " + window.screen.height + "&lt;/p&gt;";
+        msg += "&lt;h2&gt;브라우저&lt;/h2&gt;&lt;p&gt;주소 : " + window.location + "&lt;/p&gt;";
+        
+        document.write(msg);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>               
+                                             
+                <h3>문서 객체 모델</h3>
+                <div class="lead">문서 객체 모델(DOM : Document Object Model)은 현재 페이지의 모델을 생성합니다.</div>
+                <h4>document 객체 <a href="javascript31.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document 객체&lt;/title&gt;
+    &lt;script&gt;
+        var msg = "&lt;p&gt; 페이지 제목 : "+ document.title + "&lt;/p&gt;";
+            msg += "&lt;p&gt; 페이지 주소 : "+ document.URL + "&lt;/p&gt;";
+            msg += "&lt;p&gt; 페이지 수정 : "+ document.lastModified + "&lt;/p&gt;";
+        document.write(msg);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> 
+                
+                <h3>전역 자바스크립트 객체</h3>
+                <div class="lead">전역 객체는 어떤 특정한 모델을 표현하지 않고 각기 다른 부분을 담당하는 관련 객체들의 집합입니다.</div>
+                <p>string, number, boolean, date, math, RegEx</p>
+                <h4>string 객체 <a href="javascript32.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;string 객체&lt;/title&gt;
+    &lt;script&gt;
+        var saying = "Home sweet home";
+        var msg = "&lt;p&gt;길이 : " + saying.length + "&lt;/p&gt;"
+            msg += "&lt;p&gt;대문자 : " + saying.toUpperCase() + "&lt;/p&gt;";
+            msg += "&lt;p&gt;소문자 : " + saying.toLowerCase() + "&lt;/p&gt;";
+            msg += "&lt;p&gt;문자인덱스12 : " + saying.charAt(12) + "&lt;/p&gt;";
+            msg += "&lt;p&gt;'ee' 첫 번째 위치  : " + saying.indexOf('ee') + "&lt;/p&gt;";
+            msg += "&lt;p&gt;'e'마지막 번째 위치  : " + saying.lastIndexOf('e') + "&lt;/p&gt;";
+            msg += "&lt;p&gt;인덱스 범위(8-14)  : " + saying.substring(8,14) + "&lt;/p&gt;";
+            msg += "&lt;p&gt;replace  : " + saying.replace('me','w') + "&lt;/p&gt;";
+        
+        document.write(msg);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+           
+                <h4>Number 객체 <a href="javascript33.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;number 객체&lt;/title&gt;
+    &lt;script&gt;
+        var number = 10.23456;
+        var msg = "&lt;p&gt;원래 숫자 : " + number+ "&lt;/p&gt;"
+            msg += "&lt;p&gt;소수점 반올림 : " + number.toFixed(3); + "&lt;/p&gt;";
+            msg += "&lt;p&gt;소수점 반올림 : " + number.toPrecision(3); + "&lt;/p&gt;";
+        
+        document.write(msg);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+           
+                <h4>math 객체 <a href="javascript34.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;number 객체&lt;/title&gt;
+    &lt;script&gt;
+        var random = Math.floor((Math.random()*10));
+        document.write(random);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+           
+                <h4>date 객체 <a href="javascript35.html"> view</a></h4>
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;date 객체&lt;/title&gt;
+    &lt;script&gt;
+        var today = new Date();
+        var msg = "";
+        msg += "오늘은 몇 일이니? : "+today.getDate()+"일"+"&lt;br&gt;";
+        msg += "오늘은 무슨 요일이니? : "+today.getDay()+"요일"+ "&lt;br&gt;";
+        msg += "오늘은 몇년도니? : "+today.getFullYear()+"년"+ "&lt;br&gt;";
+        msg += "지금은 몇 시니? : "+today.getHours()+"시"+ "&lt;br&gt;";
+        msg += "지금은 몇 분이니? : "+today.getMinutes()+"분"+ "&lt;br&gt;";
+        msg += "지금은 몇 초니? : "+today.getMilliseconds()+"초"+ "&lt;br&gt;";
+        msg += "오늘은 몇 월이니? : "+today.getMonth()+"월"+ "&lt;br&gt;";
+        
+        document.write(msg);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            
+				</div>
+				<!-- //Introduction -->
+
+				<!-- Introduction -->
+				<div class="bs-docs-section">
+					<h2 id="introduction10" class="page-header">자바스크립트</h2>
+				</div>
+				<!-- //Introduction -->
+
+				
+			</div>
+			<!-- //col-md-9 -->
+
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#introduction1">자바스크립트</a></li>
+                        <li><a href="#introduction2">자바스크립트 기본</a></li>
+                        <li><a href="#introduction3">변수</a>
+                            <ul class="nav">
+                                <li><a href="#introduction3-1">변수의 종류</a></li>
+                                <li><a href="#introduction3-2">변수의 유형</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#introduction4">배열</a></li>
+                        <li><a href="#introduction5">연산자</a>
+                            <ul class="nav">
+                                <li><a href="#introduction5-1">산술연산자</a></li>
+                                <li><a href="#introduction5-2">복합연산자</a></li>
+                                <li><a href="#introduction5-3">증감연산자</a></li>
+                                <li><a href="#introduction5-4">비교연산자</a></li>
+                                <li><a href="#introduction5-5">논리연산자</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#introduction6">조건문</a>
+                            <ul class="nav">
+                                <li><a href="#introduction6-1">if</a></li>
+                                <li><a href="#introduction6-2">if~else</a></li>
+                                <li><a href="#introduction6-3">다중 if</a></li>
+                                <li><a href="#introduction6-4">switch</a></li>
+                                <li><a href="#introduction6-5">조건부 연산자</a></li>
+                            </ul>    
+                        </li>
+                        <li><a href="#introduction7">반복문</a>
+                            <ul class="nav">
+                                <li><a href="#introduction7-1">while문</a></li>
+                                <li><a href="#introduction7-2">do while문</a></li>
+                                <li><a href="#introduction7-3">for문</a></li>
+                                <li><a href="#introduction7-4">다중 for문</a></li>
+                                <li><a href="#introduction7-5">break문과 continue문</a></li>
+                            </ul> 
+                        </li>
+                        <li><a href="#introduction8">함수</a></li>
+                        <li><a href="#introduction9">객체</a></li>
+                        <li><a href="#introduction10">이벤트</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //col-md-3 -->
+        </div>
+        <!-- //row -->
+
+    </div>
+    <!-- //container -->
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v1.0</li>
+                <li>&middot;</li>
+                <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+
+
+</body>
+</html>

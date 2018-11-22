@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>switch</title>
+    <script>
+        var site = window.prompt("네이버, 다음, 구글, 네이트 중 가장 자주가는 사이트는?");
+        var url;
+        
+        switch (site){
+            case"네이버": url="www.naver.com";
+            break;
+                
+            case"다음": url="www.daum.net";
+            break;
+                
+            case"구글": url="www.google.com";
+            break;
+                
+            case"네이트": url="www.nate.com";
+            break;
+                
+            default : document.write("그런 사이트 없습니다.");
+            break;
+        }
+        //alert(url);
+        
+        if(url) location.href="http://"+url
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

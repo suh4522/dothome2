@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리턴값이 있는 함수</title>
+    <script>
+        function func4(){
+            var str = "리턴값이 있는 함수입니다."
+            return str;
+        }
+        document.write(func4());
+        
+        function calculateArea(width, height){
+            var area = width * height;
+            return area;
+        }
+        var ca = calculateArea(300,400);
+        document.write(ca);
+        
+        function getSize(width, height, depth){
+            var area = width * height;
+            var volume = width * height * depth;
+            var size = [area, volume];
+            return size;
+        }
+        var areaOne = getSize(3, 2, 3)[0];
+        var volumeOne = getSize(3, 2, 3)[1];
+        document.write(areaOne);
+        document.write(volumeOne);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

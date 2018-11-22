@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    //변수를 사용해서 화면에 50*3을 출력해주세요!
+    var num1 = 50
+    var num2 = 3
+    document.write(num1*num2,"<br>");
+        
+    //배열을 사용해서 화면에 50*3을 출력해주세요!
+    var arr1 = new Array(50,3);
+        document.write(arr1[0]*arr1[1],"<br>");
+        
+    //함수를 사용해서 화면에 50*3을 출력해주세요!
+     function fun(num){
+        var num1 = 50;
+        var num2 = 3;
+        document.write(num1*num2,"<br>");
+    }
+    fun();
+        
+    //객체를 사용해서 화면에 50*3을 출력해주세요!
+    var number = {
+        n1 : 50,
+        n2 : 3
+    }
+    document.write(number.n1*number.n2,"<br>----------<br>");
+        
+    //변수를 사용해서 화면에 "javascript"를 출력해주세요!
+        
+        var str ="javascript";
+        document.write(str,"<br>");
+        
+    //함수를 사용해서 화면에 "javascript"를 출력해주세요!
+
+    functi   on fun(){
+        var str ="javascript";
+        document.write(str,"<br>");
+    }
+    fun();
+
+    //함수와 매개변수를 사용해서 화면에 "javascript"를 출력해주세요!
+    function fun2(num1){
+        var str =num1;
+        document.write(str,"<br>");
+    }
+        fun2("javascript");
+
+    //함수와 매개변수를 사용해서 화면에 "javascript","jquery"를 출력해주세요!
+
+    function fun3(num2,num3){
+        var str1 =num2;
+        var str2 =num3;
+        document.write(str1," "+str2,"<br>");
+    }
+    fun3("javascript","jquery");
+    
+    //for문을 사용해서 1부터 100까지 합을 구하세요!
+    var sum = 0;
+    for(var i=0;i<=100;i++){
+       sum = sum + i;
+    }
+    document.write(sum,"<br>----------<br>");
+    
+    //변수 x=300, y=400 화면 x*y의 값을 출력해주세요!
+    var x = 300
+    var y = 400
+    document.write(x*y,"<br>");
+        
+    //함수를 이용하여 xy=300, xz=400 화면 xy*xz의 값을 출력해주세요!
+    function fun5(){
+        var xy = 300;
+        var xz = 400;
+        document.write(xy*xz,"<br>");
+    }
+    fun5();
+    //매개변수를 이용하여 xy=300, xz=400 화면 xy*xz의 값을 출력해주세요!
+    function fun6(y1,y2){
+        var xy =y1;
+        var xz =y2;
+        document.write(xy*xz,"<br>");
+    }
+    fun6(300,400);
+        
+    //객체를 이용하여 x=300, y=400  화면에 300*400을 출력해주세요!
+    var xyz = {
+        u1 : 300,
+        u2 : 400
+    }
+    document.write(xyz.u1 * xyz.u2,"<br>");
+        
+    //for문을 이용해서 20~80까지 출력해주세요!
+    for(var y=20;y<=80;y++){
+        document.write(y,"<br>");
+    }
+    
+    //for문을 이용해서 20~80중에 5의 배수만 출력해주세요!
+    for(var y=20; y<=80; y++){
+        if(y % 5 ==0){
+            document.write(y,"<br>");
+        }
+    }
+        
+    //for문을 이용해서 20~80중에 5의 배수와 8의 배수를 출력해주세요!
+    for(var y=20; y<=80; y++){
+        if(y % 5 ==0 && ㅛ % 8 == 0){
+            document.write(y,"<br>");
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

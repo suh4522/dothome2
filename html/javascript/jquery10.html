@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>offset</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        body {width: 2000px; height: 4000px;}
+        #box {position: absolute; width: 100px; height: 100px; left: 50%; top: 50%; background: #000;}
+        #info {position: fixed; left: 10px; top: 10px;}
+    </style>
+</head>
+<body>
+    <div id="info">
+        <span>offset().left =</span><span class="offset_left"></span><br>
+        <span>offset().top =</span><span class="offset_top"></span><br>
+        <span>position().left =</span><span class="position_left"></span><br>
+        <span>position().top =</span><span class="position_top"></span><br>
+        <span>scrollLeft =</span><span class="scroll_left"></span><br>
+        <span>scrollTop =</span><span class="scroll_top"></span><br>
+    </div>
+    
+    <div id="box">Drag</div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        //#box요소 백그라운드 컬러 #f06292를 적용하세요.
+        //color: #fff, border-radius: 50% 적용
+        $("#box").css({
+            'backgroundColor':'#f06292',
+            'color':'#fff',
+            'borderRadius':'50%',
+            'textAlign':'center',
+            'lineHeight':'100px'
+        });
+        //$(".offset_left").text("offset().left");
+        
+        //var tt = $("#info span:eq(0)").text();
+        //$(".offset_left").text(tt);
+        
+        $("#box").draggable({
+            drag:function() {
+                $('.offset_left').text( $("#box").offset().left);
+                $('.offset_top').text( $("#box").offset().top);
+                $('.position_left').text( $("#box").offset().left);
+                $('.position_top').text( $("#box").offset().top);
+            }
+        });
+        
+        //브라우저를 스크롤 했을 때~
+        $(window).scroll(function(){
+            $(".scroll_left").text( $(window).scrollLeft() );
+            $(".scroll_top").text( $(window).scrollTop() );
+        });
+    </script>
+</body>
+</html>

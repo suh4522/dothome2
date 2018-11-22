@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>image2</title>
+   <style>
+      * {margin: 0; padding: 0;}
+      .slide-wrap {background: #ccc; height: 600px; overflow: hidden; position: relative; }
+      .slide-wrap .slide-view {position: absolute; width: 100%; height: 100%; /* left: 0; */ }
+      .slide-wrap .slide-view .slide {position: absolute; width: 100%; height: 100%;  overflow: hidden;  /* left: 0; */ }
+      .slide-wrap .slide-view .slide .slide-img img {position: absolute; left: 50%; width: 1600px; margin-left: -800px;  }
+      .slide-wrap .slide-view .slide .slide-text {position: absolute; left: 50%; top:50%; color: #fff; transform: translate(-50%,-50%); text-align: center; font-size: 40px;  }
+
+      .slide-indicator {  
+         position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
+      }
+      .slide-indicator a {
+         width: 20px; height: 20px; background: rgba(255,255,255,0.5); border-radius: 50%; display: inline-block; margin: 6px;
+      }
+      .slide-indicator a.active {
+         background: rgba(255,255,255,1);
+      }
+
+      .slide-nav {}
+      .slide-nav a {position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 40px; border-top-left-radius: 50%; background: #fff; text-align: center; line-height: 60px;}
+      .slide-nav a.prev{left: 5px;}
+      .slide-nav a.next{right: 5px;}
+
+   </style>
+</head>
+<body>
+   <div class="slide-wrap">
+      <div class="slide-view">
+         <div class="slide">
+            <div class="slide-img">
+               <img src="assets/img/slide01.jpg" alt="">
+            </div>
+            <div class="slide-text">
+               <h3>Image Slide1</h3>
+               <p>images text</p>
+            </div>
+         </div>
+         <div class="slide">
+            <div class="slide-img">
+               <img src="assets/img/slide02.jpg" alt="">
+            </div>
+            <div class="slide-text">
+               <h3>Image Slide2</h3>
+               <p>images text</p>
+            </div>
+         </div>
+         <div class="slide">
+            <div class="slide-img">
+               <img src="assets/img/slide03.jpg" alt="">
+            </div>
+            <div class="slide-text">
+               <h3>Image Slide3</h3>
+               <p>images text</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <!-- <div class='slide-nav'><a href='#' class='prev'>Prev</a><a href='#' class='next'>Next</a></div>
+   <div class='slide-indicator'></div>
+   <div class='slide-count'><span class='currentIndex'>0</span><span class='slideCount'>0</span></div> -->
+
+   <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src ="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script>
+      $(".slide-wrap").append("<div class='slide-nav'><a href='#' class='prev'>Prev</a><a href='#' class='next'>Next</a></div>");
+      $(".slide-wrap").append("<div class='slide-indicator'></div>");
+      $(".slide-wrap").append("<div class='slide-count'><span class='currentIndex'>0</span><span class='slideCount'>0</span></div>");
+
+      $(".slide-wrap").each(function(){
+         var $container = $(this),                                   //전체 슬라이드 그룹
+              $slideView = $container.find(".slide-view"),     //슬라이드 그룹   
+              $slide = $slideView.find(">div"),                   //슬라이드 이미지
+              $slideNav = $container.find(".slide-nav"),          //슬라이드 버튼
+              $indicator = $container.find(".slide-indicator"), //슬라이드 인디케이터
+
+              slideCount = $slide.length,          //슬라이드 갯수
+              currentIndex = 0,                       //현재 이미지 인덱스
+              indicator = "";                     //인티케이터 콘텐츠
+
+            //이미지 포지션(첫번째 left:0, 두번째 left:-100%, 세번째 left: -200%)
+            $slide.each(function(i){
+               $(this).css( {left : -100 * i + '%' });
+               //indicator += "<a href='#'>"+(i+1)+"</a>"
+               indicator += "<a href='#'></a>"
+            });
+            //인디케이터 이미지 갯수만큼 표시
+            $indicator.html(indicator);
+
+            //버튼을 클릭하면 이미지를 이동
+      });
+
+      
+   </script>
+</body>
+</html>

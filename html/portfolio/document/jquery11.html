@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dimensions</title>
+    <style>
+        #box {margin: 10px; padding: 10px; border: 10px solid #ccc;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <span>박스의 width =</span><span id="width">0</span><br>
+        <span>박스의 height =</span><span id="height">0</span><br>
+        <span>박스의 innerWidth =</span><span id="innerWidth">0</span><br>
+        <span>박스의 innerHeight =</span><span id="innerHeight">0</span><br>
+        <span>박스의 outerWidth =</span><span id="outerWidth">0</span><br>
+        <span>박스의 outerHeight</span><span id="outerHeight">0</span><br>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        //$("#box").click(function(){});
+        //$(window).scroll(function(){});
+        $(window).resize(function(){
+            $("#width").text($("#box").width() );
+            $("#height").text($("#box").height() );
+            $("#innerWidth").text($("#box").innerWidth() );
+            $("#innerHeight").text($("#box").innerHeight() );
+            $("#outerWidth").text($("#box").outerWidth() );
+            $("#outerHeight").text($("#box").outerHeight() );
+        });
+    </script>
+</body>
+</html>

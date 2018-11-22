@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>조건부 연산자</title>
+    <script>
+        //숫자를 입력했을 때 10보다 크면 "숫자가 10보다 큽니다" 출력
+        //숫자가 10보다 작으면 "숫자가 10보다 작습니다" 출력
+        var num = window.prompt("숫자를 입력하세요.");
+        if(num > 10){
+            document.write("숫자가 10보다 큽니다.");
+        }
+        else {
+            document.write("숫자가 10보다 작습니다.");
+        }
+        
+        document.write("<br><br>");
+        
+        //숫자를 입력했을 때 5보다 크면 "숫자가 5보다 큽니다" 출력
+        //숫자가 10보다 작으면 "숫자가 5보다 작습니다" 출력
+        //숫자가 5면 "빙고"
+        var num4 = window.prompt("숫자를 입력하세요.");
+        if(num4 == 5){
+            document.write("빙고");
+        } else if(num4 > 5){
+            document.write("숫자가 5보다 큽니다.");
+        } else if(num4 < 5){
+            document.write("숫자가 5보다 작습니다.");
+        }
+        
+        document.write("<br><br>");
+        
+        //x:100 y:200 x*y의 값을 출력해주세요!
+        var x = 100;
+        var y = 200;
+        document.write(x*y);
+        
+        document.write("<br><br>");
+        
+        //x:100 y:200 함수(num2)를 이용해서 x*y의 값을 출력해주세요!
+        function num2(){
+            var x = 100;
+            var y = 200;
+            
+            document.write(x*y);
+        }
+        num2();
+        
+        document.write("<br><br>");
+        
+        //매개변수를 100,200을 이용해 함수(num3)를 만들어서 x*y의 값을 출력
+        function num3(x,y){
+            document.write(x*y);
+        }
+        num3(100,200);
+        
+        document.write("<br><br>");
+        
+        //사용자가 숫자를 입력했을 때 홀수, 짝수 구별해서 출력해주세요~
+        var num5 = window.prompt("숫자를 입력해주세요.");
+        num5 = parseInt(num5); 
+        if(num5 % 2 == 0){
+            document.write("짝수");
+        } else {
+            document.write("홀수");
+        }
+        
+        (num5 % 2 == 0) ? document.write("짝수") : document.write("홀수");   //삼항연산자
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

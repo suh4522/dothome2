@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+	<!-- font-family: 'Playfair Display', serif; -->
+		<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}img{border:0 none}dl,ul,ol,menu,li{list-style:none}a{color:#000;font-size: 14px;text-decoration:none}a:hover{color:#118eff;text-decoration:none}a:active{background-color:transparent}
+
+	body {
+ 	 overflow: hidden;
+ 	 cursor: none;
+	}
+
+	#section {}
+
+	#nav {
+		position: fixed; left: 0; top: 0; width: 100%;
+		background: #fff; z-index: 2000;
+	}
+	#nav h1 {text-align: center; height: 100px; line-height: 100px; 
+		font-family: 'Roboto', sans-serif; 
+		text-transform: uppercase; 
+		font-weight: 700; letter-spacing: 10px; 
+		font-size: 14px;
+	}
+	#nav .link {position: absolute; left: 100px; top: 0; height: 100px; line-height: 100px;}
+	#nav .link li {display: inline-block; padding-right: 10px;}
+	#nav .link li.active a {
+		font-weight: bold; font-family: 'Roboto', sans-serif; 
+	}
+	#nav .menu {
+		width: 30px; height: 32px;
+		position: absolute; right: 100px; top: 34px;
+	}
+
+	/* icon-wrap */
+	.icon-wrap {
+	position: absolute; right: -15px; top: 50%;
+	transform: translate(-50%, -50%);
+	}
+	.icon, .icon:before, .icon:after { 
+	width: 30px; height: 3px; background-color: #000;
+	}
+	.icon {
+	position: relative; 
+	transition: all 0 300ms;
+	}
+	.icon.animation{
+	background: rgba(255,255,255,0);
+	}
+
+	.icon:before {
+	content:'';
+	position: absolute; left: 0; bottom: 7px;
+	transition:
+	  bottom 300ms 300ms cubic-bezier(0.32,1,0.32,1),
+	  transform 300ms cubic-bezier(0.32,1,0.32,1);
+	}
+	.icon.animation:before{
+	bottom: 0;
+	transform: rotate(45deg);
+	transition:
+	  bottom 300ms cubic-bezier(0.32,1,0.32,1),
+	  transform 300ms 300ms cubic-bezier(0.32,1,0.32,1);
+	}
+	.icon:after {
+	content:'';
+	position: absolute; left: 0; top: 7px;
+	transition:
+	  top 300ms 300ms cubic-bezier(0.32,1,0.32,1),
+	  transform 300ms cubic-bezier(0.32,1,0.32,1);
+	}
+	.icon.animation:after { 
+	top: 0;
+	transform: rotate(-45deg);
+	transition:
+	  bottom 300ms cubic-bezier(0.32,1,0.32,1),
+	  transform 300ms 300ms cubic-bezier(0.32,1,0.32,1);
+	}
+
+	/* slide_wrap */
+	.slide_wrap {
+		position: relative; height: 100vh; overflow: hidden;  
+	}
+	.slide_wrap .slide_img {
+		position: absolute; width: 100%; height: 100%;
+	}
+
+
+
+	.sidel_text {position: fixed; left: 0;}
+	.sidel_text a {
+		background: #fff; width: 100px; height: 100vh; 
+		display: block; line-height: 100vh; 
+		text-transform: uppercase; letter-spacing: 0.2rem;
+		text-align: center;
+	}
+	.sidel_text a span {
+		transform: rotate(-90deg); display: block;
+		font-size: 12px; color: #999;
+	}
+	.sider_text {position: fixed; right: 0;}
+	.sider_text a {
+		background: #fff; width: 100px; height: 100vh; 
+		display: block; line-height: 100vh; 
+		text-transform: uppercase; letter-spacing: 0.2rem;
+		text-align: center; 
+	}
+	.sider_text a span {
+		transform: rotate(90deg); display: block;
+		font-size: 12px; color: #999;
+	}
+
+	/* slide_nav */
+	.slide_nav a {
+		position: absolute; width: 100px; height: 100px;  
+		bottom: 0px; z-index: 2000; background: #fff; top: 0;
+	}
+	.slide_nav a svg  {
+		width: 18px; height: 18px; transform: rotate(45deg);
+		position: absolute;
+	}
+	.slide_nav a.prev svg {
+		margin: 50px 0 0 40px;
+		bottom: 40px; left: 0px;
+	}
+	.slide_nav a.next svg {
+		margin: 40px 0 0 40px; 
+		bottom: 40px; right: 50px;
+		transform: rotate(-135deg);
+	}
+	.slide_nav a svg path {stroke:#444; stroke-width:2;  }
+	.slide_nav a.prev {left: 0; width: 100px; height: 100vh;}
+	.slide_nav a.next {right: 0; width: 100px; height: 100vh }
+	.slide_nav a.disabled {display: none;}
+
+	/* slide_indicator */
+	.slide_indicator {
+		position: fixed; left: 50%; bottom: 0; width: 100%;
+		transform: translateX(-50%);
+		background: #fff; height: 100px;
+		text-align: center;
+	}
+	.slide_indicator a {  
+		display: inline-block; width: 10px; height: 10px;
+		border-radius: 50%;  margin: 40px 15px 0;
+		text-align: center; border: 1px solid #ccc;
+		color: #fff; text-indent: -9999px;
+		transition: color 0.3s ease;
+		font-style: italic;
+		line-height: 12px;
+		font-weight: bold;
+	}
+	.slide_indicator a.active {
+		border: 0; color: #666; text-indent: 0px;
+
+	}
+
+	/* slide_count */
+	.slide_count {  
+		position: fixed; left: 130px; top: 130px;
+		font-size: 90px; line-height: 60px; color: #000; 
+		width: 300px; height: 90px;
+		padding-left: 10px; 
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+	}
+	.slide_count:before {
+		content: ''; width: 100%; height: 100%; 
+		background: #fff; position: absolute;
+		left: 0; top: 0; transform: scaleX(0);
+		z-index: 1;
+	}
+	.slide_count span {
+		margin-right: 90px;
+		position: relative; opacity: 0;
+	}
+	.slide_count span:first-child:before {
+		content: '';
+		width: 60px; height: 1px; background: #000;
+		position: absolute; right: -80px; bottom: 45px;
+	}
+
+
+
+
+	/* slide_img */
+	.slide_img {  }
+	.slide_img .slide {
+		position: absolute; 
+		width: 100%; height: 100%; 
+		overflow:hidden;  
+	}
+	.slide_img .slide .img {
+		position: absolute; left: 50%; top: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 100%;  
+	}
+	.slide_img .slide .img img {
+		max-width: 500px; 
+		display: block; margin: 0 auto;
+		transform: scale(0.8);
+	}
+	.slide_img .slide .txt {
+		position: absolute; left: 50%; top: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 100%; text-align: center; font-size: 8vw;
+		color: #fff; letter-spacing: 0.2em;		
+		overflow: hidden;
+		line-height: 9vw;
+	}
+	.slide_img .slide .txt h2 span {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		text-transform: uppercase;
+		display: inline-block; transform: translate(50px, 250px); 
+		transform-origin: bottom left; 
+		transition: all 1s ease;
+
+	}
+	.slide_img .slide.s1 {background: #FCEFE9;}
+	.slide_img .slide.s2 {background: #E9EFFD;}
+	.slide_img .slide.s3 {background: #FAE3F5;}
+	.slide_img .slide.s4 {background: #FBE368;}
+	.slide_img .slide.s5 {background: #CCEBEA;}
+	.slide_img .slide.s6 {background: #E9EFFD;}
+	.slide_img .slide.s7 {background: #F4F2EC;}
+
+	.slide_img .slide.active .txt h2 span {transform: translate(0px, 0px);}
+	.slide_img .slide.active .txt h2 span:nth-child(1) {transition-delay: 0s;}
+	.slide_img .slide.active .txt h2 span:nth-child(2) {transition-delay: 0.05s;}
+	.slide_img .slide.active .txt h2 span:nth-child(3) {transition-delay: 0.10s;}
+	.slide_img .slide.active .txt h2 span:nth-child(4) {transition-delay: 0.15s;}
+	.slide_img .slide.active .txt h2 span:nth-child(5) {transition-delay: 0.20s;}
+	.slide_img .slide.active .txt h2 span:nth-child(6) {transition-delay: 0.25s;}
+	.slide_img .slide.active .txt h2 span:nth-child(7) {transition-delay: 0.30s;}
+	.slide_img .slide.active .txt h2 span:nth-child(8) {transition-delay: 0.35s;}
+	.slide_img .slide.active .txt h2 span:nth-child(9) {transition-delay: 0.40s;}
+
+	.slide_img .slide.active .slide_count:before {animation: ani1 0.7s 0.6s ease forwards;}
+	.slide_img .slide.active .slide_count span {animation: opa1 0.5s 0.75s ease forwards;}
+	.slide_img .slide.active .img img {animation: sca1 0.5s ease-in-out forwards}
+
+	@keyframes ani1 {
+		0%   {transform-origin: left; transform: scaleX(0);}
+		50%  {transform-origin: left; transform: scaleX(1);}
+		51%  {transform-origin: right; transform: scaleX(1);}
+		100% {transform-origin: right; transform: scaleX(0);}
+	}
+	@keyframes opa1 {
+		0% 	 {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	@keyframes sca1 {
+		0%   {transform: scale(0.8); transform-origin:right;}
+		100% {transform: scale(1); transform-origin:right;}
+	}
+
+
+
+
+	/* mouse */
+	.cursor {
+		position: absolute;
+		background-color: rgba(250, 177, 177, 0.8);
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		z-index: 10000;
+		user-select: none;
+		pointer-events: none;
+		transform: scale(1);
+		transition: 0.3s ease-in-out transform, 0.2s ease-in-out opacity;
+	}
+	.cursor.active {
+		opacity: 0.5;
+		transform: scale(0);
+	}
+
+	.cursor-follower {
+		position: absolute;
+		background-color: rgba(252, 239, 233, 0.8);
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		z-index: 10000;
+		transform: translate(5px, 5px);
+		user-select: none;
+		pointer-events: none;
+		transition: 0.6s ease-in-out transform, 0.2s ease-in-out opacity;
+	}
+	.cursor-follower.active {
+		opacity: 0.7;
+		transform: scale(3);
+	}
+
+	
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="cursor"></div>
+	<div class="cursor-follower"></div>
+
+	<nav id="nav">
+		<ul class="link">
+			<li class="active"><a href="#">Works</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+		<h1>Portfolio</h1>
+		<div class="menu">
+     		<div class="icon-wrap">
+    				<div class="icon"></div>
+			</div>
+		</div>
+	</nav>
+
+	<section id="section">
+		<div class="slide_wrap">
+			<div class="slide_img">
+				<div class="slide s1">
+					<div class="txt">
+						<h2 data-name="portfolio"><span>P</span><span>O</span><span>R</span><span>T</span><span>F</span><span>O</span><span>L</span><span>I</span><span>O</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img1.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>contact</span></a></div>
+					<div class="sider_text"><a href="#"><span>webstandard</span></a></div>
+				</div>
+				 <div class="slide s2">
+					<div class="txt">
+						<h2 data-name="webstandard"><span>W</span><span>E</span><span>B</span><span>S</span><span>T</span><span>A</span><span>N</span><span>D</span><span>A</span><span>R</span><span>D</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img2.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>portfolio</span></a></div>
+					<div class="sider_text"><a href="#"><span>mobile</span></a></div>
+				</div>
+				<div class="slide s3">
+					<div class="txt">
+						<h2 data-name="mobile"><span>M</span><span>O</span><span>B</span><span>I</span><span>L</span><span>E</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img3.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>webstandard</span></a></div>
+					<div class="sider_text"><a href="#"><span>coding</span></a></div>
+				</div>
+				<div class="slide s4">
+					<div class="txt">
+						<h2 data-name="coding"><span>C</span><span>O</span><span>D</span><span>I</span><span>N</span><span>G</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img4.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>mobile</span></a></div>
+					<div class="sider_text"><a href="#"><span>mysite</span></a></div>
+				</div>
+				<div class="slide s5">
+					<div class="txt">
+						<h2 data-name="mysite"><span>M</span><span>Y</span><span>S</span><span>I</span><span>T</span><span>E</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img1.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>coding</span></a></div>
+					<div class="sider_text"><a href="#"><span>design</span></a></div>
+				</div>
+				<div class="slide s6">
+					<div class="txt">
+						<h2 data-name="design"><span>D</span><span>E</span><span>S</span><span>I</span><span>G</span><span>N</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img2.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>mysite</span></a></div>
+					<div class="sider_text"><a href="#"><span>contact</span></a></div>
+				</div>
+				<div class="slide s7">
+					<div class="txt">
+						<h2 data-name="contact"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></h2>
+					</div>
+					<div class="img">
+						<img src="img/img3.png" alt="slide1">
+					</div>
+					<div class="sidel_text"><a href="#"><span>design</span></a></div>
+					<div class="sider_text"><a href="#"><span>portfolio</span></a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	
+	<!-- 
+	<div class="slide_nav">
+	<a href="#" class="prev">
+		<svg x='0px' y='0px' width='16.578px' height='30px' viewBox='0 0 16.578 30" enable-background='new 0 0 16.578 30"><path fill="#231F20" d="M15.516,29.875c-0.266,0-0.531-0.105-0.729-0.314L0.16,14.015L14.835,0.392c0.403-0.375,1.038-0.354,1.413,0.053c0.376,0.405,0.353,1.038-0.052,1.413L2.996,14.11l13.248,14.079c0.378,0.402,0.359,1.035-0.043,1.414C16.008,29.785,15.762,29.875,15.516,29.875z'/></svg>
+	</a>
+
+	<a href="#" class="next">오른쪽</a></div>
+	<div class="slide_indicator"></div> 
+	<div class='slide_count'><spanclass='curentIndex'>0</span><spanclass='slideCount'>0</span>
+	</div> 
+	-->
+
+	<script src="assets/js/jquery-1.12.4.js"></script>
+	<script src="assets/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="assets/js/TweenMax.min.js"></script>
+	<script>
+		var $slideWrap = $(".slide_wrap");
+
+		$slideWrap.append("<div class='slide_nav'><a href='#' class='prev link' ><svg viewBox='-1 -2 18 18'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'><path d='M3.26849658e-13,8.84328471 L3.26849658e-13,-4.19220214e-13' stroke='#444444' stroke-width='2'></path><path d='M2.27373675e-13,8.84328471 L8.84328471,8.84328471' ></path></g></svg></a><a href='#' class='next link'><svg viewBox='-1 -2 18 18'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'><path d='M3.26849658e-13,8.84328471 L3.26849658e-13,-4.19220214e-13' stroke='#444444' stroke-width='2'></path><path d='M2.27373675e-13,8.84328471 L8.84328471,8.84328471' ></path></g></svg></a></div>");
+		$slideWrap.append("<div class='slide_indicator'></div>");
+		$(".slide").append("<div class='slide_count'><span class='currentIndex'>0</span><span class='slideCount'>0</span></div>");
+
+		$slideWrap.each(function(){
+			var $container = $(this),
+				$slideGroup = $container.find(".slide_img"),
+				$slide = $slideGroup.find(".slide"),
+				$nav = $container.find(".slide_nav"),
+				$indicator = $container.find(".slide_indicator"),
+				$count = $container.find(".slide_count"),
+
+				slideCount = $slide.length,		//이미지 전체 갯수
+				currentIndex = 0,				//현재 페이지
+				indicatorHTML = '',				//인디케이터 HTML
+				duration = 1000,				//이미지 움직이는 시간
+				easing = 'easeOutExpo',			//움직임 효과
+				interval = 2000,				//이미지 자동 시간 간격
+				timer;
+
+			//각각의 이미지 위치를 설정
+			$slide.each(function(i){
+				$(this).css({ left: 100 * i+'%' });
+
+				//indicatorHTML += "<a href='#'></a>";
+				indicatorHTML += "<a href='#' class='link'>" + ("0"+(i+1)) + "</a>";	
+
+				// var name = $(this).find("h2").attr("data-name");
+				// indicatorHTML += "<a href='#'>" + name + "</a>";
+			});	
+
+
+			$indicator.html(indicatorHTML);
+
+			function gotoSlide(i){
+				$slideGroup.animate({ left: -100 * i +'%' }, duration, easing);
+				//1 = -100%  : 왼쪽으로 사라짐
+				//-1 = 100%  : 오른쪽으로 사라짐
+				currentIndex = i;
+				updateNav();
+			}
+
+			function updateNav(){
+					var $navPrev = $nav.find('.prev'),
+						$navNext = $nav.find('.next'),
+						$countCurrent = $count.find('.currentIndex'),
+						$countTotal = $count.find('.slideCount');
+
+
+						// //첫번째 이미지
+						// if(currentIndex == 0){
+						// 	$navPrev.addClass("disabled");
+						// } else {
+						// 	$navPrev.removeClass("disabled");
+						// }
+
+						// //마지막 이미지
+						// if(currentIndex == slideCount - 1){
+						// 	$navNext.addClass("disabled");
+						// } else {
+						// 	$navNext.removeClass("disabled");
+						// }
+
+					
+					$indicator.find('a').removeClass('active').eq(currentIndex).addClass('active');
+					$slide.removeClass('active').eq(currentIndex).addClass('active');			
+					$countCurrent.text("0" + (currentIndex + 1));
+					$countTotal.text("0" + slideCount);
+
+					if(currentIndex == 0){
+						$(".cursor").css("background-color","#fcb797")
+						$(".cursor-follower").css({"background-color":"#fcb797" , "opacity":"0.5"})
+					}
+					if(currentIndex == 1){
+						$(".cursor").css("background-color","#97b6fc")
+						$(".cursor-follower").css({"background-color":"#97b6fc" , "opacity":"0.5"})
+					}
+					if(currentIndex == 2){
+						$(".cursor").css("background-color","#fa96e4")
+						$(".cursor-follower").css({"background-color":"#fa96e4" , "opacity":"0.5"})
+					}
+					if(currentIndex == 3){
+						$(".cursor").css("background-color","#fad000")
+						$(".cursor-follower").css({"background-color":"#fad000" , "opacity":"0.5"})
+					}
+					if(currentIndex == 4){
+						$(".cursor").css("background-color","#75ebe7")
+						$(".cursor-follower").css({"background-color":"#75ebe7" , "opacity":"0.5"})
+					}
+					if(currentIndex == 5){
+						$(".cursor").css("background-color","#97b6fc")
+						$(".cursor-follower").css({"background-color":"#97b6fc" , "opacity":"0.5"})
+					}
+					if(currentIndex == 6){
+						$(".cursor").css("background-color","#f5dc93")
+						$(".cursor-follower").css({"background-color":"#f5dc93" , "opacity":"0.5"})
+					}
+
+			}
+
+
+
+			$nav.on("click","a",function(e){
+				e.preventDefault();
+				var nextIndex = (currentIndex + 1) % slideCount;
+				var prevIndex = (currentIndex - 1) % slideCount;
+				if (currentIndex == 0) prevIndex = slideCount -1;
+
+				//0 + 1 = 1 % 7 = 6
+				//1 + 1 = 2 % 7 = 5 
+				//2 + 1 = 3 % 7 = 4
+				//3 + 1 = 4 % 7 = 3
+				//4 + 1 = 5 % 7 = 2
+				//5 + 1 = 6 % 7 = 1
+				//6 + 1 = 7 % 7 = 0
+				//7 + 1 = 8 % 7 = 1
+				//8 + 1 = 9 % 7 = 2
+				
+				if($(this).hasClass('prev')){
+					//왼쪽 버튼
+					gotoSlide(prevIndex);
+				} else {
+					//오른쪽 버튼
+					gotoSlide(nextIndex);
+				}
+
+				console.log(currentIndex);
+			});
+
+			$indicator.on("click","a",function(e){	//인디케이터 클릭시 해당 페이지로 이동
+				e.preventDefault();
+				if( !$(this).hasClass('active')){
+					gotoSlide( $(this).index());
+				};
+			});
+
+			function startTimer(){		//자동플레이
+				timer = setInterval(function(){
+					var nextIndex = (currentIndex + 1) % slideCount;
+					gotoSlide(nextIndex);
+				},interval);
+			}
+
+			function stopTimer(){
+				clearInterval(timer);
+			}
+
+			//$container.on({mouseenter:stopTimer, mouseleave: startTimer});
+
+			//첫번째 슬라이드 실행
+			gotoSlide(currentIndex);
+			//타이머 설정
+			//startTimer();
+		});
+
+		//menu
+		$(".icon-wrap").click(function(){
+    		$(".icon").toggleClass("animation");
+		});
+
+		//cursor
+		var cursor = $(".cursor"),
+			follower = $(".cursor-follower");
+
+		var posX = 0,
+			posY = 0;
+
+		var mouseX = 0,
+			mouseY = 0;
+
+		TweenMax.to({}, 0.016, {
+			repeat:-1,
+			onRepeat:function(){
+				posX += (mouseX - posX) / 9;
+				posY += (mouseY - posY) / 9;
+		
+				TweenMax.set(follower, {
+						css: {
+							left: posX - 12,
+							top: posY - 12
+						}
+				});
+				TweenMax.set(cursor, {
+					css: {
+						left: mouseX,
+						top: mouseY
+					}
+				});
+			}	
+		});
+		$(document).on("mousemove",function(e){
+			mouseX = e.pageX;
+			mouseY = e.pageY;
+		});
+
+		$("body").find(".link").on("mouseenter",function(){
+			cursor.addClass("active");
+			follower.addClass("active");
+		});
+
+		$("body").find(".link").on("mouseleave",function(){
+			cursor.removeClass("active");
+			follower.removeClass("active");
+		});
+
+		//img,text
+		var $img = $(".slide").find(".img"),
+			$txt = $(".slide").find(".txt"),
+			x = 0,
+			y = 0,
+			folloxX = 0,
+			folloxY = 0,
+			friction = 1/10;
+
+		function animate(){
+			x += (folloxX - x) * friction;
+			y += (folloxY - y) * friction;
+	
+			$img.css({
+				'transform': 'translate(-50%, -50%) translateX('+ x +'px) translateY('+ y +'px)'
+			});
+			$txt.css({
+				'transform': 'translate(-50%, -50%) translateX('+ -x +'px) translateY('+ -y +'px)'
+			});
+			window.requestAnimationFrame(animate);
+		}
+
+		$(window).on('mousemove click',function(e){
+			var iMouseX = Math.max(-100, Math.min(100, $(window).width()/2 - e.clientX));
+			var iMouseY = Math.max(-100, Math.min(100, $(window).height()/2 - e.clientY));
+			folloxX = (12 * iMouseX) / 100;
+			folloxY = (12 * iMouseY) / 100;
+		});
+
+		animate();
+
+		
+
+		
+	</script>
+
+</body>
+</html>
+
+
+
+
+

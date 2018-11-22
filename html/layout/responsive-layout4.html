@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>responsive-layout4</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		#wrap {width: 960px; height: 800px; margin: 0 auto; }
+		#box1 {width: 30%; height: 800px; background-color: #00796b ; float: left; }
+		#box2 {width: 70%; height: 400px; background-color: #00695c ; float: left; }
+		#box3 {width: 70%; height: 400px; background-color: #004d40 ; float: left; }
+
+		/* 화면 너비 0~960px */
+		@media (max-width: 970px){
+			#wrap {width: 95%; }
+			#box1 {background-color: #ff8a80 ; }
+			#box2 { background-color: #ff5252 ; }
+			#box3 {background-color: #ff1744 ; }
+		}
+		/* 화면 너비 0~768px */
+		@media (max-width: 768px){
+			#wrap {width: 100%;}
+			#box1 {width: 100%; height: 400px; background-color: #b388ff; float: none;}
+			#box2 {width: 100%; height: 400px; background-color: #7c4dff; float: none;}
+			#box3 {width: 100%; height: 400px; background-color: #651fff; float: none;}
+		}
+		/* 화면 너비 0~576px */
+		@media (max-width: 576px){
+			#box1 {height: 300px; background-color: #b388ff;}
+			#box2 { height: 300px; background-color: #536dfe; }
+			#box3 { height: 300px; background-color: #3d5afe; }
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="box1">box1</div>
+		<div id="box2">box2</div>
+		<div id="box3">box3</div>
+	</div>
+</body>
+</html>

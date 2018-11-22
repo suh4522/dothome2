@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* #list2 li {color: red;} */
+    </style>
+    <script>
+        window.onload = function(){
+            var list2 = document.getElementById("list2");
+            var liList = list2.getElementsByTagName("li");
+            for(var i=0; i<liList.length; i++){
+                var li = liList[i];
+                li.style.color = "#f00";
+            }
+        }
+    </script>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#list1 li").css("color","blue");
+        });
+    </script>
+</head>
+<body>
+    <h3>jQuery Sample</h3>
+    <div>
+        <ul id="list1" class="list">
+            <li class="one1">one1</li>
+            <li class="one2">one2</li>
+            <li class="one3">one3</li>
+            <li class="one4">one4</li>
+            <li class="one5">one5</li>
+            <li class="one6">one6</li>
+            <li class="one7">one7</li>
+            <li class="one8">one8</li>
+            <li class="one9">one9</li>
+            <li class="one10">one10</li>
+        </ul>
+        <ul id="list2" class="list">
+            <li class="one1">one1</li>
+            <li class="one2">one2</li>
+            <li class="one3">one3</li>
+            <li class="one4">one4</li>
+            <li class="one5">one5</li>
+            <li class="one6">one6</li>
+            <li class="one7">one7</li>
+            <li class="one8">one8</li>
+            <li class="one9">one9</li>
+            <li class="one10">one10</li>
+        </ul>
+    </div>
+</body>
+</html>

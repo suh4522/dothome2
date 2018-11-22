@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout8</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        /*layout*/
+        #wrap {width: 100%; font-size:24px; text-align: center;}
+        #header {width:100%; height: 177px; line-height:177px; background-color: #7c4dff;}
+        #content {width: 100%; height: 1466px; background-color: #651fff; overflow: hidden;}
+        #footer {width: 100%; height:314px; line-height:177px; background-color: #6200ea;}
+        
+        /* container : 가운데 영역 */
+        .container {width: 1100px; height: inherit; background-color: rgba(255,255,255,0.4); margin: 0 auto;}
+
+
+        /* content */
+        #content .container {}
+        .c-box1 {float: left; width: 740px; height: 110px; line-height: 110px; background-color: #ede7f6; margin-top: 10px;}
+        .c-box2 {float: right; width: 332px; height: 110px; line-height: 110px; background-color: #d1c4e9; margin-top: 10px; }
+        .c-box3 {float: left; width: 740px; height: 290px; line-height: 290px;  margin-top: 10px;}
+        .c-box3 .c-box3-1 { width: 740px; height: 36px; line-height: 36px; background-color: #9575cd; margin-top: 10px;}
+        .c-box3 .c-box3-2{ width: 740px; height: 236px; line-height: 236px; background-color: #7e57c2; margin-top: 10px;}
+        .c-box4 {float: right; width: 332px; height: 132px; line-height: 132px; background-color: #673ab7; margin-top: 10px;}
+        .c-box4-1 {float: right; width: 332px; height: 138px; line-height: 138px; background-color: #5e35b1; margin-top: 10px;}
+        .c-box5 {float: left; width: 740px; height: 874px; line-height: 874px; background-color: #512da8; margin-top: 10px;}
+        .c-box6 {float: right; width: 332px; height: 874px; line-height: 874px; background-color: #4527a0; margin-top: 10px;}
+        .c-box7 {float: left; width: 740px; height: 120px; line-height: 120px; background-color: #311b92; margin-top: 10px;}
+        .c-box8 {float: right; width: 332px; height: 120px; line-height: 120px; background-color: #b388ff; margin-top: 10px;}
+      
+        
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <!-- //header -->
+        
+        <div id="content">
+            <div class="container">
+                <div class="c-box1">c-box1</div>
+                <div class="c-box2">c-box2</div>
+                <div class="c-box3">
+                    <div class="c-box3-1">box3-1</div>
+                    <div class="c-box3-2">box3-2</div>
+                </div>
+                <div class="c-box4">c-box4</div>
+                <div class="c-box4-1">c-box4-1</div>
+                <div class="c-box5">c-box5</div>
+                <div class="c-box6">c-box6</div>
+                <div class="c-box7">c-box7</div>
+                <div class="c-box8">c-box8</div>
+            </div>
+        </div>
+        <!-- //content -->
+
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //wrap -->
+    
+</body>
+</html>

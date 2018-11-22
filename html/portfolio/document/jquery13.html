@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        #box {
+            width: 70px; height: 70px;
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            border-radius: 50%;
+            position: absolute; left: 50%; top: 50%; 
+            margin-left: -30px; margin-top: -35px;
+        }
+        button {
+            position: relative; z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button class="bnt1">color</button>
+    <button class="bnt2">width</button>
+    <button class="bnt3">animate</button>
+    <button class="bnt4">fadeOut</button>
+    <button class="bnt5">toggle</button>
+    <button class="bnt6">marginTop</button>
+    <button class="bnt7">animate</button>
+    <button class="bnt8">left</button>
+    <button class="bnt9">toggle</button>
+    <button class="bnt10">animate</button>
+    <button class="bnt11">loop</button>
+    <button class="bnt12">setInterval</button>
+    
+    <div id="box"></div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        //bnt1을 클릭하면 box의 백그라운 색을 빨간색으로 변경해주세요!
+        $(".bnt1").click(function(){
+            $("#box").css("background","red");
+        });
+        
+        //bnt2을 클릭하면 box의 크기를 두배로 변경해주세요!
+        $(".bnt2").click(function(){
+            $("#box").css({"width":"140", "height":"140"});
+        });
+        
+        //bnt3을 클릭하면 box의 크기를 두배로 애니메이션 해주세요!
+        $(".bnt3").click(function(){
+            $("#box").animate({"width":"240", "height":"240"},600);
+        });
+        
+        //bnt4을 클릭하면 box를 사라지게 해주세요!(4가지)
+        $(".bnt4").click(function(){
+            //$("#box").css("display","none");
+            //$("#box").hide();
+            $("#box").fadeOut();
+            //$("#box").slideUp();
+        });
+        
+        //bnt5을 클릭하면 box를 사라지고 한번 더 클릭하면 나타나게 해주세요!
+        $(".bnt5").click(function(){
+            //$("#box").toggle();
+            //$("#box").fadeToggle();
+            //$("#box").slideToggle();
+            
+            $("#box").toggleClass("on");
+            
+            if($("#box").hasClass("on")){
+                $("#box").hide();
+            } else {
+                $("#box").show();
+            }
+        });
+        
+        //bnt6을 클릭하면 box를 밑으로 이동시켜주세요
+        $(".bnt6").click(function(){
+            $("#box").animate({"marginTop":"400px"},200);
+        });
+        
+        $(".bnt7").click(function(){
+            $("#box").animate({"marginTop":"400px"},200);
+            $("#box").animate({"marginLeft":"400px"},200);
+            $("#box").animate({"marginTop":"0px"},200);
+            $("#box").animate({"marginLeft":"0px"},200);
+        });
+        
+        $(".bnt8").click(function(){
+            $("#box").animate({ left: "+=20px" });
+        });
+        
+        $(".bnt9").click(function(){
+            $("#box").animate({ hight: "toggle" });
+        });
+        
+        $(".bnt10").click(function(){
+            $("#box").animate({ height: "100px", opacity: "0.4" },"slow");
+            $("#box").animate({ width: "100px", opacity: "0.8" },"slow");
+            $("#box").animate({ height: "70px", opacity: "0.4" },"slow");
+            $("#box").animate({ width: "100px", opacity: "0.8" },"slow");
+        });
+        
+        $(".bnt11").click(function(){
+            loop();
+        });
+        
+        function loop(){
+            $("#box").css({"width":"200","height":"200"})
+                    .animate({ marginTop:100 },1000)
+                    .animate({ marginLeft:100 },1000)
+                    .animate({ marginTop:0 },1000)
+                    .animate({ marginLeft:0 },1000,loop)
+        };
+        
+        $(".bnt12").click(function(){
+            setInterval(time, 4000);
+        });
+        
+        function time(){
+            $("#box").animate({opacity: "0.1"},1200)
+                    .animate({opacity: "1"},1200)
+                    .slideUp("slow")
+                    .slideDown("fast");
+        }
+    </script>
+</body>
+</html>
+
+
+

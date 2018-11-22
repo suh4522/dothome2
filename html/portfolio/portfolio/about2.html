@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="webstoryboy">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹스토리보이,웹퍼블리셔,웹표준,웹접근성"> 
+	<title>Portfolio01</title>
+	
+	<!-- style -->
+	<link rel="stylesheet" href="assets/css/about.css">
+
+	<!-- font -->
+	<link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+	<!-- webfont -->
+
+	<!--[If IE 9]-->
+	<!--<script type="text/javascript">
+		alert("Please Upgrade Your BROWSER !");
+	</script>-->
+	<!--[endif]-->
+	
+
+</head>
+<body>
+    
+    <div class="info">
+		<span class="scroll_top">0</span>
+	</div>
+
+    <!-- mainNav -->
+	<nav class="mainNav">
+	    <div class="navContent">
+	    	<ul>
+                <li><a href="http://suh45222.dothome.co.kr/portfolio/portfolio/index3.html">Portfolio</a></li>
+                <li><a href="#">Animation</a></li>
+                <li><a href="#">Document</a></li>
+                <li><a href="http://suh45222.dothome.co.kr/portfolio/portfolio/about.html">About me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    	</div>
+        <div class="ham-menu">
+            <div class="icon-wrap">
+                <div class="icon"><span></span></div>
+            </div>
+        </div>
+	</nav>
+	<!-- //mainNav -->
+
+    <!-- layer-menu -->
+    <nav class="layer-menu">
+        <ul class="menu">
+            <li><a href="#section1"><span>Portfolio</span></a></li>
+            <li><a href="#section2"><span>Animation</span></a></li>
+            <li><a href="#section3"><span>Document</span></a></li>
+            <li><a href="#section4"><span>About me</span></a></li>
+            <li><a href="#section5"><span>Contact</span></a></li>
+        </ul>
+    </nav>
+    <!-- //layer-menu -->
+    
+    <section id="about">
+       
+       
+        <div id="draggable" class="ui-widget-content">
+          <p>Drag1</p>
+        </div>
+
+        <div id="droppable" class="ui-widget-header">
+          <p>Drag1</p>
+        </div>
+
+        <h3>Feedback on activating draggable:</h3>
+
+        <div id="draggable2" class="ui-widget-content">
+          <p>Drag2</p>
+        </div>
+
+        <div id="droppable2" class="ui-widget-header">
+          <p>Drag2</p>
+        </div>
+       
+        
+        <div class="cir1">section1</div>
+        <div class="cir2">section2</div>
+        
+        <!-- dropTarget -->
+        <div class="dropTarget1">
+            <p class="title3">section1</p>
+        </div>
+        <!-- //dropTarget -->
+        
+        <!-- dropTarget -->
+<!--
+        <div class="dropTarget2">
+            <p class="title3">section2</p>
+        </div>
+-->
+        <!-- //dropTarget -->
+
+        <!-- dropTarget -->
+        <div class="aboutBlock">
+            <div class="textWrap">
+                <h2 class="title1">About me!</h2>
+                <p>
+                    I have the passion, the curiosity and the desire 
+                    to accomplish great things.
+                    <br><br>
+                    If you looking out for new talent,
+                    Please don't hesitate to contact me.
+                </p>
+            </div>
+        </div>
+        <!-- //dropTarget -->
+
+        <div class="slideText">
+            <h3 class="title2">WHO I AM?</h3>
+            <p class="sub_tit">안녕하세요.<br>신입 퍼블리셔 23살 박수현 입니다.</p>
+
+            <p class="post">
+                HTML5, CSS3 사용 가능<br>
+                JavaScript, jQuery에 대한 기초 지식 보유<br>
+                PHOTOSHOP, ILLUSTRATOR 기본 툴 사용<br>
+            </p>
+        </div>
+    </section>
+    
+
+
+	
+	
+
+
+
+	<script src="assets/js/jquery-1.12.4.js"></script>
+	<script src="assets/js/jquery-ui-1.12.1.min.js"></script>
+	<script src="assets/js/skrollr.js"></script>
+	<script src="assets/js/TweenMax.min.js"></script>
+	<script src="assets/js/ie-checker.js"></script>
+	<script src="assets/js/modernizr.min.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/js/html5shiv.js"></script>
+	<script>
+
+        //hambuger Menu
+        $(".icon-wrap").click(function(){
+            $(".icon").toggleClass("animation");
+            $("body").toggleClass("open");
+            $("body").toggleClass("over");
+        });
+
+        
+        
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable({
+          accept: "#draggable",
+          classes: {
+            "ui-droppable-hover": "ui-state-hover"
+          },
+          drop: function( event, ui ) {
+            $( this ).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped!" );
+            $( this ).parent().removeClass().addClass("drag1");
+            $(".title2").text("draggable1");
+            $(".sub_tit").text("draggable1");
+            $(".post").text("draggable1");
+          }
+        });
+
+        $( "#draggable2" ).draggable();
+        $( "#droppable2" ).droppable({
+          accept: "#draggable2",
+          classes: {
+            "ui-droppable-active": "ui-state-default"
+          },
+          drop: function( event, ui ) {
+             $( this ).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped!" );
+             $( this ).parent().removeClass().addClass("drag2");
+             $(".title2").text("draggable2");
+             $(".sub_tit").text("draggable2");
+             $(".post").text("draggable2");
+          }
+        });
+        
+     
+        
+        
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
